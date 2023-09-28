@@ -158,7 +158,7 @@ having SUM(soluong)>=30
 
 GO
 ---0: theo tháng
----1: theo năm
+---1: theo n?m
 CREATE function topCustomerBuy(@checkType bit, @date Date)
 returns @TABLE TABLE(name nvarchar(100),totalMoney int)
 as
@@ -181,7 +181,7 @@ end
 GO
 
 ---0: theo tháng
----1: theo năm
+---1: theo n?m
 CREATE function topStaffSell(@checkType bit, @date Date)
 returns @TABLE TABLE(name nvarchar(100),totalOrder int)
 as
@@ -204,16 +204,16 @@ GO
 
 INSERT KHACHHANG (TENKH, GIOITINH, DIACHI, SDT, maloaikh) 
 VALUES 
-(N'Nguyễn Tuấn Kiệt', 1, N'Tiền Giang', N'0376880903  ', 1),
-(N'Nguyễn Thành Trung', 1, N'TPHCM', N'0703031232  ', 3),
-(N'Diệp Bá Huy', 0, N'HCM', N'0403332112  ', 2);
+(N'Nguy?n Tu?n Ki?t', 1, N'Ti?n Giang', N'0376880903  ', 1),
+(N'Nguy?n Thành Trung', 1, N'TPHCM', N'0703031232  ', 3),
+(N'Di?p Bá Huy', 0, N'HCM', N'0403332112  ', 2);
 
 INSERT LINHKIEN (TENLINHKIEN, MALOAI, HANGSX, DONGIA, HINHANH, SOLUONGCON) 
 VALUES 
 (N'ASUS ROG STRIX G G512 IAL013T', 1, N'ASUS', 324332, N'6KCM16U4.jpg', 20),
 (N'MACBOOK PRO 13 2020 Z11B000CT', 1, N'APPLE', 369900, N'imagelp2.jpg', 1),
 (N'ACER ASPIRE 3 A315 57G 524Z', 1, N'Acer', 154900, N'imagelp3.jpg', 10),
-(N'ASUS VIVOBOOK D515UA Ẹ045T', 1, N'ASUS', 1349000, N'imagelp4.jpg', 2),
+(N'ASUS VIVOBOOK D515UA ?045T', 1, N'ASUS', 1349000, N'imagelp4.jpg', 2),
 (N'MSI MODERN 14 B11MO 011VN', 1, N'MSI', 2099000, N'imagelp5.jpg', 98),
 (N'LENOVO IDEAPAD	SLIM 3 14IIL05 81WD00VJVN', 1, N'LENOVO', 1049000, N'imagelp6.jpg', 2),
 (N'ASUS H410M-E', 2, N'ASUS', 1865000, N'imagemb1.jpg', 3),
@@ -257,18 +257,18 @@ VALUES
 (N'Case Antec NX800', 8, N'ANTEC', 1750000, N'imagevm4.jpg', 100),
 (N'Case Xigmatek Aquarius Plus-Black', 8, N'XIGMATEK', 2000000, N'imagevm5.jpg', 100),
 (N'Case Deepcool CL500 4F', 8, N'DEEPCOOL', 2190000, N'imagevm6.jpg', 100),
-(N'(600W) Nguồn SliverStone ST60F-ES230-80 Plus', 9, N'SLIVERSTONE', 1090000, N'imageps1.jpg', 100),
-(N'(750W) Nguồn CoolerMaster MWE 750 BRONZE-V2 230V', 9, N'COOLER MASTER', 2090000, N'imageps2.jpg', 100),
-(N'(650W) Nguồn Corsair RM650-80 Plus Gold-Full Modular', 9, N'CORSAIR', 2690000, N'imageps3.jpg', 100),
-(N'(850W) Nguồn Corsair RM850-80 Plus Gold-Full Modular', 9, N'CORSAIR', 3290000, N'imageps4.jpg', 100),
-(N'(850W) Nguồn Corsair RM850X-80 Plus Gold-Full Modular', 9, N'CORSAIR', 3790000, N'imageps5.jpg', 100),
-(N'(1200W)Nguồn Corsair AX1200i-1200 Watt-80 Plus Platinum-Full Modular', 9, N'CORSAIR', 9200000, N'imageps6.jpg', 100),
+(N'(600W) Ngu?n SliverStone ST60F-ES230-80 Plus', 9, N'SLIVERSTONE', 1090000, N'imageps1.jpg', 100),
+(N'(750W) Ngu?n CoolerMaster MWE 750 BRONZE-V2 230V', 9, N'COOLER MASTER', 2090000, N'imageps2.jpg', 100),
+(N'(650W) Ngu?n Corsair RM650-80 Plus Gold-Full Modular', 9, N'CORSAIR', 2690000, N'imageps3.jpg', 100),
+(N'(850W) Ngu?n Corsair RM850-80 Plus Gold-Full Modular', 9, N'CORSAIR', 3290000, N'imageps4.jpg', 100),
+(N'(850W) Ngu?n Corsair RM850X-80 Plus Gold-Full Modular', 9, N'CORSAIR', 3790000, N'imageps5.jpg', 100),
+(N'(1200W)Ngu?n Corsair AX1200i-1200 Watt-80 Plus Platinum-Full Modular', 9, N'CORSAIR', 9200000, N'imageps6.jpg', 100),
 (N'Fan DEEPCOOL CF120-FAN RGB(CF120)', 10, N'DEEPCOOL', 450000, N'imagetn1.jpg', 100),
-(N'Tản nhiệt Xigmatek Windpower Pro ARGB', 10, N'XIGMATEK', 890000, N'imagetn2.jpg', 100),
+(N'T?n nhi?t Xigmatek Windpower Pro ARGB', 10, N'XIGMATEK', 890000, N'imagetn2.jpg', 100),
 (N'Fan Cooler Master MASTERFAN MF120 PRISMATIC 3 IN 1', 10, N'COOLER MASTER', 1550000, N'imagetn3.jpg', 100),
-(N'Tản nhiệt Cooler Master MASTERAIR MA610P ARGB', 10, N'COOLER MASTER', 1750000, N'imagetn4.jpg', 100),
-(N'Tản nhiệt GIGABYTE AORUS ATC800', 10, N'GIGABYTE', 2050000, N'imagetn5.jpg', 100),
-(N'Tản nhiệt Deepcool Assassin III', 10, N'DEEPCOOL', 2250000, N'imagetn6.jpg', 100),
+(N'T?n nhi?t Cooler Master MASTERAIR MA610P ARGB', 10, N'COOLER MASTER', 1750000, N'imagetn4.jpg', 100),
+(N'T?n nhi?t GIGABYTE AORUS ATC800', 10, N'GIGABYTE', 2050000, N'imagetn5.jpg', 100),
+(N'T?n nhi?t Deepcool Assassin III', 10, N'DEEPCOOL', 2250000, N'imagetn6.jpg', 100),
 (N'Tai nghe DareU EH416 RGB', 11, N'DARE-U', 350000, N'imagetng1.jpg', 100),
 (N'Tai nghe HyperX Cloud II RED', 11, N'KINGSTON', 2090000, N'imagetng2.jpg', 100),
 (N'Tai nghe Gaming Logitech G Pro Gen 2', 11, N'LOGITECH', 2390000, N'imagetng3.jpg', 100),
@@ -280,33 +280,33 @@ VALUES
 (N'Bàn phím Razer Blackwidow V3 Pro', 12, N'RAZER', 5990000, N'imagebp3.jpg', 100),
 (N'Bàn phím Logitech G813 RGB', 12, N'LOGITECH', 3090000, N'imagebp4.jpg', 100),
 (N'Bàn phím Logitech G913 TKL Lightspeed Wireless', 12, N'LOGITECH', 3990000, N'bg.gif', 220),
-(N'Bàn phím Leopold FC660MPD Light Pink', 12, N'LEOPOLD', 2750000, N'imagebp6.jpg', 100),
+(N'Ba?n phi?m Leopold FC660MPD Light Pink', 12, N'LEOPOLD', 2750000, N'imagebp6.jpg', 100),
 (N'Màn hình ViewSonic VX2458-P 24" 144Hz FreeSync', 13, N'VIEWSONIC', 4350000, N'imagemh1.jpg', 100),
 (N'Màn hình Asus TUF GAMING VG249Q 24" IPS 144Hz FreeSync chuyên game', 13, N'ASUS', 5450000, N'imagemh2.jpg', 100),
-(N'Màn hình ViewSonic VP2458 24" IPS chuyên đồ họa', 13, N'VIEWSONIC', 4500000, N'imagemh3.jpg', 100),
-(N'Màn hình ASUS ProArt PA248QV 24" IPS 75Hz 16:10 chuyên đồ họa', 13, N'ASUS', 5190000, N'imagemh4.jpg', 100),
-(N'Màn hình Dell UltraSharp U2721DE 27" IPS 2K chuyên đồ họa', 13, N'DELL', 1069000, N'imagemh5.jpg', 100),
+(N'Màn hình ViewSonic VP2458 24" IPS chuyên ?? h?a', 13, N'VIEWSONIC', 4500000, N'imagemh3.jpg', 100),
+(N'Màn hình ASUS ProArt PA248QV 24" IPS 75Hz 16:10 chuyên ?? h?a', 13, N'ASUS', 5190000, N'imagemh4.jpg', 100),
+(N'Màn hình Dell UltraSharp U2721DE 27" IPS 2K chuyên ?? h?a', 13, N'DELL', 1069000, N'imagemh5.jpg', 100),
 (N'Màn hình cong Philips 322M8CZ 32" VA 165Hz Freesync', 13, N'PHILIPS', 6290000, N'imagemh6.jpg', 200),
-(N'Chuột Logitech G102 Lightsync RGB Black', 14, N'LOGITECH', 400000, N'imagech1.jpg', 100),
-(N'Chuột Logitech G502 Hero', 14, N'LOGITECH', 990000, N'imagech2.jpg', 100),
-(N'Chuột Logitech G Pro Wireless', 14, N'LOGITECH', 2690000, N'imagech3.jpg', 100),
-(N'Chuột Razer DeathAdder V2', 14, N'RAZER', 1690000, N'imagech4.jpg', 100),
-(N'Chuột Razer DeathAdder V2 Pro', 14, N'RAZER', 299000, N'imagech5.jpg', 100),
-(N'Chuột Steelseries Rival 650', 14, N'STEELSERIES', 259000, N'imagech6.jpg', 100),
-(N'Bộ định tuyến WiFi 5 ASUS RT-AC1500UHP Chuẩn AC1500 (Xuyên tường)', 15, N'ASUS', 1690000, N'imagetbm1.jpg', 100),
-(N'Bộ định tuyến WiFi 6 Asus RT-AX82U Gundam Edition', 15, N'ASUS', 6390000, N'imagetbm2.jpg', 100),
-(N'Bộ định tuyến WiFi 6 Asus RT-AX86U Zaku II Gundam Edition', 15, N'ASUS', 7390000, N'imagetbm3.jpg', 100),
-(N'Bộ định tuyến WiFi 6 ASUS RT-AX88U Chuẩn AX6000', 15, N'ASUS', 8190000, N'imagetbm4.jpg', 100),
-(N'Bộ định tuyến WiFi 6 ASUS RT-AX92U Chuẩn AX6100', 15, N'ASUS', 9090000, N'imagetbm5.jpg', 100),
-(N'Bộ định tuyến WiFi 6 ROG Rapture GT-AX11000 Chuẩn AX11000', 15, N'ASUS', 1449000, N'blog1.jpg', 100),
+(N'Chu?t Logitech G102 Lightsync RGB Black', 14, N'LOGITECH', 400000, N'imagech1.jpg', 100),
+(N'Chu?t Logitech G502 Hero', 14, N'LOGITECH', 990000, N'imagech2.jpg', 100),
+(N'Chu?t Logitech G Pro Wireless', 14, N'LOGITECH', 2690000, N'imagech3.jpg', 100),
+(N'Chu?t Razer DeathAdder V2', 14, N'RAZER', 1690000, N'imagech4.jpg', 100),
+(N'Chu?t Razer DeathAdder V2 Pro', 14, N'RAZER', 299000, N'imagech5.jpg', 100),
+(N'Chu?t Steelseries Rival 650', 14, N'STEELSERIES', 259000, N'imagech6.jpg', 100),
+(N'B? ??nh tuy?n WiFi 5 ASUS RT-AC1500UHP Chu?n AC1500 (Xuyên t??ng)', 15, N'ASUS', 1690000, N'imagetbm1.jpg', 100),
+(N'B? ??nh tuy?n WiFi 6 Asus RT-AX82U Gundam Edition', 15, N'ASUS', 6390000, N'imagetbm2.jpg', 100),
+(N'B? ??nh tuy?n WiFi 6 Asus RT-AX86U Zaku II Gundam Edition', 15, N'ASUS', 7390000, N'imagetbm3.jpg', 100),
+(N'B? ??nh tuy?n WiFi 6 ASUS RT-AX88U Chu?n AX6000', 15, N'ASUS', 8190000, N'imagetbm4.jpg', 100),
+(N'B? ??nh tuy?n WiFi 6 ASUS RT-AX92U Chu?n AX6100', 15, N'ASUS', 9090000, N'imagetbm5.jpg', 100),
+(N'B? ??nh tuy?n WiFi 6 ROG Rapture GT-AX11000 Chu?n AX11000', 15, N'ASUS', 1449000, N'blog1.jpg', 100),
 (N'MÀN HÌNH CONG SAMSUNG', 13, N'SAMSUNG', 1200000, N'service1.jpg', 1000);
 
 
 INSERT LOAIKH (TENLOAIKH, GIAMGIA) 
 VALUES 
 (N'KHÁCH HÀNG VIP', 0.1),
-(N'KHÁCH HÀNG TIỀM NĂNG', 0.08),
-(N'KHÁCH HÀNG THÂN THIẾT', 0.05);
+(N'KHÁCH HÀNG TI?M N?NG', 0.08),
+(N'KHÁCH HÀNG THÂN THI?T', 0.05);
 
 
 INSERT LOAILINHKIEN (TENLOAI) 
@@ -318,24 +318,24 @@ VALUES
 (N'VGA'),
 (N'SSD'),
 (N'HDD'),
-(N'VỎ MÁY TÍNH'),
+(N'V? MÁY TÍNH'),
 (N'PSU'),
-(N'TẢN NHIỆT'),
+(N'T?N NHI?T'),
 (N'TAI NGHE'),
 (N'BÀN PHÍM'),
 (N'MÀN HÌNH'),
-(N'CHUỘT'),
-(N'THIẾT BỊ MẠNG');
+(N'CHU?T'),
+(N'THI?T B? M?NG');
 
 INSERT NHANVIEN (TENNV, DIACHI, SDT, GIOITINH, NGAYVL, LUONG, HINHANH, taikhoan, MATKHAU, maquyen) 
 VALUES 
-(N'Nguyễn Tuấn Kiệt', N'TP.HCM', N'0376880903  ', 1, CAST(N'2021-05-11' AS Date), 11000000, N'cart.jpg', N'limminh', N'12345', 1),
-(N'Nguyễn Thành Trung', N'Bình Định', N'0789632456  ', 1, CAST(N'2021-04-12' AS Date), 10000000, N'logo.jpg.png', N'duyho', N'12345', 1),
-(N'Nguyễn Nhật My', N'TPHCM', N'0125325635  ', 1, CAST(N'2020-12-14' AS Date), 14000000, N'cart4.jpg', N'mynguyen', N'12345', 1),
-(N'Lê Bảo Hoàng Việt', N'TPHCM', N'01245369852 ', 0, CAST(N'2019-12-14' AS Date), 15000000, N'productbig.jpg', N'vietle', N'12345', 1),
-(N'Nguyễn Trần Yến Nhi', N'TPHCM', N'01247369752 ', 1, CAST(N'2017-12-14' AS Date), 100000000, N'staff(7).png', N'nhinguyen', N'12345', 1),
-(N'Trương Văn Tấn Trung', N'TPHCM', N'0784325965  ', 1, CAST(N'2020-01-14' AS Date), 1, N'blog4.jpg', N'trungtruongd', N'12345', 2),
-(N'Diệp Bá Huy', N'Tiền Giang', N'0376880903  ', 1, CAST(N'2001-12-06' AS Date), 423423423, N'cart.png', N'dongduy', N'12345', 2);
+(N'Nguy?n Tu?n Ki?t', N'TP.HCM', N'0376880903  ', 1, CAST(N'2021-05-11' AS Date), 11000000, N'cart.jpg', N'limminh', N'12345', 1),
+(N'Nguy?n Thành Trung', N'Bình ??nh', N'0789632456  ', 1, CAST(N'2021-04-12' AS Date), 10000000, N'logo.jpg.png', N'duyho', N'12345', 1),
+(N'Nguy?n Nh?t My', N'TPHCM', N'0125325635  ', 1, CAST(N'2020-12-14' AS Date), 14000000, N'cart4.jpg', N'mynguyen', N'12345', 1),
+(N'Lê B?o Hoàng Vi?t', N'TPHCM', N'01245369852 ', 0, CAST(N'2019-12-14' AS Date), 15000000, N'productbig.jpg', N'vietle', N'12345', 1),
+(N'Nguy?n Tr?n Y?n Nhi', N'TPHCM', N'01247369752 ', 1, CAST(N'2017-12-14' AS Date), 100000000, N'staff(7).png', N'nhinguyen', N'12345', 1),
+(N'Tr??ng V?n T?n Trung', N'TPHCM', N'0784325965  ', 1, CAST(N'2020-01-14' AS Date), 1, N'blog4.jpg', N'trungtruongd', N'12345', 2),
+(N'Di?p Bá Huy', N'Ti?n Giang', N'0376880903  ', 1, CAST(N'2001-12-06' AS Date), 423423423, N'cart.png', N'dongduy', N'12345', 2);
 
 
 INSERT NHAPKHO (NGAYNHAP, tongtien, MANV, ispay) 
@@ -360,3 +360,210 @@ INSERT QUYEN (tenquyen)
 VALUES 
 (N'Nhân viên'),
 (N'admin');
+go
+ALTER TABLE LINHKIEN ADD CONSTRAINT UC_LINHKIEN UNIQUE (TENLINHKIEN);
+GO
+ALTER TABLE LOAIKH ADD CONSTRAINT UNI_TENLOAIKH UNIQUE (TENLOAIKH);
+GO
+ALTER TABLE LOAILINHKIEN ADD CONSTRAINT UNI_LOAILINHKIEN UNIQUE (TENLOAI);
+GO
+ALTER TABLE NHANVIEN ADD CONSTRAINT UNI__NHANVIEN UNIQUE (taikhoan);
+GO
+ALTER TABLE CHITIETHD ADD CONSTRAINT FK_CHITIETHD_HOADON FOREIGN KEY (MAHD) REFERENCES HOADON(MAHD) ON DELETE CASCADE
+GO
+ALTER TABLE CHITIETHD CHECK CONSTRAINT FK_CHITIETHD_HOADON
+GO
+ALTER TABLE CHITIETHD ADD  CONSTRAINT FK_CHITIETHD_LINHKIEN FOREIGN KEY(MALINHKIEN)
+REFERENCES LINHKIEN (MALINHKIEN)
+GO
+ALTER TABLE CHITIETHD CHECK CONSTRAINT FK_CHITIETHD_LINHKIEN
+GO
+ALTER TABLE CHITIETNK ADD  CONSTRAINT FK_CHITIETNK_LINHKIEN FOREIGN KEY(MALINHKIEN)
+REFERENCES LINHKIEN (MALINHKIEN)
+GO
+ALTER TABLE CHITIETNK CHECK CONSTRAINT FK_CHITIETNK_LINHKIEN
+GO
+ALTER TABLE CHITIETNK ADD  CONSTRAINT FK_CHITIETNK_NHAPKHO FOREIGN KEY(MAPN)
+REFERENCES NHAPKHO (MAPN)
+ON DELETE CASCADE
+GO
+ALTER TABLE CHITIETNK CHECK CONSTRAINT FK_CHITIETNK_NHAPKHO
+GO
+ALTER TABLE HOADON ADD  CONSTRAINT FK_HOADON_KHACHHANG FOREIGN KEY(MAKH)
+REFERENCES KHACHHANG (Makh)
+GO
+ALTER TABLE HOADON CHECK CONSTRAINT FK_HOADON_KHACHHANG
+GO
+ALTER TABLE HOADON ADD  CONSTRAINT FK_HOADON_NHANVIEN FOREIGN KEY(MANV)
+REFERENCES NHANVIEN (MANV)
+GO
+ALTER TABLE HOADON CHECK CONSTRAINT FK_HOADON_NHANVIEN
+GO
+ALTER TABLE KHACHHANG ADD  CONSTRAINT fk_khachhang_loaikh FOREIGN KEY(maloaikh)
+REFERENCES LOAIKH (MALOAIKH)
+GO
+ALTER TABLE KHACHHANG CHECK CONSTRAINT fk_khachhang_loaikh
+GO
+ALTER TABLE LINHKIEN ADD  CONSTRAINT FK_MALOAI FOREIGN KEY(MALOAI)
+REFERENCES LOAILINHKIEN (MALOAI)
+GO
+ALTER TABLE LINHKIEN CHECK CONSTRAINT FK_MALOAI
+GO
+ALTER TABLE NHANVIEN ADD CONSTRAINT FK_NHANVIEN_QUYEN FOREIGN KEY(maquyen)
+REFERENCES QUYEN (maquyen)
+GO
+ALTER TABLE NHANVIEN CHECK CONSTRAINT FK_NHANVIEN_QUYEN
+GO
+ALTER TABLE NHAPKHO ADD  CONSTRAINT FK_NHAPKHO_NHANVIEN FOREIGN KEY(MANV)
+REFERENCES NHANVIEN (MANV)
+GO
+ALTER TABLE NHAPKHO CHECK CONSTRAINT FK_NHAPKHO_NHANVIEN
+GO
+ALTER TABLE KHACHHANG ADD CONSTRAINT CHK_GIOITINH_KH CHECK ((GIOITINH=(0) OR GIOITINH=(1)))
+GO
+ALTER TABLE KHACHHANG CHECK CONSTRAINT CHK_GIOITINH_KH
+GO
+ALTER TABLE LINHKIEN ADD CONSTRAINT CHK_SOLUONGCON CHECK ((SOLUONGCON>=(0)))
+GO
+ALTER TABLE LINHKIEN CHECK CONSTRAINT CHK_SOLUONGCON
+GO
+ALTER TABLE LOAIKH ADD CONSTRAINT CHK_GIAMGIA_LOAIKH CHECK (([GIAMGIA]>=(0)))
+GO
+ALTER TABLE LOAIKH CHECK CONSTRAINT CHK_GIAMGIA_LOAIKH
+GO
+ALTER TABLE NHANVIEN  ADD  CONSTRAINT CHK_GIOITINH_NV CHECK ((GIOITINH=(0) OR GIOITINH=(1)))
+GO
+ALTER TABLE NHANVIEN CHECK CONSTRAINT CHK_GIOITINH_NV
+GO
+ALTER TABLE NHAPKHO ADD  CONSTRAINT CHK_THANHTIEN_NK CHECK ((TONGTIEN>=(0)))
+GO
+ALTER TABLE NHAPKHO CHECK CONSTRAINT CHK_THANHTIEN_NK
+
+go
+CREATE trigger trg_hoadon_delete on CHITIETHD
+for delete
+as
+begin
+		declare @malk int,@soluong int,@mahd int,@tongtien float
+		select @malk=malinhkien,@soluong=soluong,@mahd=MAHD from deleted
+		if((select ispay from HOADON where MAHD=@mahd)=0)
+		begin
+			update linhkien
+			set soluongcon +=@soluong
+			where MALINHKIEN=@malk	
+			if((select count(*) from chitiethd where mahd=@mahd)!=0)
+				BEGIN
+					select @tongtien=SUM(thanhtien) from CHITIETHD where mahd=@mahd
+					update HOADON 
+					set tongtien=@tongtien-@tongtien*giamgia
+					where MAHD=@mahd
+				END
+			ELSE
+			update HOADON 
+			set tongtien=0
+			where MAHD=@mahd
+		end
+end
+Go
+CREATE trigger trg_hoadon_insert on CHITIETHD
+for insert
+as
+begin
+		declare @malk int,@soluong int,@mahd int,@tongtien float
+		select @malk=malinhkien,@soluong=soluong,@mahd=MAHD from inserted
+		update CHITIETHD
+		set THANHTIEN=SOLUONG*DONGIA
+		where mahd=@mahd and MALINHKIEN=@malk
+		
+		update linhkien
+		set soluongcon-=@soluong
+		where MALINHKIEN=@malk	
+		select @tongtien=SUM(thanhtien) from CHITIETHD where mahd=@mahd
+		update HOADON 
+		set tongtien=@tongtien-@tongtien*giamgia
+		where MAHD=@mahd
+end
+go
+CREATE trigger trg_hoadon_update on CHITIETHD
+for update
+as
+begin
+		declare @malk int,@soluong int,@mahd int,@tongtien float
+		select @malk=malinhkien,@soluong=soluong,@mahd=MAHD from inserted
+		set @soluong-=(select soluong from deleted)
+		update CHITIETHD
+		set THANHTIEN=SOLUONG*DONGIA
+		where mahd=@mahd and MALINHKIEN=@malk
+
+		
+		update linhkien
+		set soluongcon-=@soluong
+		where MALINHKIEN=@malk	
+		select @tongtien=SUM(thanhtien) from CHITIETHD where mahd=@mahd
+		update HOADON 
+		set tongtien=@tongtien-@tongtien*giamgia
+		where MAHD=@mahd
+end
+go
+CREATE trigger trg_nhapkho_delete on CHITIETNK
+for delete
+as
+begin
+		declare @malk int,@soluong int,@mapn int,@tongtien float
+		select @malk=malinhkien,@soluong=soluong,@mapn=MAPN from deleted	
+		if((select ispay from NHAPKHO where MAPN=@mapn)=0)
+		begin
+			update linhkien
+			set soluongcon -=@soluong
+			where MALINHKIEN=@malk	
+			if((select count(*) from CHITIETNK where MAPN=@mapn)!=0)
+				BEGIN
+					select @tongtien=SUM(thanhtien) from CHITIETNK where MAPN=@mapn
+					update NHAPKHO 
+					set tongtien=@tongtien
+					where MAPN=@mapn
+				END
+			ELSE
+			update NHAPKHO 
+			set tongtien=0
+			where MAPN=@mapn
+		end
+end
+go
+CREAte trigger trg_nhapkho_insert on CHITIETNK
+for insert
+as
+begin
+		declare @malk int,@soluong int,@mapn int,@tongtien float
+		select @malk=malinhkien,@soluong=soluong,@mapn=MAPN from inserted
+		update CHITIETNK
+		set THANHTIEN=SOLUONG*DONGIA
+		where MAPN=@mapn and MALINHKIEN=@malk
+		
+		update linhkien
+		set soluongcon +=@soluong
+		where MALINHKIEN=@malk	
+		select @tongtien=SUM(thanhtien) from CHITIETNK where MAPN=@mapn
+		update NHAPKHO 
+		set tongtien=@tongtien
+		where MAPN=@mapn
+end
+go
+CREATE trigger trg_nhapkho_update on CHITIETNK
+for update
+as
+begin
+		declare @malk int,@soluong int,@mapn int,@tongtien float
+		select @malk=malinhkien,@soluong=soluong,@mapn=MAPN from inserted
+		set @soluong-=(select soluong from deleted)
+		update CHITIETNK
+		set THANHTIEN=SOLUONG*DONGIA
+		where MAPN=@mapn and MALINHKIEN=@malk
+		update linhkien
+		set soluongcon+=@soluong
+		where MALINHKIEN=@malk	
+		select @tongtien=SUM(thanhtien) from CHITIETNK where MAPN=@mapn
+		update NHAPKHO 
+		set tongtien=@tongtien
+		where MAPN=@mapn
+end
