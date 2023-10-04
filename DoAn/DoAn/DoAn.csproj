@@ -108,6 +108,30 @@
     <Compile Include="UC\uc_import_employee.Designer.cs">
       <DependentUpon>uc_import_employee.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\uc_inventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\uc_inventory.Designer.cs">
+      <DependentUpon>uc_inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\uc_order.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\uc_order.Designer.cs">
+      <DependentUpon>uc_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\uc_order_employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\uc_order_employee.Designer.cs">
+      <DependentUpon>uc_order_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\uc_predict.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\uc_predict.Designer.cs">
+      <DependentUpon>uc_predict.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +156,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\uc_import_employee.resx">
       <DependentUpon>uc_import_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\uc_inventory.resx">
+      <DependentUpon>uc_inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\uc_order.resx">
+      <DependentUpon>uc_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\uc_order_employee.resx">
+      <DependentUpon>uc_order_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\uc_predict.resx">
+      <DependentUpon>uc_predict.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
