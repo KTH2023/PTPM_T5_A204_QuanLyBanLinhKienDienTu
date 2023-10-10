@@ -578,3 +578,27 @@ C:\Users\Admin-s\OneDrive\Máy tính\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\D
 C:\Users\Admin-s\OneDrive\Máy tính\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DoAn\obj\Debug\GUI.UC.uc_order.resources
 C:\Users\Admin-s\OneDrive\Máy tính\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DoAn\obj\Debug\GUI.UC.uc_order_employee.resources
 C:\Users\Admin-s\OneDrive\Máy tính\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DoAn\obj\Debug\GUI.UC.uc_predict.resources
+D:\Huy\class\projectcuoi\DoAn\DoAn\bin\Debug\DoAn.exe.config
+D:\Huy\class\projectcuoi\DoAn\DoAn\bin\Debug\DoAn.exe
+D:\Huy\class\projectcuoi\DoAn\DoAn\bin\Debug\DoAn.pdb
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\DoAn.Form1.resources
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\DoAn.Properties.Resources.resources
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\GUI.UC.uc_customer.resources
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\GUI.UC.uc_home.resources
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\GUI.UC.uc_import.resources
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\GUI.UC.uc_import_employee.resources
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\GUI.UC.uc_inventory.resources
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\GUI.UC.uc_order.resources
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\GUI.UC.uc_order_employee.resources
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\GUI.UC.uc_predict.resources
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\DoAn.csproj.GenerateResource.cache
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\DoAn.exe.licenses
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\DoAn.csproj.CoreCompileInputs.cache
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\DoAn.csproj.CopyComplete
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\DoAn.exe
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\DoAn.pdb
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\GUI.UC.uc_product.resources
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\GUI.UC.uc_staff.resources
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\GUI.UC.uc_statistic_staff_customer.resources
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\GUI.UC.uc_statistical.resources
+D:\Huy\class\projectcuoi\DoAn\DoAn\obj\Debug\DoAn.csproj.AssemblyReference.cache

@@ -132,6 +132,30 @@
     <Compile Include="UC\uc_predict.Designer.cs">
       <DependentUpon>uc_predict.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\uc_product.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\uc_product.Designer.cs">
+      <DependentUpon>uc_product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\uc_staff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\uc_staff.designer.cs">
+      <DependentUpon>uc_staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\uc_statistical.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\uc_statistical.designer.cs">
+      <DependentUpon>uc_statistical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\uc_statistic_staff_customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\uc_statistic_staff_customer.designer.cs">
+      <DependentUpon>uc_statistic_staff_customer.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +192,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\uc_predict.resx">
       <DependentUpon>uc_predict.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\uc_product.resx">
+      <DependentUpon>uc_product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\uc_staff.resx">
+      <DependentUpon>uc_staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\uc_statistical.resx">
+      <DependentUpon>uc_statistical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\uc_statistic_staff_customer.resx">
+      <DependentUpon>uc_statistic_staff_customer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
