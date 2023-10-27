@@ -17,7 +17,7 @@ namespace DoAn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            new Form1().Show();
+            new FRM.frmSystem().Show();
             Application.Run();
         }
     }

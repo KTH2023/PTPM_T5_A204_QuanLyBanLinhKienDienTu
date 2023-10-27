@@ -76,11 +76,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FRM\frmConnect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FRM\frmConnect.designer.cs">
+      <DependentUpon>frmConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM\frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM\frmSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM\frmSystem.designer.cs">
+      <DependentUpon>frmSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -156,8 +180,20 @@
     <Compile Include="UC\uc_statistic_staff_customer.designer.cs">
       <DependentUpon>uc_statistic_staff_customer.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FRM\frmConnect.resx">
+      <DependentUpon>frmConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM\frmSystem.resx">
+      <DependentUpon>frmSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -206,6 +242,7 @@
       <DependentUpon>uc_statistic_staff_customer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="Images\fsadf.bak" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -218,6 +255,199 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\6KCM16U4.jpg" />
+    <Content Include="Images\add-file.png" />
+    <Content Include="Images\add-image.png" />
+    <Content Include="Images\analytics.png" />
+    <Content Include="Images\background.png" />
+    <Content Include="Images\banner1.jpg" />
+    <Content Include="Images\bg.gif" />
+    <Content Include="Images\bill.png" />
+    <Content Include="Images\blog1.jpg" />
+    <Content Include="Images\blog13.jpg" />
+    <Content Include="Images\blog2.jpg" />
+    <Content Include="Images\blog4.jpg" />
+    <Content Include="Images\blog5.jpg" />
+    <Content Include="Images\blog7.jpg" />
+    <Content Include="Images\cart.jpg" />
+    <Content Include="Images\cart.png" />
+    <Content Include="Images\cart17.jpg" />
+    <Content Include="Images\cart18.jpg" />
+    <Content Include="Images\cart19.jpg" />
+    <Content Include="Images\cart2.jpg" />
+    <Content Include="Images\cart3.jpg" />
+    <Content Include="Images\cart4.jpg" />
+    <Content Include="Images\cart5.png" />
+    <Content Include="Images\clipboard.png" />
+    <Content Include="Images\count2.png" />
+    <Content Include="Images\data-_1_.ico" />
+    <Content Include="Images\data.png" />
+    <Content Include="Images\data_1.png" />
+    <Content Include="Images\delete %281%29.png" />
+    <Content Include="Images\delete-file.png" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\device.png" />
+    <Content Include="Images\devices.png" />
+    <Content Include="Images\drop-in-value.png" />
+    <Content Include="Images\duy.jpg" />
+    <Content Include="Images\favicon.png" />
+    <Content Include="Images\fontlogo.jpg" />
+    <Content Include="Images\fontlogo2.jpg" />
+    <Content Include="Images\hinh-nen-vu-tru-4k-11-scaled.jpg" />
+    <Content Include="Images\holding-wrench.png" />
+    <Content Include="Images\imagebp1.jpg" />
+    <Content Include="Images\imagebp2.jpg" />
+    <Content Include="Images\imagebp3.jpg" />
+    <Content Include="Images\imagebp4.jpg" />
+    <Content Include="Images\imagebp5.jpg" />
+    <Content Include="Images\imagebp6.jpg" />
+    <Content Include="Images\imagech1.jpg" />
+    <Content Include="Images\imagech2.jpg" />
+    <Content Include="Images\imagech3.jpg" />
+    <Content Include="Images\imagech4.jpg" />
+    <Content Include="Images\imagech5.jpg" />
+    <Content Include="Images\imagech6.jpg" />
+    <Content Include="Images\imagecp1.jpg" />
+    <Content Include="Images\imagecp2.jpg" />
+    <Content Include="Images\imagecp3.jpg" />
+    <Content Include="Images\imagecp4.jpg" />
+    <Content Include="Images\imagecp5.jpg" />
+    <Content Include="Images\imagecp6.jpg" />
+    <Content Include="Images\imagehd1.JPG" />
+    <Content Include="Images\imagehd2.jpg" />
+    <Content Include="Images\imagehd3.jpg" />
+    <Content Include="Images\imagehd4.jpg" />
+    <Content Include="Images\imagehd5.jpg" />
+    <Content Include="Images\imagehd6,jpg.JPG" />
+    <Content Include="Images\imagelp1.jpg" />
+    <Content Include="Images\imagelp2.jpg" />
+    <Content Include="Images\imagelp3.jpg" />
+    <Content Include="Images\imagelp4.jpg" />
+    <Content Include="Images\imagelp5.jpg" />
+    <Content Include="Images\imagelp6.jpg" />
+    <Content Include="Images\imagemb1.jpg" />
+    <Content Include="Images\imagemb2.jpg" />
+    <Content Include="Images\imagemb3.jpg" />
+    <Content Include="Images\imagemb4.jpg" />
+    <Content Include="Images\imagemb5.jpg" />
+    <Content Include="Images\imagemb6.jpg" />
+    <Content Include="Images\imagemh1.jpg" />
+    <Content Include="Images\imagemh2.jpg" />
+    <Content Include="Images\imagemh3.jpg" />
+    <Content Include="Images\imagemh4.jpg" />
+    <Content Include="Images\imagemh5.jpg" />
+    <Content Include="Images\imagemh6.jpg" />
+    <Content Include="Images\imageps1.jpg" />
+    <Content Include="Images\imageps2.jpg" />
+    <Content Include="Images\imageps3.jpg" />
+    <Content Include="Images\imageps4.jpg" />
+    <Content Include="Images\imageps5.jpg" />
+    <Content Include="Images\imageps6.jpg" />
+    <Content Include="Images\imagera1.jpg" />
+    <Content Include="Images\imagera2.jpg" />
+    <Content Include="Images\imagera3.jpg" />
+    <Content Include="Images\imagera4.jpg" />
+    <Content Include="Images\imagera5.jpg" />
+    <Content Include="Images\imagera6.jpg" />
+    <Content Include="Images\imagess1.jpg" />
+    <Content Include="Images\imagess2.jpg" />
+    <Content Include="Images\imagess3.jpg" />
+    <Content Include="Images\imagess4.jpg" />
+    <Content Include="Images\imagess5.jpg" />
+    <Content Include="Images\imagess6.jpg" />
+    <Content Include="Images\imagetbm1.jpg" />
+    <Content Include="Images\imagetbm2.jpg" />
+    <Content Include="Images\imagetbm3.jpg" />
+    <Content Include="Images\imagetbm4.jpg" />
+    <Content Include="Images\imagetbm5.jpg" />
+    <Content Include="Images\imagetbm6.jpg" />
+    <Content Include="Images\imagetn1.jpg" />
+    <Content Include="Images\imagetn2.jpg" />
+    <Content Include="Images\imagetn3.jpg" />
+    <Content Include="Images\imagetn4.jpg" />
+    <Content Include="Images\imagetn5.jpg" />
+    <Content Include="Images\imagetn6.jpg" />
+    <Content Include="Images\imagetng1.jpg" />
+    <Content Include="Images\imagetng2.jpg" />
+    <Content Include="Images\imagetng3.jpg" />
+    <Content Include="Images\imagetng4.jpg" />
+    <Content Include="Images\imagetng5.jpg" />
+    <Content Include="Images\imagetng6.jpg" />
+    <Content Include="Images\imagevg1.jpg" />
+    <Content Include="Images\imagevg2.jpg" />
+    <Content Include="Images\imagevg3.jpg" />
+    <Content Include="Images\imagevg4.jpg" />
+    <Content Include="Images\imagevm1.jpg" />
+    <Content Include="Images\imagevm2.jpg" />
+    <Content Include="Images\imagevm3.jpg" />
+    <Content Include="Images\imagevm4.jpg" />
+    <Content Include="Images\imagevm5.jpg" />
+    <Content Include="Images\imagevm6.jpg" />
+    <Content Include="Images\import %281%29.png" />
+    <Content Include="Images\import.png" />
+    <Content Include="Images\insert %281%29.png" />
+    <Content Include="Images\insert.png" />
+    <Content Include="Images\kh.png" />
+    <Content Include="Images\loadImg.png" />
+    <Content Include="Images\logo.jpg.png" />
+    <Content Include="Images\nv.png" />
+    <Content Include="Images\online-order.png" />
+    <Content Include="Images\open-box.png" />
+    <Content Include="Images\pay.png" />
+    <Content Include="Images\port1.jpg" />
+    <Content Include="Images\port3.jpg" />
+    <Content Include="Images\port4.jpg" />
+    <Content Include="Images\port5.jpg" />
+    <Content Include="Images\port7.jpg" />
+    <Content Include="Images\port9.jpg" />
+    <Content Include="Images\printer.png" />
+    <Content Include="Images\product1.jpg" />
+    <Content Include="Images\product13.jpg" />
+    <Content Include="Images\product15.jpg" />
+    <Content Include="Images\product2.jpg" />
+    <Content Include="Images\product3.jpg" />
+    <Content Include="Images\product4.jpg" />
+    <Content Include="Images\product5.jpg" />
+    <Content Include="Images\product8.jpg" />
+    <Content Include="Images\product9.jpg" />
+    <Content Include="Images\productbig.jpg" />
+    <Content Include="Images\productbig1.jpg" />
+    <Content Include="Images\productbig2.jpg" />
+    <Content Include="Images\profits.png" />
+    <Content Include="Images\rating.png" />
+    <Content Include="Images\receipt.png" />
+    <Content Include="Images\report.png" />
+    <Content Include="Images\reset.png" />
+    <Content Include="Images\salary.png" />
+    <Content Include="Images\save-file.png" />
+    <Content Include="Images\save.png" />
+    <Content Include="Images\service1.jpg" />
+    <Content Include="Images\service2.jpg" />
+    <Content Include="Images\span-hot.png" />
+    <Content Include="Images\span-new.png" />
+    <Content Include="Images\staff %283%29.png" />
+    <Content Include="Images\staff %284%29.png" />
+    <Content Include="Images\staff %285%29.png" />
+    <Content Include="Images\staff%281%29.png" />
+    <Content Include="Images\staff%282%29.png" />
+    <Content Include="Images\staff%286%29.png" />
+    <Content Include="Images\staff%287%29.png" />
+    <Content Include="Images\staff.png" />
+    <Content Include="Images\synchronize.png" />
+    <Content Include="Images\team.png" />
+    <Content Include="Images\test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{7750dd85-388f-425c-8ca1-37895e3fbb72}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{9a6fa58d-fc84-48aa-8afc-8185a80780be}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
