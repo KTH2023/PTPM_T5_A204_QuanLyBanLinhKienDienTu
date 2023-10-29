@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +26,7 @@ namespace DAO
         {
             db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues,
                    db.CHITIETNKs);
-            return from ctnk in db.CHITIETNKs where ctnk.MAPN == mapn select ctnk;
+            return Support.ToDataTable < CHITIETNK >( (from ctnk in db.CHITIETNKs where ctnk.MAPN == mapn select ctnk).ToList());
         }
         public int Insert(int mapn, int malk, int soluong, double donGia)
         {

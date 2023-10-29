@@ -847,7 +847,7 @@
             this.Name = "uc_home";
             this.Size = new System.Drawing.Size(943, 674);
             this.Tag = "Trang chủ";
-            this.Load += new System.EventHandler(this.uc_home_Load);
+            this.Load += new System.EventHandler(this.Uc_home_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartStatistical)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartQuantityImportOrder)).EndInit();

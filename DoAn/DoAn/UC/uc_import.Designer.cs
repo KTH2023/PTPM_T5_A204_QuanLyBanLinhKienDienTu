@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Uc_import));
             this.gvImportDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -54,10 +54,12 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
+            this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gvImportDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcImport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvImport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // gvImportDetail
@@ -123,16 +125,18 @@
             // gcImport
             // 
             this.gcImport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcImport.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            gridLevelNode2.LevelTemplate = this.gvImportDetail;
-            gridLevelNode2.RelationName = "Chi tiết phiếu nhập";
+            this.gcImport.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
+            gridLevelNode1.LevelTemplate = this.gvImportDetail;
+            gridLevelNode1.RelationName = "Chi tiết phiếu nhập";
             this.gcImport.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.gcImport.Location = new System.Drawing.Point(0, 28);
             this.gcImport.MainView = this.gvImport;
-            this.gcImport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gcImport.Margin = new System.Windows.Forms.Padding(2);
             this.gcImport.MenuManager = this.barManager1;
             this.gcImport.Name = "gcImport";
+            this.gcImport.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemCheckEdit1});
             this.gcImport.Size = new System.Drawing.Size(575, 281);
             this.gcImport.TabIndex = 5;
             this.gcImport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -203,6 +207,7 @@
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Thanh toán?";
+            this.gridColumn4.ColumnEdit = this.repositoryItemCheckEdit1;
             this.gridColumn4.FieldName = "isPay";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
@@ -276,7 +281,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(2);
             this.barDockControlTop.Size = new System.Drawing.Size(575, 28);
             // 
             // barDockControlBottom
@@ -285,7 +290,7 @@
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 309);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(2);
             this.barDockControlBottom.Size = new System.Drawing.Size(575, 0);
             // 
             // barDockControlLeft
@@ -294,7 +299,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 28);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(2);
             this.barDockControlLeft.Size = new System.Drawing.Size(0, 281);
             // 
             // barDockControlRight
@@ -303,7 +308,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(575, 28);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(2);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 281);
             // 
             // btnDelete
@@ -314,6 +319,11 @@
             this.btnDelete.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.LargeImage")));
             this.btnDelete.Name = "btnDelete";
             // 
+            // repositoryItemCheckEdit1
+            // 
+            this.repositoryItemCheckEdit1.AutoHeight = false;
+            this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
+            // 
             // Uc_import
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,7 +333,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Uc_import";
             this.Size = new System.Drawing.Size(575, 309);
             this.Tag = "Phiếu nhập";
@@ -332,6 +342,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gcImport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvImport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -362,5 +373,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraBars.BarButtonItem btnPrint;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
     }
 }

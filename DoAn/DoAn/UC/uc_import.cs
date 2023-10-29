@@ -28,6 +28,7 @@ namespace DoAn.UC
         private void Uc_import_Load(object sender, EventArgs e)
         {
             gcImport.DataSource = NhapKhoBUS.Instances.GetNhapKhos(true);
+
             gvImport.IndicatorWidth = 50;
             gvImportDetail.IndicatorWidth = 50;
         }
@@ -41,7 +42,7 @@ namespace DoAn.UC
         {
             var mapn = gvImport.GetRowCellValue(e.RowHandle, "MAPN");
             if (mapn != null)
-                e.IsEmpty = ChiTietNKBUS.Instances.GetChiTietNKs(int.Parse(mapn.ToString())).Count == 0;
+                e.IsEmpty = ChiTietNKBUS.Instances.GetChiTietNKs(int.Parse(mapn.ToString())).Rows.Count == 0;
         }
 
         private void GvImport_MasterRowGetChildList(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowGetChildListEventArgs e)

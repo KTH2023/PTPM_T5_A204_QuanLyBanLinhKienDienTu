@@ -17,7 +17,7 @@ namespace DoAn.UC
     public partial class Uc_statistic_staff_customer : DevExpress.XtraEditors.XtraUserControl
     {
         FrmMain frm;
-        bool checkTypeStatistic;
+        //bool checkTypeStatistic;
         public Uc_statistic_staff_customer(FrmMain frm)
         {
             InitializeComponent();

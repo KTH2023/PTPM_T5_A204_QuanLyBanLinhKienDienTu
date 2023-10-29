@@ -117,6 +117,7 @@
             this.btnThanhToan.StyleController = this.layoutControl1;
             this.btnThanhToan.TabIndex = 14;
             this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.Click += new System.EventHandler(this.BtnThanhToan_Click);
             // 
             // btnDestroy
             // 
@@ -126,6 +127,7 @@
             this.btnDestroy.StyleController = this.layoutControl1;
             this.btnDestroy.TabIndex = 12;
             this.btnDestroy.Text = "Huỷ phiếu nhập";
+            this.btnDestroy.Click += new System.EventHandler(this.BtnDestroy_Click);
             // 
             // btnCreate
             // 
@@ -135,6 +137,7 @@
             this.btnCreate.StyleController = this.layoutControl1;
             this.btnCreate.TabIndex = 11;
             this.btnCreate.Text = "Tạo phiếu nhập";
+            this.btnCreate.Click += new System.EventHandler(this.BtnCreate_Click);
             // 
             // gcImportDetail
             // 
@@ -147,6 +150,7 @@
             this.gcImportDetail.TabIndex = 10;
             this.gcImportDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvImportDetail});
+            this.gcImportDetail.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.GcImportDetail_PreviewKeyDown);
             // 
             // gvImportDetail
             // 
@@ -160,6 +164,9 @@
             this.gvImportDetail.Name = "gvImportDetail";
             this.gvImportDetail.OptionsDetail.EnableMasterViewMode = false;
             this.gvImportDetail.OptionsView.ShowGroupPanel = false;
+            this.gvImportDetail.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.GvImportDetail_CustomDrawRowIndicator);
+            this.gvImportDetail.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.GvImportDetail_InvalidRowException);
+            this.gvImportDetail.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.GvImportDetail_ValidateRow);
             // 
             // gridColumn5
             // 
@@ -231,6 +238,7 @@
             this.gcImport.TabIndex = 5;
             this.gcImport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvImport});
+            this.gcImport.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.GcImport_PreviewKeyDown);
             // 
             // gvImport
             // 
@@ -244,6 +252,8 @@
             this.gvImport.Name = "gvImport";
             this.gvImport.OptionsDetail.EnableMasterViewMode = false;
             this.gvImport.OptionsView.ShowGroupPanel = false;
+            this.gvImport.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.GvImport_RowCellClick);
+            this.gvImport.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.GvImport_CustomDrawRowIndicator);
             // 
             // gridColumn1
             // 
@@ -455,6 +465,7 @@
             this.btnClose.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.LargeImage")));
             this.btnClose.Name = "btnClose";
             this.btnClose.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnClose.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnClose_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -508,6 +519,7 @@
             this.Name = "uc_import_employee";
             this.Size = new System.Drawing.Size(939, 675);
             this.Tag = "Nhập hàng";
+            this.Load += new System.EventHandler(this.Uc_import_employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcImportDetail)).EndInit();

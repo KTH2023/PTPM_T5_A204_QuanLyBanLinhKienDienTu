@@ -1,6 +1,7 @@
 ﻿using DAO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,22 +22,22 @@ namespace BUS
             set { instances = value; }
         }
         //đơn hàng phiếu nhập trong tháng hiện tại
-        public dynamic loadOrderAndImportInMonthNow()
+        public DataTable loadOrderAndImportInMonthNow()
         {
             return ChartDAO.Instances.loadOrderAndImportInMonthNow();
         }
         //top sản phẩm bán chạy nhất
-        public dynamic loadTopSelling()
+        public DataTable loadTopSelling()
         {
             return ChartDAO.Instances.loadTopSelling();
         }
         //load doanh thu năm hiện tại
-        public dynamic loadStatisticalYear()
+        public DataTable loadStatisticalYear()
         {
             return ChartDAO.Instances.loadStatisticalYear();
         }
         //sản phẩm sắp hết hàng <=5
-        public dynamic loadProductNotStock()
+        public DataTable loadProductNotStock()
         {
             return ChartDAO.Instances.loadProductNotStock();
         }

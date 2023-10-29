@@ -129,9 +129,12 @@ namespace DoAn.UC
             {
                 try
                 {
-                    Image img = Image.FromFile("../../Images/" + gvProduct.GetRowCellValue(e.RowHandle, "HINHANH").ToString());
-                    images.Images.Clear();
-                    images.Images.Add(img);
+                    if (gvProduct.GetRowCellValue(e.RowHandle, "HINHANH") != null)
+                    {
+                        Image img = Image.FromFile("../../Images/" + gvProduct.GetRowCellValue(e.RowHandle, "HINHANH").ToString());
+                        images.Images.Clear();
+                        images.Images.Add(img);
+                    }
                 }
                 catch (Exception)
                 {
@@ -305,7 +308,7 @@ namespace DoAn.UC
                 {
                     try
                     {
-                        int i = LoaiLKBUS.Instances.Update(gvTypeProduct.GetRowCellValue(e.RowHandle, "TENLOAI").ToString().Trim(), int.Parse(gvTypeProduct.GetRowCellValue(e.RowHandle, "TENLOAI").ToString().Trim()));
+                        int i = LoaiLKBUS.Instances.Update(gvTypeProduct.GetRowCellValue(e.RowHandle, "TENLOAI").ToString().Trim(), int.Parse(gvTypeProduct.GetRowCellValue(e.RowHandle, "MALOAI").ToString().Trim()));
                         if (i == 1)
                             gcTypeProduct.DataSource = LoaiLKBUS.Instances.GetLoaiLKs();
                         else

@@ -127,9 +127,12 @@ namespace DoAn.UC
             {
                 try
                 {
-                    Image img = Image.FromFile("../../Images/" + gvStaff.GetDataRow(e.RowHandle)["HINHANH"].ToString());
-                    images.Images.Clear();
-                    images.Images.Add(img);
+                    if(gvStaff.GetDataRow(e.RowHandle)["HINHANH"] != null)
+                    {
+                        Image img = Image.FromFile("../../Images/" + gvStaff.GetDataRow(e.RowHandle)["HINHANH"].ToString());
+                        images.Images.Clear();
+                        images.Images.Add(img);
+                    }    
                 }
                 catch (Exception)
                 {

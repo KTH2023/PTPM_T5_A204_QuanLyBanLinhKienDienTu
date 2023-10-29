@@ -30,216 +30,212 @@ namespace DoAn.FRM
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.mainContainer = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
-            this.btnHome = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnManagerment = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnProduct = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnNhanVien = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnKhachHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnReceipt = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnOrder = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnStaffCustomer = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnBanHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnNhapHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnCustomerOfStaff = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnStatistical = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnTurnover = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnInventory = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnTopStaffCustomer = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.btnPredictNextDay = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnHome = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnManagerment = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnProduct = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnNhanVien = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnKhachHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnReceipt = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnOrder = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnStaffCustomer = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnBanHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnNhapHang = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnCustomerOfStaff = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnStatistical = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnTurnover = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnInventory = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnTopStaffCustomer = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.BtnPredictNextDay = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
-            this.lbTieuDe = new DevExpress.XtraBars.BarHeaderItem();
+            this.LbTieuDe = new DevExpress.XtraBars.BarHeaderItem();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::DoAn.FRM.WaitForm1), true, true);
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
-            this.btnDoiMK = new DevExpress.XtraBars.BarButtonItem();
-            this.btnBackup = new DevExpress.XtraBars.BarButtonItem();
-            this.btnRestore = new DevExpress.XtraBars.BarButtonItem();
-            this.btnLogout = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnChangePass = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnBackup = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnRestore = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnLogout = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
-            this.lbAccount = new DevExpress.XtraBars.BarHeaderItem();
+            this.LbAccount = new DevExpress.XtraBars.BarHeaderItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
-            // repositoryItemTextEdit1
+            // fluentDesignFormContainer1
             // 
-            this.repositoryItemTextEdit1.AutoHeight = false;
-            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
-            // 
-            // mainContainer
-            // 
-            this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainContainer.Location = new System.Drawing.Point(260, 53);
-            this.mainContainer.Name = "mainContainer";
-            this.mainContainer.Size = new System.Drawing.Size(427, 392);
-            this.mainContainer.TabIndex = 0;
+            this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(260, 53);
+            this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(431, 394);
+            this.fluentDesignFormContainer1.TabIndex = 0;
             // 
             // accordionControl1
             // 
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.btnHome,
-            this.btnManagerment,
-            this.btnStaffCustomer,
-            this.btnStatistical});
+            this.BtnHome,
+            this.BtnManagerment,
+            this.BtnStaffCustomer,
+            this.BtnStatistical});
             this.accordionControl1.Location = new System.Drawing.Point(0, 53);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(260, 392);
+            this.accordionControl1.Size = new System.Drawing.Size(260, 394);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
-            // btnHome
+            // BtnHome
             // 
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnHome.Text = "Trang chủ";
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.BtnHome.Name = "BtnHome";
+            this.BtnHome.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.BtnHome.Text = "Trang chủ";
+            this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
-            // btnManagerment
+            // BtnManagerment
             // 
-            this.btnManagerment.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.btnProduct,
-            this.btnNhanVien,
-            this.btnKhachHang,
-            this.btnReceipt,
-            this.btnOrder});
-            this.btnManagerment.Expanded = true;
-            this.btnManagerment.Name = "btnManagerment";
-            this.btnManagerment.Text = "Quản lý";
+            this.BtnManagerment.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.BtnProduct,
+            this.BtnNhanVien,
+            this.BtnKhachHang,
+            this.BtnReceipt,
+            this.BtnOrder});
+            this.BtnManagerment.Expanded = true;
+            this.BtnManagerment.Name = "BtnManagerment";
+            this.BtnManagerment.Text = "Quản lý";
             // 
-            // btnProduct
+            // BtnProduct
             // 
-            this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnProduct.Text = "Linh kiện";
-            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
+            this.BtnProduct.Name = "BtnProduct";
+            this.BtnProduct.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.BtnProduct.Text = "Linh kiện";
+            this.BtnProduct.Click += new System.EventHandler(this.BtnProduct_Click);
             // 
-            // btnNhanVien
+            // BtnNhanVien
             // 
-            this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnNhanVien.Text = "Nhân viên";
-            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
+            this.BtnNhanVien.Name = "BtnNhanVien";
+            this.BtnNhanVien.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.BtnNhanVien.Text = "Nhân viên";
+            this.BtnNhanVien.Click += new System.EventHandler(this.BtnNhanVien_Click);
             // 
-            // btnKhachHang
+            // BtnKhachHang
             // 
-            this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnKhachHang.Text = "Khách hàng";
-            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
+            this.BtnKhachHang.Name = "BtnKhachHang";
+            this.BtnKhachHang.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.BtnKhachHang.Text = "Khách hàng";
+            this.BtnKhachHang.Click += new System.EventHandler(this.BtnKhachHang_Click);
             // 
-            // btnReceipt
+            // BtnReceipt
             // 
-            this.btnReceipt.Name = "btnReceipt";
-            this.btnReceipt.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnReceipt.Text = "Phiếu nhập";
-            this.btnReceipt.Click += new System.EventHandler(this.btnReceipt_Click);
+            this.BtnReceipt.Name = "BtnReceipt";
+            this.BtnReceipt.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.BtnReceipt.Text = "Phiếu nhập";
+            this.BtnReceipt.Click += new System.EventHandler(this.BtnReceipt_Click);
             // 
-            // btnOrder
+            // BtnOrder
             // 
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnOrder.Text = "Hoá đơn";
-            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            this.BtnOrder.Name = "BtnOrder";
+            this.BtnOrder.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.BtnOrder.Text = "Hoá đơn";
+            this.BtnOrder.Click += new System.EventHandler(this.BtnOrder_Click);
             // 
-            // btnStaffCustomer
+            // BtnStaffCustomer
             // 
-            this.btnStaffCustomer.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.btnBanHang,
-            this.btnNhapHang,
-            this.btnCustomerOfStaff});
-            this.btnStaffCustomer.Expanded = true;
-            this.btnStaffCustomer.Name = "btnStaffCustomer";
-            this.btnStaffCustomer.Text = "Khách hàng";
+            this.BtnStaffCustomer.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.BtnBanHang,
+            this.BtnNhapHang,
+            this.BtnCustomerOfStaff});
+            this.BtnStaffCustomer.Expanded = true;
+            this.BtnStaffCustomer.Name = "BtnStaffCustomer";
+            this.BtnStaffCustomer.Text = "Khách hàng";
             // 
-            // btnBanHang
+            // BtnBanHang
             // 
-            this.btnBanHang.Name = "btnBanHang";
-            this.btnBanHang.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnBanHang.Text = "Bán hàng";
-            this.btnBanHang.Click += new System.EventHandler(this.btnBanHang_Click);
+            this.BtnBanHang.Name = "BtnBanHang";
+            this.BtnBanHang.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.BtnBanHang.Text = "Bán hàng";
+            this.BtnBanHang.Click += new System.EventHandler(this.BtnBanHang_Click);
             // 
-            // btnNhapHang
+            // BtnNhapHang
             // 
-            this.btnNhapHang.Name = "btnNhapHang";
-            this.btnNhapHang.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnNhapHang.Text = "Nhập hàng";
-            this.btnNhapHang.Click += new System.EventHandler(this.btnNhapHang_Click);
+            this.BtnNhapHang.Name = "BtnNhapHang";
+            this.BtnNhapHang.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.BtnNhapHang.Text = "Nhập hàng";
+            this.BtnNhapHang.Click += new System.EventHandler(this.BtnNhapHang_Click);
             // 
-            // btnCustomerOfStaff
+            // BtnCustomerOfStaff
             // 
-            this.btnCustomerOfStaff.Name = "btnCustomerOfStaff";
-            this.btnCustomerOfStaff.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnCustomerOfStaff.Text = "Quản lý khách hàng";
-            this.btnCustomerOfStaff.Click += new System.EventHandler(this.btnCustomerOfStaff_Click);
+            this.BtnCustomerOfStaff.Name = "BtnCustomerOfStaff";
+            this.BtnCustomerOfStaff.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.BtnCustomerOfStaff.Text = "Quản lý khách hàng";
+            this.BtnCustomerOfStaff.Click += new System.EventHandler(this.BtnCustomerOfStaff_Click);
             // 
-            // btnStatistical
+            // BtnStatistical
             // 
-            this.btnStatistical.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.btnTurnover,
-            this.btnInventory,
-            this.btnTopStaffCustomer,
-            this.btnPredictNextDay});
-            this.btnStatistical.Expanded = true;
-            this.btnStatistical.Name = "btnStatistical";
-            this.btnStatistical.Text = "Thống kê - Dự đoán";
+            this.BtnStatistical.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.BtnTurnover,
+            this.BtnInventory,
+            this.BtnTopStaffCustomer,
+            this.BtnPredictNextDay});
+            this.BtnStatistical.Expanded = true;
+            this.BtnStatistical.Name = "BtnStatistical";
+            this.BtnStatistical.Text = "Thống kê - Dự đoán";
             // 
-            // btnTurnover
+            // BtnTurnover
             // 
-            this.btnTurnover.Name = "btnTurnover";
-            this.btnTurnover.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnTurnover.Text = "Doanh thu";
-            this.btnTurnover.Click += new System.EventHandler(this.btnTurnover_Click);
+            this.BtnTurnover.Name = "BtnTurnover";
+            this.BtnTurnover.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.BtnTurnover.Text = "Doanh thu";
+            this.BtnTurnover.Click += new System.EventHandler(this.BtnTurnover_Click);
             // 
-            // btnInventory
+            // BtnInventory
             // 
-            this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnInventory.Text = "Tồn kho";
-            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
+            this.BtnInventory.Name = "BtnInventory";
+            this.BtnInventory.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.BtnInventory.Text = "Tồn kho";
+            this.BtnInventory.Click += new System.EventHandler(this.BtnInventory_Click);
             // 
-            // btnTopStaffCustomer
+            // BtnTopStaffCustomer
             // 
-            this.btnTopStaffCustomer.Name = "btnTopStaffCustomer";
-            this.btnTopStaffCustomer.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnTopStaffCustomer.Text = "Top khách hàng, nhân viên";
-            this.btnTopStaffCustomer.Click += new System.EventHandler(this.btnTopStaffCustomer_Click);
+            this.BtnTopStaffCustomer.Name = "BtnTopStaffCustomer";
+            this.BtnTopStaffCustomer.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.BtnTopStaffCustomer.Text = "Top khách hàng, nhân viên";
+            this.BtnTopStaffCustomer.Click += new System.EventHandler(this.BtnTopStaffCustomer_Click);
             // 
-            // btnPredictNextDay
+            // BtnPredictNextDay
             // 
-            this.btnPredictNextDay.Name = "btnPredictNextDay";
-            this.btnPredictNextDay.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.btnPredictNextDay.Text = "Dự báo doanh thu";
-            this.btnPredictNextDay.Click += new System.EventHandler(this.btnPredictNextDay_Click);
+            this.BtnPredictNextDay.Name = "BtnPredictNextDay";
+            this.BtnPredictNextDay.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.BtnPredictNextDay.Text = "Dự báo doanh thu";
+            this.BtnPredictNextDay.Click += new System.EventHandler(this.BtnPredictNextDay_Click);
             // 
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.lbTieuDe});
+            this.LbTieuDe});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemTextEdit1});
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(687, 29);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(691, 29);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
-            this.fluentDesignFormControl1.TitleItemLinks.Add(this.lbTieuDe);
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.LbTieuDe);
             // 
-            // lbTieuDe
+            // LbTieuDe
             // 
-            this.lbTieuDe.Caption = "lbTieuDe";
-            this.lbTieuDe.Id = 1;
-            this.lbTieuDe.Name = "lbTieuDe";
+            this.LbTieuDe.Caption = "LbTieuDe";
+            this.LbTieuDe.Id = 0;
+            this.LbTieuDe.Name = "LbTieuDe";
+            // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // barManager1
             // 
@@ -252,11 +248,11 @@ namespace DoAn.FRM
             this.barManager1.DockControls.Add(this.barDockControlRight);
             this.barManager1.Form = this;
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.btnDoiMK,
-            this.btnBackup,
-            this.btnRestore,
-            this.btnLogout,
-            this.lbAccount});
+            this.BtnChangePass,
+            this.BtnBackup,
+            this.BtnRestore,
+            this.BtnLogout,
+            this.LbAccount});
             this.barManager1.MaxItemId = 5;
             this.barManager1.StatusBar = this.bar3;
             // 
@@ -267,39 +263,39 @@ namespace DoAn.FRM
             this.bar1.DockRow = 0;
             this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnDoiMK, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnBackup),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnRestore),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnLogout)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.BtnChangePass),
+            new DevExpress.XtraBars.LinkPersistInfo(this.BtnBackup),
+            new DevExpress.XtraBars.LinkPersistInfo(this.BtnRestore),
+            new DevExpress.XtraBars.LinkPersistInfo(this.BtnLogout)});
             this.bar1.Text = "Tools";
             // 
-            // btnDoiMK
+            // BtnChangePass
             // 
-            this.btnDoiMK.Caption = "Đổi mật khẩu";
-            this.btnDoiMK.Id = 0;
-            this.btnDoiMK.Name = "btnDoiMK";
-            this.btnDoiMK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDoiMK_ItemClick);
+            this.BtnChangePass.Caption = "Đổi mật khẩu";
+            this.BtnChangePass.Id = 0;
+            this.BtnChangePass.Name = "BtnChangePass";
+            this.BtnChangePass.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnChangePass_ItemClick);
             // 
-            // btnBackup
+            // BtnBackup
             // 
-            this.btnBackup.Caption = "Backup";
-            this.btnBackup.Id = 1;
-            this.btnBackup.Name = "btnBackup";
-            this.btnBackup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBackup_ItemClick);
+            this.BtnBackup.Caption = "Backup";
+            this.BtnBackup.Id = 1;
+            this.BtnBackup.Name = "BtnBackup";
+            this.BtnBackup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnBackup_ItemClick);
             // 
-            // btnRestore
+            // BtnRestore
             // 
-            this.btnRestore.Caption = "Restore";
-            this.btnRestore.Id = 2;
-            this.btnRestore.Name = "btnRestore";
-            this.btnRestore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRestore_ItemClick);
+            this.BtnRestore.Caption = "Restore";
+            this.BtnRestore.Id = 2;
+            this.BtnRestore.Name = "BtnRestore";
+            this.BtnRestore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnRestore_ItemClick);
             // 
-            // btnLogout
+            // BtnLogout
             // 
-            this.btnLogout.Caption = "Đăng xuất";
-            this.btnLogout.Id = 3;
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLogout_ItemClick);
+            this.BtnLogout.Caption = "Đăng xuất";
+            this.BtnLogout.Id = 3;
+            this.BtnLogout.Name = "BtnLogout";
+            this.BtnLogout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnLogout_ItemClick);
             // 
             // bar3
             // 
@@ -309,17 +305,17 @@ namespace DoAn.FRM
             this.bar3.DockRow = 0;
             this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
             this.bar3.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.lbAccount)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.LbAccount)});
             this.bar3.OptionsBar.AllowQuickCustomization = false;
             this.bar3.OptionsBar.DrawDragBorder = false;
             this.bar3.OptionsBar.UseWholeRow = true;
             this.bar3.Text = "Status bar";
             // 
-            // lbAccount
+            // LbAccount
             // 
-            this.lbAccount.Caption = "NV";
-            this.lbAccount.Id = 4;
-            this.lbAccount.Name = "lbAccount";
+            this.LbAccount.Caption = "LbAccount";
+            this.LbAccount.Id = 4;
+            this.LbAccount.Name = "LbAccount";
             // 
             // barDockControlTop
             // 
@@ -327,15 +323,15 @@ namespace DoAn.FRM
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 29);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(687, 24);
+            this.barDockControlTop.Size = new System.Drawing.Size(691, 24);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 445);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 447);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(687, 26);
+            this.barDockControlBottom.Size = new System.Drawing.Size(691, 26);
             // 
             // barDockControlLeft
             // 
@@ -343,23 +339,23 @@ namespace DoAn.FRM
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 53);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 392);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 394);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(687, 53);
+            this.barDockControlRight.Location = new System.Drawing.Point(691, 53);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 392);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 394);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 471);
-            this.ControlContainer = this.mainContainer;
-            this.Controls.Add(this.mainContainer);
+            this.ClientSize = new System.Drawing.Size(691, 473);
+            this.ControlContainer = this.fluentDesignFormContainer1;
+            this.Controls.Add(this.fluentDesignFormContainer1);
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -369,9 +365,8 @@ namespace DoAn.FRM
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
             this.Name = "FrmMain";
             this.NavigationControl = this.accordionControl1;
-            this.Text = "Phần mềm quản lý bán linh kiện điện tử";
-            this.Load += new System.EventHandler(this.FrmMain_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
+            this.Text = "FrmMain";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
@@ -381,39 +376,38 @@ namespace DoAn.FRM
         }
 
         #endregion
-        private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer mainContainer;
+        private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer fluentDesignFormContainer1;
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnHome;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnHome;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
-        private DevExpress.XtraBars.BarHeaderItem lbTieuDe;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar1;
-        private DevExpress.XtraBars.BarButtonItem btnDoiMK;
-        private DevExpress.XtraBars.BarButtonItem btnBackup;
-        private DevExpress.XtraBars.BarButtonItem btnRestore;
-        private DevExpress.XtraBars.BarButtonItem btnLogout;
+        private DevExpress.XtraBars.BarButtonItem BtnChangePass;
+        private DevExpress.XtraBars.BarButtonItem BtnBackup;
+        private DevExpress.XtraBars.BarButtonItem BtnRestore;
+        private DevExpress.XtraBars.BarButtonItem BtnLogout;
         private DevExpress.XtraBars.Bar bar3;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnManagerment;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnProduct;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnNhanVien;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnKhachHang;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnReceipt;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnOrder;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnStaffCustomer;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnBanHang;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnNhapHang;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnCustomerOfStaff;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnStatistical;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnTurnover;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnInventory;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnTopStaffCustomer;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement btnPredictNextDay;
-        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
-        private DevExpress.XtraBars.BarHeaderItem lbAccount;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnManagerment;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnProduct;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnNhanVien;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnKhachHang;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnReceipt;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnOrder;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnStaffCustomer;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnBanHang;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnNhapHang;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnCustomerOfStaff;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnStatistical;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnTurnover;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnInventory;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnTopStaffCustomer;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnPredictNextDay;
+        private DevExpress.XtraBars.BarHeaderItem LbAccount;
+        private DevExpress.XtraBars.BarHeaderItem LbTieuDe;
     }
 }

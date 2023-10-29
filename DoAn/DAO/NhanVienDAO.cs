@@ -20,7 +20,7 @@ namespace DAO
         public dynamic GetNVs()
         {
             var lst = (from nv in db.NHANVIENs select nv).ToList();
-            return lst;
+            return Support.ToDataTable<NHANVIEN>(lst); ;
         }
         public int Insert(string tennv, string diachi, string sdt, bool gioiTinh, DateTime ngayVL
             , double luong, string hinhAnh, string taiKhoan, int maQuyen)

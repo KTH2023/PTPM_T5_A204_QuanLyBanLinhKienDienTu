@@ -20,7 +20,7 @@ namespace DAO
         public dynamic GetLinhKiens()
         {
             db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues, db.LINHKIENs);
-            return from lk in db.LINHKIENs select lk;
+            return Support.ToDataTable < LINHKIEN >(( from lk in db.LINHKIENs select lk).ToList());
         }
         public int Insert(string tenLK, int maLoai, string hangSX, double donGia, string hinhAnh, int soLuongCon)
         {

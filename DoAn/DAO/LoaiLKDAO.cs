@@ -22,7 +22,7 @@ namespace DAO
         }
         public dynamic GetLoaiLKs()
         {
-            return from llk in db.LOAILINHKIENs select llk;
+            return Support.ToDataTable<LOAILINHKIEN>( (from llk in db.LOAILINHKIENs select llk).ToList());
         }
         public int Insert(string tenLoai)
         {

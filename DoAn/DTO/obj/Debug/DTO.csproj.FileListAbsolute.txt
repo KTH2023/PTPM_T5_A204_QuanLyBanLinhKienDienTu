@@ -3,4 +3,3 @@ C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\
 C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DTO\obj\Debug\DTO.dll
 C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DTO\obj\Debug\DTO.pdb
-C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache

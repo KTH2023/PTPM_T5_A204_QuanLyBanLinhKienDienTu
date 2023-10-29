@@ -60,8 +60,12 @@ namespace DAO
     partial void InsertNHAPKHO(NHAPKHO instance);
     partial void UpdateNHAPKHO(NHAPKHO instance);
     partial void DeleteNHAPKHO(NHAPKHO instance);
-    #endregion
-		
+		#endregion
+		public QL_LinhKienDBDataContext() :
+				base(Properties.Settings.Default.QL_LINHKIENMAYTINHConnectionString, mappingSource)
+		{
+			OnCreated();
+		}
 		public QL_LinhKienDBDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
@@ -85,8 +89,8 @@ namespace DAO
 		{
 			OnCreated();
 		}
-		
-		public System.Data.Linq.Table<CHITIETHD> CHITIETHDs
+
+        public System.Data.Linq.Table<CHITIETHD> CHITIETHDs
 		{
 			get
 			{
