@@ -6,10 +6,10 @@ using BUS;
 
 namespace DoAn.FRM
 {
-    public partial class frmLogin : DevExpress.XtraEditors.XtraForm
+    public partial class FrmLogin : DevExpress.XtraEditors.XtraForm
     {
-        private frmSystem frm;
-        public frmLogin(frmSystem frm)
+        private FrmSystem frm;
+        public FrmLogin(FrmSystem frm)
         {
             InitializeComponent();
             this.frm = frm;
@@ -27,7 +27,7 @@ namespace DoAn.FRM
             else
                 ckbRemember.Checked = false;
         }
-        private bool validateTextBox(TextEdit txt)
+        private bool ValidateTextBox(TextEdit txt)
         {
             if (txt.Text.Trim().Length == 0)
             {
@@ -39,11 +39,11 @@ namespace DoAn.FRM
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (validateTextBox(txtUsername) || validateTextBox(txtPassword))
+            if (ValidateTextBox(txtUsername) || ValidateTextBox(txtPassword))
                 return;
             splashScreenManager1.ShowWaitForm();
             int errorCode = 0;
-            var nv = NhanVienBUS.Instances.login(txtUsername.Text, txtPassword.Text,ref errorCode);
+            var nv = NhanVienBUS.Instances.Login(txtUsername.Text, txtPassword.Text,ref errorCode);
             if (errorCode.ToString().Equals("-2146232060"))
             {
                 splashScreenManager1.CloseWaitForm();

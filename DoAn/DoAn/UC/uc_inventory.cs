@@ -10,17 +10,24 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraReports.Parameters;
-namespace GUI.UC
+using DoAn.FRM;
+using GUI.Report;
+using BUS;
+
+namespace DoAn.UC
 {
-    public partial class uc_inventory : DevExpress.XtraEditors.XtraUserControl
+    public partial class Uc_inventory : DevExpress.XtraEditors.XtraUserControl
     {
-       
-        public uc_inventory()
+        FrmMain frm;
+        public Uc_inventory(FrmMain frm)
         {
             InitializeComponent();
-            
+            this.frm = frm;
+            gvInventory.IndicatorWidth = 50;
+            dateFrom.DateTime = DateTime.Now;
+            dateTo.DateTime = DateTime.Now;
         }
 
-       
+        
     }
 }

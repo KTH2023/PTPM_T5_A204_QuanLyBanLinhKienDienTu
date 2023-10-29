@@ -17,12 +17,12 @@ namespace DAO
                 return instances;}
             set{ instances = value;}
         }
-        public dynamic getNVs()
+        public dynamic GetNVs()
         {
             var lst = (from nv in db.NHANVIENs select nv).ToList();
             return lst;
         }
-        public int insert(string tennv, string diachi, string sdt, bool gioiTinh, DateTime ngayVL
+        public int Insert(string tennv, string diachi, string sdt, bool gioiTinh, DateTime ngayVL
             , double luong, string hinhAnh, string taiKhoan, int maQuyen)
         {
             try
@@ -49,7 +49,7 @@ namespace DAO
             }
 
         }
-        public int update(string tennv, string diachi, string sdt, bool gioiTinh, DateTime ngayVL
+        public int Update(string tennv, string diachi, string sdt, bool gioiTinh, DateTime ngayVL
             , double luong, string hinhAnh, int maQuyen, int manv)
         {
             var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == manv);
@@ -77,25 +77,23 @@ namespace DAO
             }
 
         }
-        //public int delete(int manv)
-        //{
-        //    try
-        //    {
-        //        var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == manv);
-        //        if (nv == null||HoaDonBUS.Instances.checkIsStaffOrder(nv.MANV) || NhapKhoBUS.Instances.checkIsStaffImport(manv))
-        //            return -1;
-        //        db.NHANVIENs.DeleteOnSubmit(nv);
-        //        db.SubmitChanges();
-        //        return 1;
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        return -1;
-        //    }
-
-        //}
-        public int resetPass(int manv)
+        public int Delete(int manv)
+        {
+            try
+            {
+                var nv = db.NHANVIENs.FirstOrDefault(x => x.MANV == manv);
+                if (nv == null || HoaDonDAO.Instances.CheckIsStaffOrder(nv.MANV) || NhapKhoDAO.Instances.CheckIsStaffImport(manv))
+                    return -1;
+                db.NHANVIENs.DeleteOnSubmit(nv);
+                db.SubmitChanges();
+                return 1;
+            }
+            catch (Exception)
+            {
+                return -1;
+            }
+        }
+        public int ResetPass(int manv)
         {
             try
             {
@@ -114,23 +112,21 @@ namespace DAO
             }
 
         }
-        public NHANVIEN login(string userName, string passWord, ref int errorCode)
+        public NHANVIEN Login(string userName, string passWord, ref int errorCode)
         {
             passWord = Support.EndCodeMD5(passWord.Trim());
             NHANVIEN nv = null;
             try
             {
                 nv = db.NHANVIENs.FirstOrDefault(x => x.taikhoan.Trim().Equals(userName.Trim()) && x.MATKHAU.Equals(passWord));
-
             }
             catch (SqlException ex)
             {
                 errorCode = ex.ErrorCode;
             }
-
             return nv;
         }
-        public int changePass(int manv, string oldPass, string newPass)
+        public int ChangePass(int manv, string oldPass, string newPass)
         {
             try
             {
@@ -146,8 +142,6 @@ namespace DAO
             {
                 return -1;
             }
-
         }
-
     }
 }

@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_LINHKIENMAYTINH" Class="QL_LinhKienDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=TKNG2001\SQLEXPRESS;Initial Catalog=QL_LINHKIENMAYTINH;Integrated Security=True" SettingsObjectName="DAO.Properties.Settings" SettingsPropertyName="QL_LINHKIENMAYTINHConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.CHITIETHD" Member="CHITIETHDs">
     <Type Name="CHITIETHD">
       <Column Name="MAHD" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -113,4 +112,26 @@
       <Association Name="NHANVIEN_NHAPKHO" Member="NHANVIEN" ThisKey="MANV" OtherKey="MANV" Type="NHANVIEN" IsForeignKey="true" />
     </Type>
   </Table>
+  <Function Name="dbo.topCustomerBuy" Method="topCustomerBuy" IsComposable="true">
+    <Parameter Name="checkType" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="date" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="topCustomerBuyResult">
+      <Column Name="name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="totalMoney" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.topStaffSell" Method="topStaffSell" IsComposable="true">
+    <Parameter Name="checkType" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="date" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="topStaffSellResult">
+      <Column Name="name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="totalOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.topSelling" Method="topSelling" IsComposable="true">
+    <ElementType Name="topSellingResult">
+      <Column Name="TENLINHKIEN" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

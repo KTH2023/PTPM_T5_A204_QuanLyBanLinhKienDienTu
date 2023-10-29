@@ -1,6 +1,6 @@
-﻿namespace GUI.UC
+﻿namespace DoAn.UC
 {
-    partial class uc_import
+    partial class Uc_import
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_import));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Uc_import));
             this.gvImportDetail = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -68,82 +68,77 @@
             this.gridColumn9,
             this.gridColumn10,
             this.gridColumn11});
-            this.gvImportDetail.DetailHeight = 368;
+            this.gvImportDetail.DetailHeight = 239;
+            this.gvImportDetail.FixedLineWidth = 1;
             this.gvImportDetail.GridControl = this.gcImport;
             this.gvImportDetail.Name = "gvImportDetail";
             this.gvImportDetail.OptionsView.ShowGroupPanel = false;
+            this.gvImportDetail.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.GvImportDetail_CustomDrawRowIndicator);
             // 
             // gridColumn7
             // 
             this.gridColumn7.Caption = "Mã phiếu nhập";
             this.gridColumn7.FieldName = "MAPN";
-            this.gridColumn7.MinWidth = 30;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 0;
-            this.gridColumn7.Width = 112;
             // 
             // gridColumn8
             // 
             this.gridColumn8.Caption = "Linh kiện";
             this.gridColumn8.FieldName = "LINHKIEN.TENLINHKIEN";
-            this.gridColumn8.MinWidth = 30;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 1;
-            this.gridColumn8.Width = 112;
             // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "Số lượng";
             this.gridColumn9.FieldName = "SOLUONG";
-            this.gridColumn9.MinWidth = 30;
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 2;
-            this.gridColumn9.Width = 112;
             // 
             // gridColumn10
             // 
             this.gridColumn10.Caption = "Đơn giá";
             this.gridColumn10.FieldName = "DONGIA";
-            this.gridColumn10.MinWidth = 30;
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 3;
-            this.gridColumn10.Width = 112;
             // 
             // gridColumn11
             // 
             this.gridColumn11.Caption = "Thành tiền";
             this.gridColumn11.FieldName = "THANHTIEN";
-            this.gridColumn11.MinWidth = 30;
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.OptionsColumn.AllowEdit = false;
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 4;
-            this.gridColumn11.Width = 112;
             // 
             // gcImport
             // 
             this.gcImport.Dock = System.Windows.Forms.DockStyle.Fill;
-            gridLevelNode1.LevelTemplate = this.gvImportDetail;
-            gridLevelNode1.RelationName = "Chi tiết phiếu nhập";
+            this.gcImport.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            gridLevelNode2.LevelTemplate = this.gvImportDetail;
+            gridLevelNode2.RelationName = "Chi tiết phiếu nhập";
             this.gcImport.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
-            this.gcImport.Location = new System.Drawing.Point(0, 40);
+            gridLevelNode2});
+            this.gcImport.Location = new System.Drawing.Point(0, 28);
             this.gcImport.MainView = this.gvImport;
+            this.gcImport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gcImport.MenuManager = this.barManager1;
             this.gcImport.Name = "gcImport";
-            this.gcImport.Size = new System.Drawing.Size(862, 435);
+            this.gcImport.Size = new System.Drawing.Size(575, 281);
             this.gcImport.TabIndex = 5;
             this.gcImport.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvImport,
             this.gvImportDetail});
+            this.gcImport.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.GcImport_PreviewKeyDown);
             // 
             // gvImport
             // 
@@ -153,7 +148,8 @@
             this.gridColumn3,
             this.gridColumn6,
             this.gridColumn4});
-            this.gvImport.DetailHeight = 368;
+            this.gvImport.DetailHeight = 239;
+            this.gvImport.FixedLineWidth = 1;
             this.gvImport.GridControl = this.gcImport;
             this.gvImport.Name = "gvImport";
             this.gvImport.OptionsFind.AlwaysVisible = true;
@@ -162,61 +158,56 @@
             this.gvImport.OptionsFind.FindNullPrompt = "Tìm kiếm tại đây...";
             this.gvImport.OptionsFind.ShowFindButton = false;
             this.gvImport.OptionsView.ShowGroupPanel = false;
+            this.gvImport.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.GvImport_CustomDrawRowIndicator);
+            this.gvImport.MasterRowEmpty += new DevExpress.XtraGrid.Views.Grid.MasterRowEmptyEventHandler(this.GvImport_MasterRowEmpty);
+            this.gvImport.MasterRowGetChildList += new DevExpress.XtraGrid.Views.Grid.MasterRowGetChildListEventHandler(this.GvImport_MasterRowGetChildList);
+            this.gvImport.MasterRowGetRelationName += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationNameEventHandler(this.GvImport_MasterRowGetRelationName);
+            this.gvImport.MasterRowGetRelationCount += new DevExpress.XtraGrid.Views.Grid.MasterRowGetRelationCountEventHandler(this.GvImport_MasterRowGetRelationCount);
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Mã phiếu nhập";
             this.gridColumn1.FieldName = "MAPN";
-            this.gridColumn1.MinWidth = 30;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 112;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Ngày nhập";
             this.gridColumn2.FieldName = "NGAYNHAP";
-            this.gridColumn2.MinWidth = 30;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 112;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Nhân viên";
             this.gridColumn3.FieldName = "NHANVIEN.TENNV";
-            this.gridColumn3.MinWidth = 30;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 112;
             // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Tổng tiền";
             this.gridColumn6.FieldName = "tongtien";
-            this.gridColumn6.MinWidth = 30;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 3;
-            this.gridColumn6.Width = 112;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Thanh toán?";
             this.gridColumn4.FieldName = "isPay";
-            this.gridColumn4.MinWidth = 30;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 4;
-            this.gridColumn4.Width = 112;
             // 
             // barManager1
             // 
@@ -257,6 +248,7 @@
             this.btnPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPrint.ImageOptions.LargeImage")));
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPrint_ItemClick);
             // 
             // btnXoa
             // 
@@ -266,6 +258,7 @@
             this.btnXoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.LargeImage")));
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnXoa_ItemClick);
             // 
             // btnClose
             // 
@@ -275,6 +268,7 @@
             this.btnClose.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.LargeImage")));
             this.btnClose.Name = "btnClose";
             this.btnClose.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnClose.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnClose_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -282,31 +276,35 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(862, 40);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barDockControlTop.Size = new System.Drawing.Size(575, 28);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 475);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 309);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(862, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barDockControlBottom.Size = new System.Drawing.Size(575, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 40);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 28);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 435);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 281);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(862, 40);
+            this.barDockControlRight.Location = new System.Drawing.Point(575, 28);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 435);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 281);
             // 
             // btnDelete
             // 
@@ -316,18 +314,20 @@
             this.btnDelete.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.LargeImage")));
             this.btnDelete.Name = "btnDelete";
             // 
-            // uc_import
+            // Uc_import
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gcImport);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Name = "uc_import";
-            this.Size = new System.Drawing.Size(862, 475);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "Uc_import";
+            this.Size = new System.Drawing.Size(575, 309);
             this.Tag = "Phiếu nhập";
+            this.Load += new System.EventHandler(this.Uc_import_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvImportDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcImport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvImport)).EndInit();

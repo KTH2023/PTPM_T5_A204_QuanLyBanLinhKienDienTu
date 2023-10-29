@@ -62,12 +62,6 @@ namespace DAO
     partial void DeleteNHAPKHO(NHAPKHO instance);
     #endregion
 		
-		public QL_LinhKienDBDataContext() : 
-				base(global::DAO.Properties.Settings.Default.QL_LINHKIENMAYTINHConnectionString, mappingSource)
-		{
-			OnCreated();
-		}
-		
 		public QL_LinhKienDBDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
@@ -170,6 +164,24 @@ namespace DAO
 			{
 				return this.GetTable<NHAPKHO>();
 			}
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.topCustomerBuy", IsComposable=true)]
+		public IQueryable<topCustomerBuyResult> topCustomerBuy([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Bit")] System.Nullable<bool> checkType, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> date)
+		{
+			return this.CreateMethodCallQuery<topCustomerBuyResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), checkType, date);
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.topStaffSell", IsComposable=true)]
+		public IQueryable<topStaffSellResult> topStaffSell([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Bit")] System.Nullable<bool> checkType, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> date)
+		{
+			return this.CreateMethodCallQuery<topStaffSellResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), checkType, date);
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.topSelling", IsComposable=true)]
+		public IQueryable<topSellingResult> topSelling()
+		{
+			return this.CreateMethodCallQuery<topSellingResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 		}
 	}
 	
@@ -2512,6 +2524,138 @@ namespace DAO
 		{
 			this.SendPropertyChanging();
 			entity.NHAPKHO = null;
+		}
+	}
+	
+	public partial class topCustomerBuyResult
+	{
+		
+		private string _name;
+		
+		private System.Nullable<int> _totalMoney;
+		
+		public topCustomerBuyResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(100)")]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this._name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_totalMoney", DbType="Int")]
+		public System.Nullable<int> totalMoney
+		{
+			get
+			{
+				return this._totalMoney;
+			}
+			set
+			{
+				if ((this._totalMoney != value))
+				{
+					this._totalMoney = value;
+				}
+			}
+		}
+	}
+	
+	public partial class topStaffSellResult
+	{
+		
+		private string _name;
+		
+		private System.Nullable<int> _totalOrder;
+		
+		public topStaffSellResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(100)")]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this._name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_totalOrder", DbType="Int")]
+		public System.Nullable<int> totalOrder
+		{
+			get
+			{
+				return this._totalOrder;
+			}
+			set
+			{
+				if ((this._totalOrder != value))
+				{
+					this._totalOrder = value;
+				}
+			}
+		}
+	}
+	
+	public partial class topSellingResult
+	{
+		
+		private string _TENLINHKIEN;
+		
+		private System.Nullable<int> _soluong;
+		
+		public topSellingResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENLINHKIEN", DbType="NVarChar(300)")]
+		public string TENLINHKIEN
+		{
+			get
+			{
+				return this._TENLINHKIEN;
+			}
+			set
+			{
+				if ((this._TENLINHKIEN != value))
+				{
+					this._TENLINHKIEN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soluong", DbType="Int")]
+		public System.Nullable<int> soluong
+		{
+			get
+			{
+				return this._soluong;
+			}
+			set
+			{
+				if ((this._soluong != value))
+				{
+					this._soluong = value;
+				}
+			}
 		}
 	}
 }

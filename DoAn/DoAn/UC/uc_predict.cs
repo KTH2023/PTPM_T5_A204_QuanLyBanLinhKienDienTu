@@ -10,12 +10,12 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraCharts;
 
-namespace GUI.UC
+namespace DoAn.UC
 {
-    public partial class uc_predict : DevExpress.XtraEditors.XtraUserControl
+    public partial class Uc_predict : DevExpress.XtraEditors.XtraUserControl
     {
         
-        public uc_predict()
+        public Uc_predict()
         {
             InitializeComponent();
             

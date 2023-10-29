@@ -12,17 +12,19 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using DevExpress.XtraEditors.Controls;
 using System.Globalization;
+using DoAn.FRM;
+using BUS;
 
-namespace GUI.UC
+namespace DoAn.UC
 {
-    public partial class uc_order_employee : DevExpress.XtraEditors.XtraUserControl
+    public partial class Uc_order_employee : DevExpress.XtraEditors.XtraUserControl
     {
-       
-        public uc_order_employee()
+        FrmMain frm;
+        public Uc_order_employee(FrmMain frm)
         {
             InitializeComponent();
-            
+            this.frm = frm;
         }
-        
+       
     }
 }

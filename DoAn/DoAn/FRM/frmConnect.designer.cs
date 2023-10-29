@@ -1,6 +1,6 @@
 ﻿namespace DoAn.FRM
 {
-    partial class frmConnect
+    partial class FrmConnect
     {
         /// <summary>
         /// Required designer variable.

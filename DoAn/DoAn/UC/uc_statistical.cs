@@ -10,11 +10,11 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraReports.Parameters;
-namespace GUI.UC
+namespace DoAn.UC
 {
-    public partial class uc_statistical : DevExpress.XtraEditors.XtraUserControl
+    public partial class Uc_statistical : DevExpress.XtraEditors.XtraUserControl
     {
-        public uc_statistical()
+        public Uc_statistical()
         {
             InitializeComponent();
         }     

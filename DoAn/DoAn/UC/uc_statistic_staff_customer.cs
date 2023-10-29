@@ -9,13 +9,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraCharts;
-namespace GUI.UC
+using DoAn.FRM;
+using BUS;
+
+namespace DoAn.UC
 {
-    public partial class uc_statistic_staff_customer : DevExpress.XtraEditors.XtraUserControl
+    public partial class Uc_statistic_staff_customer : DevExpress.XtraEditors.XtraUserControl
     {
-        public uc_statistic_staff_customer()
+        FrmMain frm;
+        bool checkTypeStatistic;
+        public Uc_statistic_staff_customer(FrmMain frm)
         {
             InitializeComponent();
-        }      
+            this.frm = frm;
+            dateStatistic.DateTime = DateTime.Now;
+        }
+
+        
     }
 }

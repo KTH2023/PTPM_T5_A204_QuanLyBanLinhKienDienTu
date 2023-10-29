@@ -1,28 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using BUS;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraEditors.Controls;
+using DoAn.FRM;
 
-namespace GUI.UC
+namespace DoAn.UC
 {
-    public partial class uc_import_employee : DevExpress.XtraEditors.XtraUserControl
+    public partial class Uc_import_employee : DevExpress.XtraEditors.XtraUserControl
     {
-        public uc_import_employee()
+        FrmMain frm;
+        public Uc_import_employee(FrmMain frm)
         {
             InitializeComponent();
+            this.frm = frm;
         }
-        private void uc_import_employee_Load(object sender, EventArgs e)
-        {
-            
-        }
-        
     }
 }

@@ -7,11 +7,11 @@ using BUS;
 
 namespace DoAn.FRM
 {
-    public partial class frmConnect : DevExpress.XtraEditors.XtraForm
+    public partial class FrmConnect : DevExpress.XtraEditors.XtraForm
     {
         private string connectionString;
-        private frmSystem frm; 
-        public frmConnect(frmSystem frm)
+        private FrmSystem frm; 
+        public FrmConnect(FrmSystem frm)
         {
             InitializeComponent();
             this.frm = frm;
@@ -33,7 +33,7 @@ namespace DoAn.FRM
                 frm.setStatus("Test kết nối thất bại.",Color.Red);
             }
         }
-        private bool validateTextBox(TextEdit txt)
+        private bool ValidateTextBox(TextEdit txt)
         {
             if (txt.Text.Trim().Length == 0)
             {
@@ -45,7 +45,7 @@ namespace DoAn.FRM
         }
         private void cbbDatabase_MouseDown(object sender, MouseEventArgs e)
         {
-            if (validateTextBox(txtUsername) || validateTextBox(txtPassword))            
+            if (ValidateTextBox(txtUsername) || ValidateTextBox(txtPassword))            
                 return;
             splashScreenManager1.ShowWaitForm();
             DataTable tb = Support.GetDBName(".", txtUsername.Text.Trim(), txtPassword.Text);
@@ -88,7 +88,5 @@ namespace DoAn.FRM
                 XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        
     }
 }

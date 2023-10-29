@@ -5,9 +5,9 @@ using DevExpress.XtraBars;
 
 namespace DoAn.FRM
 {
-    public partial class frmSystem : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class FrmSystem : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public frmSystem()
+        public FrmSystem()
         {
             InitializeComponent();
             lbStatus.Caption = "";
@@ -33,27 +33,27 @@ namespace DoAn.FRM
         }
         private void btnConnect_ItemClick(object sender, ItemClickEventArgs e)
         {
-            openForm(typeof(frmConnect));
+            openForm(typeof(FrmConnect));
         }
         private void btnLogin_ItemClick(object sender, ItemClickEventArgs e)
         {
-            openForm(typeof(frmLogin));
+            openForm(typeof(FrmLogin));
         }
         private void frmSystem_Load(object sender, EventArgs e)
         {
-            openForm(typeof(frmLogin));
+            openForm(typeof(FrmLogin));
         }
-        //public void _show()
-        //{
-        //    this.Show();
-        //    foreach (Form frm in MdiChildren)
-        //    {
-        //        if (frm.GetType() == typeof(frmLogin))
-        //        {
-        //            frm.Close();
-        //            return;
-        //        }
-        //    }
-        //}
+        public void _show()
+        {
+            this.Show();
+            foreach (Form frm in MdiChildren)
+            {
+                if (frm.GetType() == typeof(FrmLogin))
+                {
+                    frm.Close();
+                    return;
+                }
+            }
+        }
     }
 }

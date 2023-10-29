@@ -1,6 +1,6 @@
 ﻿namespace DoAn.FRM
 {
-    partial class frmLogin
+    partial class FrmLogin
     {
         /// <summary>
         /// Required designer variable.

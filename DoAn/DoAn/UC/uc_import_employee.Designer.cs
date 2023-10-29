@@ -1,6 +1,6 @@
-﻿namespace GUI.UC
+﻿namespace DoAn.UC
 {
-    partial class uc_import_employee
+    partial class Uc_import_employee
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_import_employee));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Uc_import_employee));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.btnThanhToan = new DevExpress.XtraEditors.SimpleButton();
             this.btnDestroy = new DevExpress.XtraEditors.SimpleButton();
@@ -508,7 +508,6 @@
             this.Name = "uc_import_employee";
             this.Size = new System.Drawing.Size(939, 675);
             this.Tag = "Nhập hàng";
-            this.Load += new System.EventHandler(this.uc_import_employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcImportDetail)).EndInit();
