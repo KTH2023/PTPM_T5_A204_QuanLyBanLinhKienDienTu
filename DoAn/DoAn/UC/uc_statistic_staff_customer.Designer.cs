@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::DoAn.FRM.WaitForm1), true, true, typeof(System.Windows.Forms.UserControl));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.btnStatisticStaff = new DevExpress.XtraEditors.SimpleButton();
             this.btnStatisticalCustomer = new DevExpress.XtraEditors.SimpleButton();
@@ -41,7 +42,6 @@
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::DoAn.FRM.WaitForm1), true, true, typeof(System.Windows.Forms.UserControl));
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateStatistic.Properties.CalendarTimeProperties)).BeginInit();
@@ -56,6 +56,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             this.SuspendLayout();
+            // 
+            // splashScreenManager1
+            // 
+            this.splashScreenManager1.ClosingDelay = 500;
             // 
             // layoutControl1
             // 
@@ -82,6 +86,7 @@
             this.btnStatisticStaff.StyleController = this.layoutControl1;
             this.btnStatisticStaff.TabIndex = 8;
             this.btnStatisticStaff.Text = "Thống kê nhân viên";
+            this.btnStatisticStaff.Click += new System.EventHandler(this.BtnStatisticStaff_Click);
             // 
             // btnStatisticalCustomer
             // 
@@ -92,6 +97,7 @@
             this.btnStatisticalCustomer.StyleController = this.layoutControl1;
             this.btnStatisticalCustomer.TabIndex = 7;
             this.btnStatisticalCustomer.Text = "Thống kê khách hàng";
+            this.btnStatisticalCustomer.Click += new System.EventHandler(this.BtnStatisticalCustomer_Click);
             // 
             // dateStatistic
             // 
@@ -127,6 +133,7 @@
             this.chartTopCustomer.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
             this.chartTopCustomer.Size = new System.Drawing.Size(256, 270);
             this.chartTopCustomer.TabIndex = 4;
+            this.chartTopCustomer.CustomDrawAxisLabel += new DevExpress.XtraCharts.CustomDrawAxisLabelEventHandler(this.ChartTopCustomer_CustomDrawAxisLabel);
             // 
             // Root
             // 
@@ -196,17 +203,13 @@
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
-            // splashScreenManager1
-            // 
-            this.splashScreenManager1.ClosingDelay = 500;
-            // 
-            // Uc_statistic_staff_customer
+            // uc_statistic_staff_customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Uc_statistic_staff_customer";
+            this.Name = "uc_statistic_staff_customer";
             this.Size = new System.Drawing.Size(529, 284);
             this.Tag = "Thống kê top nhân viên,khách hàng";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
@@ -227,6 +230,7 @@
         }
 
         #endregion
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraCharts.ChartControl chartTopCustomer;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
@@ -240,6 +244,5 @@
         private DevExpress.XtraEditors.SimpleButton btnStatisticalCustomer;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

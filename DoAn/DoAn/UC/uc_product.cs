@@ -129,7 +129,7 @@ namespace DoAn.UC
             {
                 try
                 {
-                    if (gvProduct.GetRowCellValue(e.RowHandle, "HINHANH") != null)
+                    if (e.RowHandle >= 0)
                     {
                         Image img = Image.FromFile("../../Images/" + gvProduct.GetRowCellValue(e.RowHandle, "HINHANH").ToString());
                         images.Images.Clear();

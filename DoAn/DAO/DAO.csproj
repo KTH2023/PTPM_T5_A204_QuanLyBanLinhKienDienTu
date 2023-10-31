@@ -66,6 +66,7 @@
       <DependentUpon>QL_LinhKienDB.dbml</DependentUpon>
     </Compile>
     <Compile Include="QuyenDAO.cs" />
+    <Compile Include="StatisticalDAO.cs" />
     <Compile Include="Support.cs" />
   </ItemGroup>
   <ItemGroup>

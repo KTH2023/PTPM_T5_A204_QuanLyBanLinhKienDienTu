@@ -26,7 +26,7 @@ namespace DAO
         }
         public dynamic GetLoaiKHs()
         {
-            return from lkh in db.LOAIKHs select lkh;
+            return Support.ToDataTable<LOAIKH>((from lkh in db.LOAIKHs select lkh).ToList());
         }
         public int Insert(string tenLoaiKH, double giamGia)
         {

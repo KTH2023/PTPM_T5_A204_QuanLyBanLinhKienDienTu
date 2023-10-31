@@ -134,6 +134,7 @@
             this.btnPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPrint.ImageOptions.LargeImage")));
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPrint_ItemClick);
             // 
             // btnDong
             // 
@@ -143,6 +144,7 @@
             this.btnDong.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDong.ImageOptions.LargeImage")));
             this.btnDong.Name = "btnDong";
             this.btnDong.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnDong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnDong_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -203,6 +205,7 @@
             this.btnThongKe.StyleController = this.layoutControl1;
             this.btnThongKe.TabIndex = 11;
             this.btnThongKe.Text = "Thống kê";
+            this.btnThongKe.Click += new System.EventHandler(this.BtnThongKe_Click);
             // 
             // simpleButton1
             // 
@@ -235,6 +238,7 @@
             this.gvInventory.GridControl = this.gcInventory;
             this.gvInventory.Name = "gvInventory";
             this.gvInventory.OptionsView.ShowGroupPanel = false;
+            this.gvInventory.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.GvInventory_CustomDrawRowIndicator);
             // 
             // gridColumn1
             // 

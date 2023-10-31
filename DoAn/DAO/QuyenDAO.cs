@@ -26,7 +26,7 @@ namespace DAO
 
         public dynamic GetQuyens()
         {
-            return from q in db.QUYENs select q;
+            return Support.ToDataTable<QUYEN>(( from q in db.QUYENs select q).ToList());
         }
         public int Insert(string tenQuyen)
         {

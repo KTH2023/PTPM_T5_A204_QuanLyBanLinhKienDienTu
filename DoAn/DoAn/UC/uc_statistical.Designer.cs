@@ -124,6 +124,7 @@
             this.btnPrint.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPrint.ImageOptions.LargeImage")));
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPrint_ItemClick);
             // 
             // btnDong
             // 
@@ -133,6 +134,7 @@
             this.btnDong.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDong.ImageOptions.LargeImage")));
             this.btnDong.Name = "btnDong";
             this.btnDong.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnDong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnDong_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -200,6 +202,7 @@
             this.btnThongKe.StyleController = this.layoutControl1;
             this.btnThongKe.TabIndex = 11;
             this.btnThongKe.Text = "Thống kê";
+            this.btnThongKe.Click += new System.EventHandler(this.BtnThongKe_Click);
             // 
             // simpleButton1
             // 
@@ -213,7 +216,7 @@
             // 
             // gcStatistical
             // 
-            this.gcStatistical.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.gcStatistical.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gcStatistical.Location = new System.Drawing.Point(16, 117);
             this.gcStatistical.MainView = this.gvStatistical;
             this.gcStatistical.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -236,6 +239,7 @@
             this.gvStatistical.GridControl = this.gcStatistical;
             this.gvStatistical.Name = "gvStatistical";
             this.gvStatistical.OptionsView.ShowGroupPanel = false;
+            this.gvStatistical.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.GvStatistical_CustomDrawRowIndicator);
             // 
             // gridColumn1
             // 
@@ -442,7 +446,7 @@
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
-            // Uc_statistical
+            // uc_statistical
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -452,7 +456,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Uc_statistical";
+            this.Name = "uc_statistical";
             this.Size = new System.Drawing.Size(551, 297);
             this.Tag = "Thống kê doanh thu";
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();

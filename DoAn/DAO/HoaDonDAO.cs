@@ -29,9 +29,9 @@ namespace DAO
             db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues,
                     db.HOADONs);
             if (isPay)
-                return from hd in db.HOADONs select hd;
+                return Support.ToDataTable<HOADON>((from hd in db.HOADONs select hd).ToList());
             else
-                return from hd in db.HOADONs where hd.ispay == false select hd;
+                return Support.ToDataTable<HOADON>((from hd in db.HOADONs where hd.ispay == false select hd).ToList());
         }
         public int Insert(int manv, int makh, double giamGia)
         {

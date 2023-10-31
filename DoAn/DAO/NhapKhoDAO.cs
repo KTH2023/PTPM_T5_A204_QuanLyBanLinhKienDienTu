@@ -28,9 +28,9 @@ namespace DAO
             db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues,
                     db.NHAPKHOs);
             if (isPay)
-                return from nk in db.NHAPKHOs select nk;
+                return Support.ToDataTable<NHAPKHO>((from nk in db.NHAPKHOs select nk).ToList());
             else
-                return from nk in db.NHAPKHOs where nk.ispay == false select nk;
+                return Support.ToDataTable<NHAPKHO>((from nk in db.NHAPKHOs where nk.ispay == false select nk).ToList());
         }
         public int Insert(int manv)
         {

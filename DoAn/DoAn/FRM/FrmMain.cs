@@ -177,7 +177,8 @@ namespace DoAn.FRM
 
         private void BtnPredictNextDay_Click(object sender, EventArgs e)
         {
-            OpenUC(typeof(Uc_predict));
+            //OpenUC(typeof(Uc_predict));
         }
     }
 }
+ 

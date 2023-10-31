@@ -42,7 +42,7 @@ namespace DoAn.UC
         {
             var mahd = gvOrder.GetRowCellValue(e.RowHandle, "MAHD");
             if (mahd != null)
-                e.IsEmpty = ChiTietHDBUS.Instances.GetChiTietHDs(int.Parse(mahd.ToString())).Count == 0;
+                e.IsEmpty = ChiTietHDBUS.Instances.GetChiTietHDs(int.Parse(mahd.ToString())).Rows.Count == 0;
         }
 
         private void GvOrder_MasterRowGetChildList(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowGetChildListEventArgs e)

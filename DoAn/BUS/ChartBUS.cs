@@ -22,22 +22,22 @@ namespace BUS
             set { instances = value; }
         }
         //đơn hàng phiếu nhập trong tháng hiện tại
-        public DataTable loadOrderAndImportInMonthNow()
+        public dynamic loadOrderAndImportInMonthNow()
         {
             return ChartDAO.Instances.loadOrderAndImportInMonthNow();
         }
         //top sản phẩm bán chạy nhất
-        public DataTable loadTopSelling()
+        public dynamic loadTopSelling()
         {
             return ChartDAO.Instances.loadTopSelling();
         }
         //load doanh thu năm hiện tại
-        public DataTable loadStatisticalYear()
+        public dynamic loadStatisticalYear()
         {
             return ChartDAO.Instances.loadStatisticalYear();
         }
         //sản phẩm sắp hết hàng <=5
-        public DataTable loadProductNotStock()
+        public dynamic loadProductNotStock()
         {
             return ChartDAO.Instances.loadProductNotStock();
         }

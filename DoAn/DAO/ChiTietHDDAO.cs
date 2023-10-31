@@ -20,7 +20,7 @@ namespace DAO
         {
             db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues,
                    db.CHITIETHDs);
-            return from cthd in db.CHITIETHDs where cthd.MAHD == mahd select cthd;
+            return Support.ToDataTable<CHITIETHD>((from cthd in db.CHITIETHDs where cthd.MAHD == mahd select cthd).ToList());
         }
         public int Insert(int mahd, int malk, int soluong)
         {

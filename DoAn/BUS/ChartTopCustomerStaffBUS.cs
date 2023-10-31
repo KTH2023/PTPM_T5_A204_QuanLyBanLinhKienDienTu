@@ -27,7 +27,7 @@ namespace BUS
             }
         }
         
-        public dynamic loadTopCustomerBuy(bool checkType,DateTime date)
+        public DataTable loadTopCustomerBuy(bool checkType,DateTime date)
         {
             return ChartTopCustomerStaffDAO.Instances.loadTopCustomerBuy(checkType,date);
         }

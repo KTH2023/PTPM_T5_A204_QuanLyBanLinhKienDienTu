@@ -27,6 +27,12 @@ namespace DAO
             }
             return table;
         }
+        public static string ConvertVND(string money)
+        {
+            var format = System.Globalization.CultureInfo.GetCultureInfo("en-US");
+            string value = String.Format(format, "{0:N0}", Convert.ToDouble(money));
+            return value;
+        }
         public static string EndCodeMD5(string input)
         {
             MD5 md5Hasher = MD5.Create();

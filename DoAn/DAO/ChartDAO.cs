@@ -19,7 +19,7 @@ namespace DAO
             set { instances = value; }
         }
         //đơn hàng phiếu nhập trong tháng hiện tại
-        public DataTable loadOrderAndImportInMonthNow()
+        public dynamic loadOrderAndImportInMonthNow()
         {
             DataTable tb = new DataTable();
             tb.Columns.Add("ten");
@@ -35,12 +35,12 @@ namespace DAO
             return tb;
         }
         //top sản phẩm bán chạy nhất
-        public DataTable loadTopSelling()
+        public dynamic loadTopSelling()
         {
             return Support.ToDataTable(db.topSelling().OrderByDescending(x => x.soluong).ThenBy(x => x.TENLINHKIEN).ToList());
         }
         //load doanh thu năm hiện tại
-        public DataTable loadStatisticalYear()
+        public dynamic loadStatisticalYear()
         {
             DataTable tb = new DataTable();
             tb.Columns.Add("ten");
@@ -56,7 +56,7 @@ namespace DAO
             return tb;
         }
         //sản phẩm sắp hết hàng <=5
-        public DataTable loadProductNotStock()
+        public dynamic loadProductNotStock()
         {
             DataTable tb = new DataTable();
             tb.Columns.Add("ten");

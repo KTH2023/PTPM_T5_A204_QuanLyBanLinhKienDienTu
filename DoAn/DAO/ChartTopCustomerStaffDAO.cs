@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,13 +26,13 @@ namespace DAO
             }
         }
 
-        public dynamic loadTopCustomerBuy(bool checkType, DateTime date)
+        public DataTable loadTopCustomerBuy(bool checkType, DateTime date)
         {
-            return db.topCustomerBuy(checkType, date).ToList();
+            return Support.ToDataTable(db.topCustomerBuy(checkType, date).ToList());
         }
-        public dynamic loadTopStaffSell(bool checkType, DateTime date)
+        public DataTable loadTopStaffSell(bool checkType, DateTime date)
         {
-            return db.topStaffSell(checkType, date).ToList();
+            return Support.ToDataTable(db.topStaffSell(checkType, date).ToList());
         }
     }
 }

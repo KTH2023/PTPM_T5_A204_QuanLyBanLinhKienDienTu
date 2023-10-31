@@ -45,9 +45,7 @@ namespace BUS
         }
         public static string ConvertVND(string money)
         {
-            var format = System.Globalization.CultureInfo.GetCultureInfo("en-US");
-            string value = String.Format(format, "{0:N0}", Convert.ToDouble(money));
-            return value;
+            return DAO.Support.ConvertVND(money);
         }
         public static DataTable GetDBName(string pServer, string pUser, string pPass)
         {

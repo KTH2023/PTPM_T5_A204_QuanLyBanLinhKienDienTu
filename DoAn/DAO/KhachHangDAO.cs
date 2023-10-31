@@ -25,7 +25,7 @@ namespace DAO
         }
         public dynamic GetKhachHangs()
         {
-            return from kh in db.KHACHHANGs select kh;
+            return Support.ToDataTable<KHACHHANG>((from kh in db.KHACHHANGs select kh).ToList());
         }
         public int Insert(string tenkh, bool gioiTinh, string diaChi, string sdt, int maLoaiKH)
         {
