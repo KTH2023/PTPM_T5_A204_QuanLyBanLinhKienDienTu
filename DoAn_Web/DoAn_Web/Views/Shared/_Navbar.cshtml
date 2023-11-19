@@ -12,9 +12,9 @@ var acc = Session["account_client"] as ACCOUNT;
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav mr-auto py-0">
-                <a href="/" class="nav-item nav-link">Trang chủ</a>
-                <a href="/" class="nav-item nav-link">Liên hệ</a>
-                <a href="/" class="nav-item nav-link">Giới thiệu</a>                
+                <a href="~/Home/Index" class="nav-item nav-link">Trang chủ</a>
+                <a href="~/Home/Contact" class="nav-item nav-link">Liên hệ</a>
+                <a href="~/Home/About" class="nav-item nav-link">Giới thiệu</a>                
             </div>
             <div class="navbar-nav ml-auto py-0">
                 @if (acc == null)

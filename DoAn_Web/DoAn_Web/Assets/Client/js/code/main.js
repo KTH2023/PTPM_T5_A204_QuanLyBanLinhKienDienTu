@@ -33,6 +33,14 @@ function formatCurrency(nStr, decSeperate, groupSeperate) {
     }
     return x1 + x2;
 }
+
+$(document).ready(function () {
+    $('#txtkeyword').keypress(function (e) {
+        if (e.which == 13) {
+            e.preventDefault();
+        }
+    })
+});
 $(function () {
     //Hàm tìm kiếm sản phẩm
     function search() {
@@ -50,8 +58,9 @@ $(function () {
     //Event tìm kiếm sản phẩm
     $('#btnsearch').click(search)
     $('#txtkeyword').keypress(function (e) {
-        if (e.which == 13)
-            search();
+        if (e.which == 13) {
+            search()
+        }
     })
 
     //Hàm xử lý thêm giỏ hàng
