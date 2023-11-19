@@ -4,6 +4,7 @@ using System.Web;
 using System.Web.Mvc;
 using DoAn_Web.Models;
 using System.IO;
+using System.Collections.Generic;
 
 namespace DoAn_Web.Controllers
 {
@@ -210,7 +211,7 @@ namespace DoAn_Web.Controllers
 
 </html>";
                 #endregion
-                if (Libary.Instances.SendMail(acc.email,"Quên mật khẩu", body))
+                if (Libary.Instances.SendMail(acc.email,"Quên mật khẩu", body,new List<string>()))
                 {
                     Session["acc"] = acc;
                     return Json(new
@@ -347,7 +348,7 @@ namespace DoAn_Web.Controllers
 </html>";
                 #endregion
 
-                Libary.Instances.SendMail(acc.email,"Gửi lại mã", body);
+                Libary.Instances.SendMail(acc.email,"Gửi lại mã", body, new List<string>());
                 return Json(new
                 {
                     status = 1,
@@ -386,9 +387,9 @@ namespace DoAn_Web.Controllers
             try
             {
                 var acc = Session["acc"] as ACCOUNT;
-                acc = db.ACCOUNTs.SingleOrDefault(x => x.Makh == acc.Makh);
-                acc.password = Libary.Instances.EncodeMD5(passNew);
-                //db.Entry(acc).State = EntityState.Modified;
+                var accObj = db.ACCOUNTs.First(x => x.Makh == acc.Makh);
+                accObj.password = Libary.Instances.EncodeMD5(passNew);
+                
                 db.SubmitChanges();
                 Session.Clear();
                 Session.Abandon();

@@ -122,6 +122,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -265,23 +266,10 @@
     <Content Include="Assets\Client\img\vendor-6.jpg" />
     <Content Include="Assets\Client\img\vendor-7.jpg" />
     <Content Include="Assets\Client\img\vendor-8.jpg" />
-    <Content Include="Assets\Client\js\code\api.js" />
     <Content Include="Assets\Client\js\code\main.js" />
     <Content Include="Assets\Client\js\code\validateform.js" />
     <Content Include="Assets\Client\js\iziToast.min.js" />
     <Content Include="Assets\Client\js\main.js" />
-    <Content Include="Assets\Client\lib\easing\easing.js" />
-    <Content Include="Assets\Client\lib\easing\easing.min.js" />
-    <Content Include="Assets\Client\lib\owlcarousel\assets\ajax-loader.gif" />
-    <Content Include="Assets\Client\lib\owlcarousel\assets\owl.carousel.css" />
-    <Content Include="Assets\Client\lib\owlcarousel\assets\owl.carousel.min.css" />
-    <Content Include="Assets\Client\lib\owlcarousel\assets\owl.theme.default.css" />
-    <Content Include="Assets\Client\lib\owlcarousel\assets\owl.theme.default.min.css" />
-    <Content Include="Assets\Client\lib\owlcarousel\assets\owl.theme.green.css" />
-    <Content Include="Assets\Client\lib\owlcarousel\assets\owl.theme.green.min.css" />
-    <Content Include="Assets\Client\lib\owlcarousel\assets\owl.video.play.png" />
-    <Content Include="Assets\Client\lib\owlcarousel\owl.carousel.js" />
-    <Content Include="Assets\Client\lib\owlcarousel\owl.carousel.min.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -299,7 +287,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Assets\Client\json\data.json" />
-    <Content Include="Assets\Client\lib\owlcarousel\LICENSE" />
     <Content Include="Assets\Client\scss\bootstrap\scss\bootstrap-grid.scss" />
     <Content Include="Assets\Client\scss\bootstrap\scss\bootstrap-reboot.scss" />
     <Content Include="Assets\Client\scss\bootstrap\scss\bootstrap.scss" />
@@ -426,6 +413,8 @@
     <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\Products\Detail.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Cart\Checkout.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

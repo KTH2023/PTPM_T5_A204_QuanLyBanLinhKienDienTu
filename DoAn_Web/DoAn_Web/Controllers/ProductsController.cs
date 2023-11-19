@@ -12,7 +12,7 @@ namespace DoAn_Web.Controllers
     public class ProductsController : Controller
     {
         readonly QLLKDataContext db = new QLLKDataContext();
-        readonly int pageSize = 10;
+        readonly int pageSize = 4;
         void ViewBagNoti(List<LINHKIEN> temp, int check, int page)
         {
             if (temp.Count() > 0)

@@ -261,12 +261,7 @@ $(function () {
     //xử lý xác nhận đơn đặt hàng
     function Pay() {
         var order = new Object();
-        order.fullname = $('#cart-fullname').val();
-        order.phone = $('#cart-phone').val();
-        order.email = $('#cart-email').val();
-        order.address = $('#cart-town').val() + ' ' + ($('#town').val() == '-1' ? '' : $('#town').val()) + ' ' + ($('#district').val() == '-1' ? '' : $('#district').val()) + ' ' + ($('#province').val() == '-1' ? '' : $('#province').val());
-        order.address = order.address.trim();
-        order.note = $("#order_note").val();
+        order.ispay = 0;
         if (order.fullname == '') {
             iziToast.warning({
                 timeout: 1500,

@@ -14,19 +14,19 @@ namespace DoAn_Web
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
 
-            //routes.MapRoute(
-            //    name: "Cart_Checkout",
-            //    url: "thanh-toan",
-            //    defaults: new { controller = "Cart", action = "Checkout", id = UrlParameter.Optional },
-            //     namespaces: new string[] { "DoAn_Web.Controller" }
-            //);
+            routes.MapRoute(
+                name: "Cart_Checkout",
+                url: "thanh-toan",
+                defaults: new { controller = "Cart", action = "Checkout", id = UrlParameter.Optional },
+                 namespaces: new string[] { "DoAn_Web.Controller" }
+            );
 
-            //routes.MapRoute(
-            //    name: "Cart_Index",
-            //    url: "gio-hang",
-            //    defaults: new { controller = "Cart", action = "Index", id = UrlParameter.Optional },
-            //     namespaces: new string[] { "DoAn_Web.Controller" }
-            //);
+            routes.MapRoute(
+                name: "Cart_Index",
+                url: "gio-hang",
+                defaults: new { controller = "Cart", action = "Index", id = UrlParameter.Optional },
+                 namespaces: new string[] { "DoAn_Web.Controller" }
+            );
 
             routes.MapRoute(
                 name: "Search",

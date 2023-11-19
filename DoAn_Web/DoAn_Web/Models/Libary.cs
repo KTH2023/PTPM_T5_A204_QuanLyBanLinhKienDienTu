@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Net;
 using System.Net.Mail;
+using System.Net.Mime;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -35,7 +37,7 @@ namespace DoAn_Web.Models
         public string ConvertVND(string money)
         {
             var format = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
-            string value = String.Format(format, "{0:c0}", Convert.ToUInt32(money));
+            string value = String.Format(format, "{0:c0}", Convert.ToDouble(money));
             return value;
         }
         public string ConvertToUnSign3(string s)
@@ -58,7 +60,7 @@ namespace DoAn_Web.Models
             }
             return new String(stringChars);
         }
-        public bool SendMail(string mailTo,string title, string body)
+        public bool SendMail(string mailTo,string title, string body,List<string> urlImage)
         {
             // //đăng nhập mail để gửi
             string email = ConfigurationManager.AppSettings["mail"].ToString();
@@ -79,7 +81,19 @@ namespace DoAn_Web.Models
                 Port = 587,
                 EnableSsl = true
             };
+            int i = 0;
+            foreach (var item in urlImage)
+            {
+                string UrlImage = item;
+                UrlImage = UrlImage.Replace("~", AppDomain.CurrentDomain.BaseDirectory);
+                LinkedResource imageResource = new LinkedResource(UrlImage, "image/jpg");
+                imageResource.ContentId = "image"+i++;
 
+                AlternateView av = AlternateView.CreateAlternateViewFromString(body, null, MediaTypeNames.Text.Html);
+                av.LinkedResources.Add(imageResource);
+                mess.AlternateViews.Add(av);
+            }
+           
             //gửi mail đi
             NetworkCredential net = new NetworkCredential(email, pass);
             smtp.UseDefaultCredentials = false;

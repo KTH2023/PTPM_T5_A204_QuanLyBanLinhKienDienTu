@@ -108,3 +108,4 @@ C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\
 C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn_Web\DoAn_Web\obj\Debug\DoAn_Web.csproj.CopyComplete
 C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn_Web\DoAn_Web\obj\Debug\DoAn_Web.dll
 C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn_Web\DoAn_Web\obj\Debug\DoAn_Web.pdb
+C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn_Web\DoAn_Web\obj\Debug\DoAn_Web.csproj.AssemblyReference.cache
