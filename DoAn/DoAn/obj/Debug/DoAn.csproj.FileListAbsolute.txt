@@ -934,4 +934,4 @@ C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\
 C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DoAn\bin\Debug\Azure.Core.xml
 C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DoAn\bin\Debug\Azure.Identity.xml
 C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DoAn\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DoAn\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DoAn\obj\Debug\DoAn.csproj.SuggestedBindingRedirects.cache
