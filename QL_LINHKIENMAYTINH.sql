@@ -568,3 +568,17 @@ begin
 		set tongtien=@tongtien
 		where MAPN=@mapn
 end
+
+use QL_LINHKIENMAYTINH
+go
+CREATE TABLE ACCOUNT (
+    username varchar(50) NOT NULL PRIMARY KEY,
+    password varchar(50) NOT NULL,
+    status bit,
+	email varchar(100),
+	image nvarchar(500),
+	Makh int
+	)
+go
+ALTER TABLE ACCOUNT ADD  CONSTRAINT fk_account_khachhang FOREIGN KEY(Makh)
+REFERENCES KHACHHANG (Makh)

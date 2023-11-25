@@ -8,3 +8,13 @@ C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\
 C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\obj\Debug\DAO.csproj.CopyComplete
 C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\obj\Debug\DAO.dll
 C:\Users\Admin-s\OneDrive\Máy tính\Study\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\obj\Debug\DAO.pdb
+D:\Huy\class\ungdungthongminh\projectcuoi\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\bin\Debug\DAO.dll.config
+D:\Huy\class\ungdungthongminh\projectcuoi\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\bin\Debug\DAO.dll
+D:\Huy\class\ungdungthongminh\projectcuoi\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\bin\Debug\DAO.pdb
+D:\Huy\class\ungdungthongminh\projectcuoi\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\bin\Debug\DTO.dll
+D:\Huy\class\ungdungthongminh\projectcuoi\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\bin\Debug\DTO.pdb
+D:\Huy\class\ungdungthongminh\projectcuoi\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\Huy\class\ungdungthongminh\projectcuoi\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\Huy\class\ungdungthongminh\projectcuoi\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\Huy\class\ungdungthongminh\projectcuoi\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\obj\Debug\DAO.dll
+D:\Huy\class\ungdungthongminh\projectcuoi\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\obj\Debug\DAO.pdb

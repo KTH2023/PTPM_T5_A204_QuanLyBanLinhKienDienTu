@@ -55,6 +55,8 @@
     <Compile Include="LoaiLKBUS.cs" />
     <Compile Include="NhanVienBUS.cs" />
     <Compile Include="NhapKhoBUS.cs" />
+    <Compile Include="NoronNextDayBUS.cs" />
+    <Compile Include="NoronNextMonthBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuyenBUS.cs" />
     <Compile Include="StatisticalBUS.cs" />
