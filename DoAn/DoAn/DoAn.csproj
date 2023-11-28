@@ -178,12 +178,6 @@
     <Compile Include="Report\rpImport.designer.cs">
       <DependentUpon>rpImport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\rpInventory.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\rpInventory.Designer.cs">
-      <DependentUpon>rpInventory.cs</DependentUpon>
-    </Compile>
     <Compile Include="Report\rpOrder.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -219,12 +213,6 @@
     </Compile>
     <Compile Include="UC\Uc_import_employee.Designer.cs">
       <DependentUpon>Uc_import_employee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC\Uc_inventory.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\Uc_inventory.Designer.cs">
-      <DependentUpon>Uc_inventory.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\Uc_order.cs">
       <SubType>UserControl</SubType>
@@ -262,12 +250,6 @@
     <Compile Include="UC\Uc_statistical.designer.cs">
       <DependentUpon>Uc_statistical.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\Uc_statistic_staff_customer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC\Uc_statistic_staff_customer.designer.cs">
-      <DependentUpon>Uc_statistic_staff_customer.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="FRM\FrmBKRS.resx">
       <DependentUpon>FrmBKRS.cs</DependentUpon>
     </EmbeddedResource>
@@ -298,9 +280,6 @@
     <EmbeddedResource Include="Report\rpImport.resx">
       <DependentUpon>rpImport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\rpInventory.resx">
-      <DependentUpon>rpInventory.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Report\rpOrder.resx">
       <DependentUpon>rpOrder.cs</DependentUpon>
     </EmbeddedResource>
@@ -319,9 +298,6 @@
     <EmbeddedResource Include="UC\Uc_import_employee.resx">
       <DependentUpon>Uc_import_employee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\Uc_inventory.resx">
-      <DependentUpon>Uc_inventory.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UC\Uc_order.resx">
       <DependentUpon>Uc_order.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,9 +315,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\Uc_statistical.resx">
       <DependentUpon>Uc_statistical.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC\Uc_statistic_staff_customer.resx">
-      <DependentUpon>Uc_statistic_staff_customer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Images\fsadf.bak" />

@@ -28,3 +28,13 @@ C:\Users\Admin-s\OneDrive\Máy tính\work\PTPM_T5_A204_QuanLyBanLinhKienDienTu\D
 C:\Users\Admin-s\OneDrive\Máy tính\work\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\obj\Debug\DAO.csproj.CopyComplete
 C:\Users\Admin-s\OneDrive\Máy tính\work\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\obj\Debug\DAO.dll
 C:\Users\Admin-s\OneDrive\Máy tính\work\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\obj\Debug\DAO.pdb
+D:\Workspace\C#\Ung_Dung_Thong_Minh\Do_An_UDTM\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\bin\Debug\DAO.dll.config
+D:\Workspace\C#\Ung_Dung_Thong_Minh\Do_An_UDTM\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\bin\Debug\DAO.dll
+D:\Workspace\C#\Ung_Dung_Thong_Minh\Do_An_UDTM\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\bin\Debug\DAO.pdb
+D:\Workspace\C#\Ung_Dung_Thong_Minh\Do_An_UDTM\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\bin\Debug\DTO.dll
+D:\Workspace\C#\Ung_Dung_Thong_Minh\Do_An_UDTM\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\bin\Debug\DTO.pdb
+D:\Workspace\C#\Ung_Dung_Thong_Minh\Do_An_UDTM\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\Workspace\C#\Ung_Dung_Thong_Minh\Do_An_UDTM\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\Workspace\C#\Ung_Dung_Thong_Minh\Do_An_UDTM\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\Workspace\C#\Ung_Dung_Thong_Minh\Do_An_UDTM\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\obj\Debug\DAO.dll
+D:\Workspace\C#\Ung_Dung_Thong_Minh\Do_An_UDTM\PTPM_T5_A204_QuanLyBanLinhKienDienTu\DoAn\DAO\obj\Debug\DAO.pdb

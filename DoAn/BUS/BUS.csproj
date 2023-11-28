@@ -44,11 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChartBUS.cs" />
-    <Compile Include="ChartTopCustomerStaffBUS.cs" />
     <Compile Include="ChiTietHDBUS.cs" />
     <Compile Include="ChiTietNKBUS.cs" />
     <Compile Include="HoaDonBUS.cs" />
-    <Compile Include="InventoryBUS.cs" />
     <Compile Include="KhachHangBUS.cs" />
     <Compile Include="LinhKienBUS.cs" />
     <Compile Include="LoaiKHBUS.cs" />

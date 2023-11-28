@@ -105,7 +105,7 @@ namespace DoAn.UC
             if (row >= 0)
             {
                 int mahd = int.Parse(gvOrder.GetRowCellValue(row, "MAHD").ToString());
-                lstDetailOrder = ChiTietHDBUS.Instances.GetChiTietHDs(mahd);
+                lstDetailOrder = ChiTietHDBUS.Instances.GetChiTietHDs__(mahd);
                 dynamic hd = HoaDonBUS.Instances.FindOrderCode(mahd);
                 var rp = new rpOrder
                 {

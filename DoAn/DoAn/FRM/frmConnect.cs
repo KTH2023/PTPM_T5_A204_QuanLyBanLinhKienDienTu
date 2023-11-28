@@ -48,7 +48,7 @@ namespace DoAn.FRM
             if (ValidateTextBox(txtUsername) || ValidateTextBox(txtPassword))            
                 return;
             splashScreenManager1.ShowWaitForm();
-            DataTable tb = Support.GetDBName(".", txtUsername.Text.Trim(), txtPassword.Text);
+            DataTable tb = Support.GetDBName(cbbServer.Text, txtUsername.Text.Trim(), txtPassword.Text);
             if (tb.Rows.Count == 0)
                 frm.setStatus("Tài khoản mật khẩu không hợp lệ.",Color.Red);
             else

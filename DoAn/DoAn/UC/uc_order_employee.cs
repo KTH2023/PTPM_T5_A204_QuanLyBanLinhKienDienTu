@@ -259,7 +259,7 @@ namespace DoAn.UC
                 XtraMessageBox.Show("Khách chưa đưa tiền.", "Thông báo");
                 return;
             }
-            double tienKhachDua = double.Parse(txtTienKhachDua.Text.Trim());
+            double tienKhachDua = double.Parse(txtTienKhachDua.Text.Trim().Replace(",", "."));
 
             if (tienPhaiTra > tienKhachDua)
             {
@@ -283,7 +283,7 @@ namespace DoAn.UC
             decimal value;
             try
             {
-                value = decimal.Parse(txtTienKhachDua.Text, NumberStyles.AllowThousands);
+                value = decimal.Parse(txtTienKhachDua.Text.Replace(",", "."), NumberStyles.AllowThousands);
 
             }
             catch (Exception)

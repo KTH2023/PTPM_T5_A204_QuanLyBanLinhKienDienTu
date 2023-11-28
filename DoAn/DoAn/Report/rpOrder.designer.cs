@@ -150,7 +150,7 @@ namespace GUI.Report
             // lbMAHD
             // 
             this.lbMAHD.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[LINHKIEN].[TENLINHKIEN]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TENLINHKIEN]")});
             this.lbMAHD.Multiline = true;
             this.lbMAHD.Name = "lbMAHD";
             this.lbMAHD.Text = "Mã Hóa Đơn";

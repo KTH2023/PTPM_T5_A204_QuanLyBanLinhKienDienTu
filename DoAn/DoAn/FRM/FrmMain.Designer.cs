@@ -45,8 +45,6 @@ namespace DoAn.FRM
             this.BtnCustomerOfStaff = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.BtnStatistical = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.BtnTurnover = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.BtnInventory = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.BtnTopStaffCustomer = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.BtnPredictNextDay = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.LbTieuDe = new DevExpress.XtraBars.BarHeaderItem();
@@ -180,8 +178,6 @@ namespace DoAn.FRM
             // 
             this.BtnStatistical.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.BtnTurnover,
-            this.BtnInventory,
-            this.BtnTopStaffCustomer,
             this.BtnPredictNextDay});
             this.BtnStatistical.Expanded = true;
             this.BtnStatistical.Name = "BtnStatistical";
@@ -193,20 +189,6 @@ namespace DoAn.FRM
             this.BtnTurnover.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.BtnTurnover.Text = "Doanh thu";
             this.BtnTurnover.Click += new System.EventHandler(this.BtnTurnover_Click);
-            // 
-            // BtnInventory
-            // 
-            this.BtnInventory.Name = "BtnInventory";
-            this.BtnInventory.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.BtnInventory.Text = "Tồn kho";
-            this.BtnInventory.Click += new System.EventHandler(this.BtnInventory_Click);
-            // 
-            // BtnTopStaffCustomer
-            // 
-            this.BtnTopStaffCustomer.Name = "BtnTopStaffCustomer";
-            this.BtnTopStaffCustomer.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.BtnTopStaffCustomer.Text = "Top khách hàng, nhân viên";
-            this.BtnTopStaffCustomer.Click += new System.EventHandler(this.BtnTopStaffCustomer_Click);
             // 
             // BtnPredictNextDay
             // 
@@ -264,8 +246,6 @@ namespace DoAn.FRM
             this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.BtnChangePass),
-            new DevExpress.XtraBars.LinkPersistInfo(this.BtnBackup),
-            new DevExpress.XtraBars.LinkPersistInfo(this.BtnRestore),
             new DevExpress.XtraBars.LinkPersistInfo(this.BtnLogout)});
             this.bar1.Text = "Tools";
             // 
@@ -275,20 +255,8 @@ namespace DoAn.FRM
             this.BtnChangePass.Id = 0;
             this.BtnChangePass.Name = "BtnChangePass";
             this.BtnChangePass.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnChangePass_ItemClick);
-            // 
-            // BtnBackup
-            // 
-            this.BtnBackup.Caption = "Backup";
-            this.BtnBackup.Id = 1;
-            this.BtnBackup.Name = "BtnBackup";
-            this.BtnBackup.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnBackup_ItemClick);
-            // 
-            // BtnRestore
-            // 
-            this.BtnRestore.Caption = "Restore";
-            this.BtnRestore.Id = 2;
-            this.BtnRestore.Name = "BtnRestore";
-            this.BtnRestore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnRestore_ItemClick);
+
+
             // 
             // BtnLogout
             // 
@@ -404,8 +372,6 @@ namespace DoAn.FRM
         private DevExpress.XtraBars.Navigation.AccordionControlElement BtnCustomerOfStaff;
         private DevExpress.XtraBars.Navigation.AccordionControlElement BtnStatistical;
         private DevExpress.XtraBars.Navigation.AccordionControlElement BtnTurnover;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnInventory;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement BtnTopStaffCustomer;
         private DevExpress.XtraBars.Navigation.AccordionControlElement BtnPredictNextDay;
         private DevExpress.XtraBars.BarHeaderItem LbAccount;
         private DevExpress.XtraBars.BarHeaderItem LbTieuDe;

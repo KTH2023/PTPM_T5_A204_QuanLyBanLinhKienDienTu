@@ -62,32 +62,6 @@ namespace DoAn.FRM
         {
             new FrmChangePass(this, nv).ShowDialog();
         }
-
-        private void BtnBackup_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            SaveFileDialog sf = new SaveFileDialog
-            {
-                Filter = "SQL Backup (*.bak)|*.bak",
-                Title = "Backup database"
-            };
-            if (sf.ShowDialog() == DialogResult.OK)
-            {
-                new FrmBKRS(sf.FileName, 0).ShowDialog();
-            }
-        }
-
-        private void BtnRestore_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            OpenFileDialog op = new OpenFileDialog
-            {
-                Filter = "SQL Backup (*.bak)|*.bak",
-                Title = "Restore database"
-            };
-            if (op.ShowDialog() == DialogResult.OK)
-            {
-                new FrmBKRS(op.FileName, 1).ShowDialog();
-            }
-        }
         public void Logout(int check = 0)
         {
             checkClose = false;
@@ -163,20 +137,9 @@ namespace DoAn.FRM
         {
             OpenUC(typeof(Uc_customer));
         }
-
-        private void BtnInventory_Click(object sender, EventArgs e)
-        {
-            OpenUC(typeof(Uc_inventory));
-        }
-
         private void BtnTurnover_Click(object sender, EventArgs e)
         {
             OpenUC(typeof(Uc_statistical));
-        }
-
-        private void BtnTopStaffCustomer_Click(object sender, EventArgs e)
-        {
-            OpenUC(typeof(Uc_statistic_staff_customer));
         }
 
         private void BtnPredictNextDay_Click(object sender, EventArgs e)

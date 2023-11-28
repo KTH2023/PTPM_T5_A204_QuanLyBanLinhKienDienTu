@@ -50,7 +50,7 @@ namespace DoAn.UC
             var mapn = gvImport.GetRowCellValue(e.RowHandle, "MAPN");
             if (mapn != null)
             {
-                e.ChildList = ChiTietNKBUS.Instances.GetChiTietNKs(int.Parse(mapn.ToString()));
+                e.ChildList = ChiTietNKBUS.Instances.GetChiTietNKs_(int.Parse(mapn.ToString()));
                 gvImportDetail.ViewCaption = "Chi tiết phiếu nhập " + mapn;
 
             }
@@ -102,7 +102,7 @@ namespace DoAn.UC
             if (row >= 0)
             {
                 int mapn = int.Parse(gvImport.GetRowCellValue(row, "MAPN").ToString());
-                lstDetailImport = ChiTietNKBUS.Instances.GetChiTietNKs(mapn);
+                lstDetailImport = ChiTietNKBUS.Instances.GetChiTietNKs__(mapn);
                 dynamic nk = NhapKhoBUS.Instances.FindOrderCode(mapn);
                 var rp = new rpImport
                 {

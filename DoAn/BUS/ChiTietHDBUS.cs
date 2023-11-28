@@ -23,6 +23,10 @@ namespace BUS
         {
             return ChiTietHDDAO.Instances.GetChiTietHDs_(mahd);
         }
+        public dynamic GetChiTietHDs__(int mahd)
+        {
+            return ChiTietHDDAO.Instances.GetChiTietNKs__(mahd);
+        }
         public int Insert(int mahd, int malk, int soluong)
         {
             return ChiTietHDDAO.Instances.Insert(mahd, malk, soluong);

@@ -28,6 +28,27 @@ namespace DAO
                    db.CHITIETNKs);
             return Support.ToDataTable < CHITIETNK >( (from ctnk in db.CHITIETNKs where ctnk.MAPN == mapn select ctnk).ToList());
         }
+        public dynamic GetChiTietNKs_(int mapn)
+        {
+            db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues,
+                   db.CHITIETHDs);
+            return (from ctnk in db.CHITIETNKs where ctnk.MAPN == mapn select ctnk).ToList();
+        }
+        public dynamic GetChiTietNKs__(int mapn)
+        {
+            db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues,
+                   db.CHITIETHDs);
+            return (from ctnk in db.CHITIETNKs 
+                                                   join lk in db.LINHKIENs on ctnk.MALINHKIEN equals lk.MALINHKIEN where ctnk.MAPN == mapn
+                                                   select new
+                                                   {
+                                                       ctnk.MAPN,
+                                                       lk.TENLINHKIEN,
+                                                       ctnk.SOLUONG,
+                                                       ctnk.DONGIA,
+                                                       ctnk.THANHTIEN
+                                                   }).ToList();
+        }
         public int Insert(int mapn, int malk, int soluong, double donGia)
         {
             var ctnk = db.CHITIETNKs.FirstOrDefault(x => x.MAPN == mapn && x.MALINHKIEN == malk);

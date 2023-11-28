@@ -43,11 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChartDAO.cs" />
-    <Compile Include="ChartTopCustomerStaffDAO.cs" />
     <Compile Include="ChiTietHDDAO.cs" />
     <Compile Include="ChiTietNKDAO.cs" />
     <Compile Include="HoaDonDAO.cs" />
-    <Compile Include="InventoryDAO.cs" />
     <Compile Include="KhachHangDAO.cs" />
     <Compile Include="LinhKienDAO.cs" />
     <Compile Include="LoaiKHDAO.cs" />

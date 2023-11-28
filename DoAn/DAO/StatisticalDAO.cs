@@ -50,21 +50,10 @@ namespace DAO
                 var lstImportTemp = lstImport.Where(x => DateTime.Parse(x.NGAYNHAP.ToShortDateString()).CompareTo(DateTime.Parse(date.ToShortDateString())) == 0).ToList();
                 if (lstOrderTemp.Count != 0 || lstImportTemp.Count != 0)
                 {
-                    double? totalRemain = 0;
 
                     DataRow dr = tb.NewRow();
                     var sumOrder = lstOrderTemp.Sum(x => x.tongtien);
-                    foreach (var import in lstImportTemp)
-                    {
-                        var lstImportDetail = db.CHITIETNKs.Where(x => x.MAPN == import.MAPN);
-                        foreach (var importDetail in lstImportDetail)
-                        {
-                            var quantityRemain = db.LINHKIENs.FirstOrDefault(x => x.MALINHKIEN == importDetail.MALINHKIEN).SOLUONGCON;
-                            totalRemain += quantityRemain * importDetail.DONGIA;
-                        }
-
-                    }
-                    var sumImport = lstImportTemp.Sum(x => x.tongtien) - totalRemain;
+                    var sumImport = lstImportTemp.Sum(x => x.tongtien);
                     dr[0] = date.ToShortDateString();
                     dr[1] = Support.ConvertVND(sumOrder.ToString());
                     dr[2] = Support.ConvertVND(sumImport.ToString());

@@ -25,6 +25,15 @@ namespace BUS
         {
             return ChiTietNKDAO.Instances.GetChiTietNKs(mapn);
         }
+        public dynamic GetChiTietNKs_(int mapn)
+        {
+            return ChiTietNKDAO.Instances.GetChiTietNKs_(mapn);
+        }
+        public dynamic GetChiTietNKs__(int mapn)
+        {
+            return ChiTietNKDAO.Instances.GetChiTietNKs__(mapn);
+        }
+    
         public int Insert(int mapn, int malk, int soluong, double donGia)
         {
             return ChiTietNKDAO.Instances.Insert(mapn, malk, soluong, donGia);

@@ -120,6 +120,7 @@
             this.btnPredict.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPredict.ImageOptions.LargeImage")));
             this.btnPredict.Name = "btnPredict";
             this.btnPredict.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnPredict.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPredict_ItemClick);
             // 
             // btnClose
             // 
@@ -136,7 +137,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(2);
             this.barDockControlTop.Size = new System.Drawing.Size(565, 28);
             // 
             // barDockControlBottom
@@ -145,7 +146,7 @@
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 291);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(2);
             this.barDockControlBottom.Size = new System.Drawing.Size(565, 0);
             // 
             // barDockControlLeft
@@ -154,7 +155,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 28);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(2);
             this.barDockControlLeft.Size = new System.Drawing.Size(0, 263);
             // 
             // barDockControlRight
@@ -163,7 +164,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(565, 28);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(2);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 263);
             // 
             // btnDelete
@@ -178,7 +179,7 @@
             // 
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 28);
-            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
             this.xtraTabControl1.Size = new System.Drawing.Size(565, 263);
@@ -190,7 +191,7 @@
             // xtraTabPage1
             // 
             this.xtraTabPage1.Controls.Add(this.layoutControl1);
-            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(560, 237);
             this.xtraTabPage1.Text = "Dự đoán doanh thu ngày tiếp theo";
@@ -201,7 +202,7 @@
             this.layoutControl1.Controls.Add(this.gcPredictNextDay);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(2);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
             this.layoutControl1.Size = new System.Drawing.Size(560, 237);
@@ -211,21 +212,21 @@
             // chartNextDay
             // 
             this.chartNextDay.Legend.Name = "Default Legend";
-            this.chartNextDay.Location = new System.Drawing.Point(281, 7);
-            this.chartNextDay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chartNextDay.Location = new System.Drawing.Point(282, 12);
+            this.chartNextDay.Margin = new System.Windows.Forms.Padding(2);
             this.chartNextDay.Name = "chartNextDay";
             this.chartNextDay.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartNextDay.Size = new System.Drawing.Size(271, 223);
+            this.chartNextDay.Size = new System.Drawing.Size(266, 213);
             this.chartNextDay.TabIndex = 5;
             // 
             // gcPredictNextDay
             // 
-            this.gcPredictNextDay.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gcPredictNextDay.Location = new System.Drawing.Point(8, 7);
+            this.gcPredictNextDay.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
+            this.gcPredictNextDay.Location = new System.Drawing.Point(12, 12);
             this.gcPredictNextDay.MainView = this.gvPredictNextDay;
-            this.gcPredictNextDay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gcPredictNextDay.Margin = new System.Windows.Forms.Padding(2);
             this.gcPredictNextDay.Name = "gcPredictNextDay";
-            this.gcPredictNextDay.Size = new System.Drawing.Size(271, 223);
+            this.gcPredictNextDay.Size = new System.Drawing.Size(266, 213);
             this.gcPredictNextDay.TabIndex = 4;
             this.gcPredictNextDay.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPredictNextDay});
@@ -275,23 +276,23 @@
             this.layoutControlItem1.Control = this.gcPredictNextDay;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(273, 225);
+            this.layoutControlItem1.Size = new System.Drawing.Size(270, 217);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.chartNextDay;
-            this.layoutControlItem2.Location = new System.Drawing.Point(273, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(270, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(273, 225);
+            this.layoutControlItem2.Size = new System.Drawing.Size(270, 217);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.layoutControl2);
-            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(560, 237);
             this.xtraTabPage2.Text = "Dự đoán doanh thu tháng tiếp theo";
@@ -302,7 +303,7 @@
             this.layoutControl2.Controls.Add(this.gcPredictNextMonth);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.layoutControl2.Margin = new System.Windows.Forms.Padding(2);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup1;
             this.layoutControl2.Size = new System.Drawing.Size(560, 237);
@@ -312,21 +313,21 @@
             // chartNextMonth
             // 
             this.chartNextMonth.Legend.Name = "Default Legend";
-            this.chartNextMonth.Location = new System.Drawing.Point(281, 7);
-            this.chartNextMonth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chartNextMonth.Location = new System.Drawing.Point(282, 12);
+            this.chartNextMonth.Margin = new System.Windows.Forms.Padding(2);
             this.chartNextMonth.Name = "chartNextMonth";
             this.chartNextMonth.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chartNextMonth.Size = new System.Drawing.Size(271, 223);
+            this.chartNextMonth.Size = new System.Drawing.Size(266, 213);
             this.chartNextMonth.TabIndex = 5;
             // 
             // gcPredictNextMonth
             // 
-            this.gcPredictNextMonth.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gcPredictNextMonth.Location = new System.Drawing.Point(8, 7);
+            this.gcPredictNextMonth.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2);
+            this.gcPredictNextMonth.Location = new System.Drawing.Point(12, 12);
             this.gcPredictNextMonth.MainView = this.gvPredictNextMonth;
-            this.gcPredictNextMonth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gcPredictNextMonth.Margin = new System.Windows.Forms.Padding(2);
             this.gcPredictNextMonth.Name = "gcPredictNextMonth";
-            this.gcPredictNextMonth.Size = new System.Drawing.Size(271, 223);
+            this.gcPredictNextMonth.Size = new System.Drawing.Size(266, 213);
             this.gcPredictNextMonth.TabIndex = 4;
             this.gcPredictNextMonth.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPredictNextMonth});
@@ -376,16 +377,16 @@
             this.layoutControlItem3.Control = this.gcPredictNextMonth;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem1";
-            this.layoutControlItem3.Size = new System.Drawing.Size(273, 225);
+            this.layoutControlItem3.Size = new System.Drawing.Size(270, 217);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.chartNextMonth;
-            this.layoutControlItem4.Location = new System.Drawing.Point(273, 0);
+            this.layoutControlItem4.Location = new System.Drawing.Point(270, 0);
             this.layoutControlItem4.Name = "layoutControlItem2";
-            this.layoutControlItem4.Size = new System.Drawing.Size(273, 225);
+            this.layoutControlItem4.Size = new System.Drawing.Size(270, 217);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -398,7 +399,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Uc_predict";
             this.Size = new System.Drawing.Size(565, 291);
             this.Tag = "Dự báo doanh thu";
