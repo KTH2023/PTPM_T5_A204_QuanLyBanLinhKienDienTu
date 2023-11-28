@@ -16,22 +16,20 @@ namespace DoAn.UC
 {
     public partial class Uc_statistic_staff_customer : DevExpress.XtraEditors.XtraUserControl
     {
-        FrmMain frm;
         bool checkTypeStatistic;
-        public Uc_statistic_staff_customer(FrmMain frm)
+        public Uc_statistic_staff_customer()
         {
             InitializeComponent();
-            this.frm = frm;
             LoadDataCBBTypeStatistic(cbbTypeStatistic);
             dateStatistic.DateTime = DateTime.Now;
         }
 
         private void LoadDataCBBTypeStatistic(ComboBoxEdit cbb)
         {
-            cbbTypeStatistic.Properties.Items.Add("Chọn loại thống kê");
-            cbbTypeStatistic.Properties.Items.Add("Thống kê theo tháng");
-            cbbTypeStatistic.Properties.Items.Add("Thống kê theo năm");
-            cbbTypeStatistic.SelectedIndex = 0;
+            cbb.Properties.Items.Add("Chọn loại thống kê");
+            cbb.Properties.Items.Add("Thống kê theo tháng");
+            cbb.Properties.Items.Add("Thống kê theo năm");
+            cbb.SelectedIndex = 0;
         }
         private bool ValidateStatistic()
         {
@@ -52,8 +50,10 @@ namespace DoAn.UC
             chart.Series.Clear();
             chart.Titles.Clear();
             Series _seri = new Series("", ViewType.Bar);
-            ChartTitle title = new ChartTitle();
-            title.Text = _title;
+            ChartTitle title = new ChartTitle
+            {
+                Text = _title
+            };
             _seri.ShowInLegend = true;
             chart.Titles.Add(title);
             chart.Series.Add(_seri);
@@ -88,12 +88,12 @@ namespace DoAn.UC
             checkTypeStatistic = false;
             if (cbbTypeStatistic.SelectedIndex == 1)
             {
-                tb = ChartTopCustomerStaffBUS.Instances.loadTopStaffSell(false, dateStatistic.DateTime);
+                tb = ChartTopCustomerStaffBUS.Instances.LoadTopStaffSell(false, dateStatistic.DateTime);
                 LoadChartTop(chartTopCustomer, "Top " + tb.Rows.Count + " nhân viên lập hoá đơn tháng "+dateStatistic.DateTime.Month+"/"+dateStatistic.DateTime.Year, tb);
             }
             else
             {
-                tb = ChartTopCustomerStaffBUS.Instances.loadTopStaffSell(true, dateStatistic.DateTime);
+                tb = ChartTopCustomerStaffBUS.Instances.LoadTopStaffSell(true, dateStatistic.DateTime);
                 LoadChartTop(chartTopCustomer, "Top " + tb.Rows.Count + " nhân viên lập hoá đơn năm " + dateStatistic.DateTime.Year, tb);
             }
             splashScreenManager1.CloseWaitForm();
@@ -108,12 +108,12 @@ namespace DoAn.UC
             checkTypeStatistic = true;
             if (cbbTypeStatistic.SelectedIndex == 1)
             {
-                tb = ChartTopCustomerStaffBUS.Instances.loadTopCustomerBuy(false, dateStatistic.DateTime);
+                tb = ChartTopCustomerStaffBUS.Instances.LoadTopCustomerBuy(false, dateStatistic.DateTime);
                 LoadChartTop(chartTopCustomer, "Top " + tb.Rows.Count + " khách hàng mua tháng "+ dateStatistic.DateTime.Month+"/"+dateStatistic.DateTime.Year, tb);
             }
             else
             {
-                tb = ChartTopCustomerStaffBUS.Instances.loadTopCustomerBuy(true, dateStatistic.DateTime);
+                tb = ChartTopCustomerStaffBUS.Instances.LoadTopCustomerBuy(true, dateStatistic.DateTime);
                 LoadChartTop(chartTopCustomer, "Top " + tb.Rows.Count + " khách hàng mua năm " + dateStatistic.DateTime.Year, tb);
             }
             splashScreenManager1.CloseWaitForm();

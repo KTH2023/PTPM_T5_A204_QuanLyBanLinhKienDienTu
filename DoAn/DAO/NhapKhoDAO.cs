@@ -8,7 +8,7 @@ namespace DAO
 {
     public class NhapKhoDAO
     {
-        QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
+        readonly QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
         private static NhapKhoDAO instances;
         public static NhapKhoDAO Instances
         {

@@ -9,7 +9,7 @@ namespace DAO
 {
     public class ChartTopCustomerStaffDAO
     {
-        QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
+        readonly QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
         private static ChartTopCustomerStaffDAO instances;
         public static ChartTopCustomerStaffDAO Instances
         {
@@ -26,11 +26,11 @@ namespace DAO
             }
         }
 
-        public DataTable loadTopCustomerBuy(bool checkType, DateTime date)
+        public DataTable LoadTopCustomerBuy(bool checkType, DateTime date)
         {
             return Support.ToDataTable(db.topCustomerBuy(checkType, date).ToList());
         }
-        public DataTable loadTopStaffSell(bool checkType, DateTime date)
+        public DataTable LoadTopStaffSell(bool checkType, DateTime date)
         {
             return Support.ToDataTable(db.topStaffSell(checkType, date).ToList());
         }

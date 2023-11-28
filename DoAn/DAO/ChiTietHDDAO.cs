@@ -4,7 +4,7 @@ namespace DAO
 {
     public class ChiTietHDDAO
     {
-        QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
+        readonly QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
         private static ChiTietHDDAO instances;
         public static ChiTietHDDAO Instances
         {
@@ -21,6 +21,12 @@ namespace DAO
             db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues,
                    db.CHITIETHDs);
             return Support.ToDataTable<CHITIETHD>((from cthd in db.CHITIETHDs where cthd.MAHD == mahd select cthd).ToList());
+        }
+        public dynamic GetChiTietHDs_(int mahd)
+        {
+            db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues,
+                   db.CHITIETHDs);
+            return (from cthd in db.CHITIETHDs where cthd.MAHD == mahd select cthd).ToList();
         }
         public int Insert(int mahd, int malk, int soluong)
         {

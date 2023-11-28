@@ -19,7 +19,7 @@ namespace DoAn.UC
 {
     public partial class Uc_order_employee : DevExpress.XtraEditors.XtraUserControl
     {
-        FrmMain frm;
+        readonly FrmMain frm;
         public Uc_order_employee(FrmMain frm)
         {
             InitializeComponent();
@@ -59,7 +59,7 @@ namespace DoAn.UC
         //đóng user control bán hàng
         private void BtnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frm._close();
+            frm.CLOSE();
         }
         //gọi các chi tiết của 1 hoá đơn có mã hoá đơn truyền vào
         private void CallDataGVOrderDetail(int mahd)

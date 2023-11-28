@@ -123,7 +123,7 @@
             this.cbbDatabase.Size = new System.Drawing.Size(608, 26);
             this.cbbDatabase.StyleController = this.layoutControl1;
             this.cbbDatabase.TabIndex = 15;
-            this.cbbDatabase.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cbbDatabase_MouseDown);
+            this.cbbDatabase.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CbbDatabase_MouseDown);
             // 
             // cbbServer
             // 
@@ -134,7 +134,7 @@
             this.cbbServer.Size = new System.Drawing.Size(608, 26);
             this.cbbServer.StyleController = this.layoutControl1;
             this.cbbServer.TabIndex = 13;
-            this.cbbServer.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.cbbServer_ButtonClick);
+            this.cbbServer.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.CbbServer_ButtonClick);
             // 
             // separatorControl1
             // 
@@ -151,7 +151,7 @@
             this.btnConnect.StyleController = this.layoutControl1;
             this.btnConnect.TabIndex = 10;
             this.btnConnect.Text = "Connect";
-            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
+            this.btnConnect.Click += new System.EventHandler(this.BtnConnect_Click);
             // 
             // btnTestconnect
             // 
@@ -161,7 +161,7 @@
             this.btnTestconnect.StyleController = this.layoutControl1;
             this.btnTestconnect.TabIndex = 9;
             this.btnTestconnect.Text = "Test connection";
-            this.btnTestconnect.Click += new System.EventHandler(this.btnTestconnect_Click);
+            this.btnTestconnect.Click += new System.EventHandler(this.BtnTestconnect_Click);
             // 
             // txtPassword
             // 

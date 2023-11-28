@@ -7,19 +7,19 @@ namespace DoAn.FRM
 {
     public partial class FrmChangePass : DevExpress.XtraEditors.XtraForm
     {
-        dynamic nv;
-        FrmMain frm;
+        readonly dynamic nv;
+        readonly FrmMain frm;
         public FrmChangePass(FrmMain frm, dynamic nv)
         {
             InitializeComponent();
             this.nv = nv;
             this.frm = frm;
         }
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             Close();
         }
-        bool validateTextBox(TextEdit txt)
+        bool ValidateTextBox(TextEdit txt)
         {
             if (txt.Text.Trim().Length == 0)
             {
@@ -29,9 +29,9 @@ namespace DoAn.FRM
             }
             return false;
         }
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void BtnSubmit_Click(object sender, EventArgs e)
         {
-            if (validateTextBox(txtOldPass) || validateTextBox(txtNewPass))
+            if (ValidateTextBox(txtOldPass) || ValidateTextBox(txtNewPass))
                 return;
             if (txtNewPass.Text.Length < 5)
             {

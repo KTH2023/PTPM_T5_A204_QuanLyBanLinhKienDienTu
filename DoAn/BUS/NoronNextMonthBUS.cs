@@ -21,9 +21,9 @@ namespace BUS
                 return instances;
             }
         }
-        public dynamic loadDataGC()
+        public dynamic LoadDataGC()
         {
-            return NoronNextMonthDAO.Instances.loadDataGC();
+            return NoronNextMonthDAO.Instances.LoadDataGC();
         }
         public double ReturnResult()
         {

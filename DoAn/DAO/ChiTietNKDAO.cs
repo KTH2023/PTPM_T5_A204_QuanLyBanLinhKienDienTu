@@ -9,7 +9,7 @@ namespace DAO
 {
     public class ChiTietNKDAO
     {
-        QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
+        readonly QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
         private static ChiTietNKDAO instances;
         public static ChiTietNKDAO Instances
         {

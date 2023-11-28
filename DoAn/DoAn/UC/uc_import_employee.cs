@@ -17,7 +17,7 @@ namespace DoAn.UC
 {
     public partial class Uc_import_employee : DevExpress.XtraEditors.XtraUserControl
     {
-        FrmMain frm;
+        readonly FrmMain frm;
         public Uc_import_employee(FrmMain frm)
         {
             InitializeComponent();
@@ -46,7 +46,7 @@ namespace DoAn.UC
         //đóng form nhập hàng
         private void BtnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frm._close();
+            frm.CLOSE();
         }
         //gọi các chi tiết của 1 phiếu nhập có mã phiếu nhập truyền vào
         private void CallDataGVImportDetail(int mapn)

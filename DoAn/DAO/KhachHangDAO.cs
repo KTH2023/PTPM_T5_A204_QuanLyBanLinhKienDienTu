@@ -8,7 +8,7 @@ namespace DAO
 {
     public class KhachHangDAO
     {
-        QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
+        readonly QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
         private static KhachHangDAO instances;
         public static KhachHangDAO Instances
         {

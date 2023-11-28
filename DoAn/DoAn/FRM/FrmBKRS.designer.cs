@@ -62,7 +62,7 @@
             this.Name = "frmBKRS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông báo";
-            this.Load += new System.EventHandler(this.frmBKRS_Load);
+            this.Load += new System.EventHandler(this.FrmBKRS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.progressBarControl1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

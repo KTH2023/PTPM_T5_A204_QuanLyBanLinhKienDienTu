@@ -10,7 +10,6 @@ namespace BUS
 {
    public class ChartTopCustomerStaffBUS
     {
-        QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
         private static ChartTopCustomerStaffBUS instances;
         public static ChartTopCustomerStaffBUS Instances
         {
@@ -27,13 +26,13 @@ namespace BUS
             }
         }
         
-        public DataTable loadTopCustomerBuy(bool checkType,DateTime date)
+        public DataTable LoadTopCustomerBuy(bool checkType,DateTime date)
         {
-            return ChartTopCustomerStaffDAO.Instances.loadTopCustomerBuy(checkType,date);
+            return ChartTopCustomerStaffDAO.Instances.LoadTopCustomerBuy(checkType,date);
         }
-        public DataTable loadTopStaffSell(bool checkType,DateTime date)
+        public DataTable LoadTopStaffSell(bool checkType,DateTime date)
         {
-            return ChartTopCustomerStaffDAO.Instances.loadTopStaffSell(checkType, date);
+            return ChartTopCustomerStaffDAO.Instances.LoadTopStaffSell(checkType, date);
         }
     }
 }

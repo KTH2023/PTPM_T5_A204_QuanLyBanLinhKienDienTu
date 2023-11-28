@@ -8,7 +8,7 @@ namespace DAO
 {
     public class LoaiKHDAO
     {
-        QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
+        readonly QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
         private static LoaiKHDAO instances;
         public static LoaiKHDAO Instances
         {

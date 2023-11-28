@@ -22,9 +22,9 @@ namespace BUS
             }
         }
 
-        public dynamic loadDataGC()
+        public dynamic LoadDataGC()
         {
-            return NoronNextDayDAO.Instances.loadDataGC();        
+            return NoronNextDayDAO.Instances.LoadDataGC();        
         }
         public double ReturnResult()
         {

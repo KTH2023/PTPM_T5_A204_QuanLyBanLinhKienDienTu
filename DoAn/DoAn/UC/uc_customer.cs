@@ -19,7 +19,7 @@ namespace DoAn.UC
 {
     public partial class Uc_customer : XtraUserControl
     {
-        FrmMain frm;
+        readonly FrmMain frm;
         public Uc_customer(FrmMain frm)
         {
             InitializeComponent();
@@ -39,7 +39,7 @@ namespace DoAn.UC
         }
         private void BtnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frm._close();
+            frm.CLOSE();
         }
         private void BtnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -85,9 +85,11 @@ namespace DoAn.UC
         }
         private void BtnExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            SaveFileDialog sf = new SaveFileDialog();
-            sf.Filter = "Excel Files (*.xlsx)|*.xls";
-            sf.Title = "Xuất ra file excel";
+            SaveFileDialog sf = new SaveFileDialog
+            {
+                Filter = "Excel Files (*.xlsx)|*.xls",
+                Title = "Xuất ra file excel"
+            };
             if (sf.ShowDialog() == DialogResult.OK)
             {
                 string str = "khách hàng";
@@ -103,9 +105,11 @@ namespace DoAn.UC
         }
         private void BtnWord_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            SaveFileDialog sf = new SaveFileDialog();
-            sf.Filter = "Word Files (*.docx)|*.docx";
-            sf.Title = "Xuất ra file word";
+            SaveFileDialog sf = new SaveFileDialog
+            {
+                Filter = "Word Files (*.docx)|*.docx",
+                Title = "Xuất ra file word"
+            };
             if (sf.ShowDialog() == DialogResult.OK)
             {
                 string str = "khách hàng";
@@ -121,9 +125,11 @@ namespace DoAn.UC
         }
         private void BtnPdf_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            SaveFileDialog sf = new SaveFileDialog();
-            sf.Filter = "Pdf Files (*.pdf)|*.pdf";
-            sf.Title = "Xuất ra file pdf";
+            SaveFileDialog sf = new SaveFileDialog
+            {
+                Filter = "Pdf Files (*.pdf)|*.pdf",
+                Title = "Xuất ra file pdf"
+            };
             if (sf.ShowDialog() == DialogResult.OK)
             {
                 string str = "khách hàng";
@@ -196,7 +202,7 @@ namespace DoAn.UC
                     try
                     {
                         int i = KhachHangBUS.Instances.Insert(gvCustomer.GetRowCellValue(e.RowHandle, "TENKH").ToString().Trim()
-                             , gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH") == null || gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH").ToString() == "" ? false : bool.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH").ToString().Trim())
+                             , gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH") != null && gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH").ToString() != "" && bool.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "GIOITINH").ToString().Trim())
                              , gvCustomer.GetRowCellValue(e.RowHandle, "DIACHI").ToString()
                              , gvCustomer.GetRowCellValue(e.RowHandle, "SDT").ToString()
                              , int.Parse(gvCustomer.GetRowCellValue(e.RowHandle, "maloaikh").ToString().Trim()));

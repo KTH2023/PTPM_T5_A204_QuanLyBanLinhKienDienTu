@@ -10,7 +10,7 @@ namespace DoAn.FRM
     {
         UserControl uc;
         public dynamic nv;
-        FrmSystem frm;
+        readonly FrmSystem frm;
         bool checkClose;
         public FrmMain(FrmSystem frm, dynamic nv)
         {
@@ -25,7 +25,7 @@ namespace DoAn.FRM
             else
                 BtnCustomerOfStaff.Visible = false;
         }
-        public void _close()
+        public void CLOSE()
         {
             fluentDesignFormContainer1.Controls.Remove(uc);
             fluentDesignFormContainer1.BringToFront();
@@ -65,9 +65,11 @@ namespace DoAn.FRM
 
         private void BtnBackup_ItemClick(object sender, ItemClickEventArgs e)
         {
-            SaveFileDialog sf = new SaveFileDialog();
-            sf.Filter = "SQL Backup (*.bak)|*.bak";
-            sf.Title = "Backup database";
+            SaveFileDialog sf = new SaveFileDialog
+            {
+                Filter = "SQL Backup (*.bak)|*.bak",
+                Title = "Backup database"
+            };
             if (sf.ShowDialog() == DialogResult.OK)
             {
                 new FrmBKRS(sf.FileName, 0).ShowDialog();
@@ -76,9 +78,11 @@ namespace DoAn.FRM
 
         private void BtnRestore_ItemClick(object sender, ItemClickEventArgs e)
         {
-            OpenFileDialog op = new OpenFileDialog();
-            op.Filter = "SQL Backup (*.bak)|*.bak";
-            op.Title = "Restore database";
+            OpenFileDialog op = new OpenFileDialog
+            {
+                Filter = "SQL Backup (*.bak)|*.bak",
+                Title = "Restore database"
+            };
             if (op.ShowDialog() == DialogResult.OK)
             {
                 new FrmBKRS(op.FileName, 1).ShowDialog();
@@ -91,13 +95,13 @@ namespace DoAn.FRM
             {
                 if (XtraMessageBox.Show("Bạn chắc chắn muốn đăng xuất?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    Close();
+                    base.Close();
                     frm._show();
                 }
             }
             else
             {
-                Close();
+                base.Close();
 
                 frm._show();
             }

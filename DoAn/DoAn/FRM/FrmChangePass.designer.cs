@@ -155,7 +155,7 @@
             this.btnSubmit.StyleController = this.layoutControl1;
             this.btnSubmit.TabIndex = 7;
             this.btnSubmit.Text = "Xác nhận";
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            this.btnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
             // layoutControlItem4
             // 
@@ -174,7 +174,7 @@
             this.btnClose.StyleController = this.layoutControl1;
             this.btnClose.TabIndex = 8;
             this.btnClose.Text = "Đóng";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // layoutControlItem5
             // 

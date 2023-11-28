@@ -18,7 +18,7 @@ namespace DoAn.UC
 {
     public partial class Uc_import : DevExpress.XtraEditors.XtraUserControl
     {
-        FrmMain frm;
+        readonly FrmMain frm;
         dynamic lstDetailImport;
         public Uc_import(FrmMain frm)
         {
@@ -35,7 +35,7 @@ namespace DoAn.UC
         //đóng form
         private void BtnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frm._close();
+            frm.CLOSE();
         }
 
         private void GvImport_MasterRowEmpty(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowEmptyEventArgs e)
@@ -104,8 +104,10 @@ namespace DoAn.UC
                 int mapn = int.Parse(gvImport.GetRowCellValue(row, "MAPN").ToString());
                 lstDetailImport = ChiTietNKBUS.Instances.GetChiTietNKs(mapn);
                 dynamic nk = NhapKhoBUS.Instances.FindOrderCode(mapn);
-                var rp = new rpImport();
-                rp.DataSource = lstDetailImport;
+                var rp = new rpImport
+                {
+                    DataSource = lstDetailImport
+                };
                 rp.lbNguoiLap.Value = frm.nv.TENNV;
                 rp.lbCodeImport.Value = "BÁO CÁO PHIẾU NHẬP " + mapn;
                 rp.lbDate.Value = nk.NGAYNHAP;

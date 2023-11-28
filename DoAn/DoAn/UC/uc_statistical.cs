@@ -17,7 +17,7 @@ namespace DoAn.UC
 {
     public partial class Uc_statistical : DevExpress.XtraEditors.XtraUserControl
     {
-        FrmMain frm;
+        readonly FrmMain frm;
         public Uc_statistical(FrmMain frm)
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace DoAn.UC
 
         private void BtnDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frm._close();
+            frm.CLOSE();
         }
 
         private void BtnThongKe_Click(object sender, EventArgs e)
@@ -53,8 +53,10 @@ namespace DoAn.UC
             DataTable tb = StatisticalBUS.Instance.LoadDetailStatistical(dateFrom.DateTime, dateTo.DateTime);
             if (tb == null || tb.Rows.Count == 0)
                 return;
-            var rp = new rpStatistical();
-            rp.DataSource = tb;
+            var rp = new rpStatistical
+            {
+                DataSource = tb
+            };
             rp.lbNguoiLap.Value = frm.nv.TENNV;
             rp.ShowPreviewDialog();
         }

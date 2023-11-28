@@ -113,7 +113,7 @@
             this.btnLogin.StyleController = this.layoutControl1;
             this.btnLogin.TabIndex = 7;
             this.btnLogin.Text = "Đăng nhập";
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // ckbRemember
             // 
@@ -223,7 +223,7 @@
             this.Controls.Add(this.layoutControl1);
             this.Name = "frmLogin";
             this.Text = "Đăng nhập";
-            this.Load += new System.EventHandler(this.frmLogin_Load);
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();

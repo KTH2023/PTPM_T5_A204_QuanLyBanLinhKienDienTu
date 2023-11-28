@@ -36,7 +36,7 @@ namespace DoAn.UC
         }
         private void BtnDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frm._close();
+            frm.CLOSE();
         }
         private void Uc_staff_Load(object sender, EventArgs e)
         {
@@ -265,7 +265,7 @@ namespace DoAn.UC
                         int i = NhanVienBUS.Instances.Insert(gvStaff.GetRowCellValue(e.RowHandle, "TENNV").ToString().Trim()
                               , gvStaff.GetRowCellValue(e.RowHandle, "DIACHI").ToString().Trim()
                            , gvStaff.GetRowCellValue(e.RowHandle, "SDT").ToString().Trim()
-                           , gvStaff.GetRowCellValue(e.RowHandle, "GIOITINH") == null || gvStaff.GetRowCellValue(e.RowHandle, "GIOITINH").ToString() == "" ? false : bool.Parse(gvStaff.GetRowCellValue(e.RowHandle, "GIOITINH").ToString().Trim())
+                           , gvStaff.GetRowCellValue(e.RowHandle, "GIOITINH") != null && gvStaff.GetRowCellValue(e.RowHandle, "GIOITINH").ToString() != "" && bool.Parse(gvStaff.GetRowCellValue(e.RowHandle, "GIOITINH").ToString().Trim())
                            , DateTime.Parse(gvStaff.GetRowCellValue(e.RowHandle, "NGAYVL").ToString().Trim())
                            , double.Parse(gvStaff.GetRowCellValue(e.RowHandle, "LUONG").ToString().Trim())
                            , open == null || open.SafeFileName == null ? gvStaff.GetRowCellValue(e.RowHandle, "HINHANH").ToString() : open.SafeFileName
@@ -403,9 +403,11 @@ namespace DoAn.UC
         //xuất ra file excel nhân viện hoặc quyền
         private void BtnExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            SaveFileDialog sf = new SaveFileDialog();
-            sf.Filter = "Excel Files (*.xlsx)|*.xls";
-            sf.Title = "Xuất ra file excel";
+            SaveFileDialog sf = new SaveFileDialog
+            {
+                Filter = "Excel Files (*.xlsx)|*.xls",
+                Title = "Xuất ra file excel"
+            };
             if (sf.ShowDialog() == DialogResult.OK)
             {
                 string str = "nhân viên";
@@ -422,9 +424,11 @@ namespace DoAn.UC
         //xuất ra file word nhân viện hoặc quyền
         private void BtnWord_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            SaveFileDialog sf = new SaveFileDialog();
-            sf.Filter = "Word Files (*.docx)|*.docx";
-            sf.Title = "Xuất ra file word";
+            SaveFileDialog sf = new SaveFileDialog
+            {
+                Filter = "Word Files (*.docx)|*.docx",
+                Title = "Xuất ra file word"
+            };
             if (sf.ShowDialog() == DialogResult.OK)
             {
                 string str = "nhân viên";
@@ -441,9 +445,11 @@ namespace DoAn.UC
         //xuất ra file Pdf nhân viện hoặc quyền
         private void BtnPdf_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            SaveFileDialog sf = new SaveFileDialog();
-            sf.Filter = "Pdf Files (*.pdf)|*.pdf";
-            sf.Title = "Xuất ra file pdf";
+            SaveFileDialog sf = new SaveFileDialog
+            {
+                Filter = "Pdf Files (*.pdf)|*.pdf",
+                Title = "Xuất ra file pdf"
+            };
             if (sf.ShowDialog() == DialogResult.OK)
             {
                 string str = "nhân viên";

@@ -6,7 +6,7 @@ namespace DAO
 {
     public class ChartDAO
     {
-        QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
+        readonly QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
         private static ChartDAO instances;
         public static ChartDAO Instances
         {
@@ -19,7 +19,7 @@ namespace DAO
             set { instances = value; }
         }
         //đơn hàng phiếu nhập trong tháng hiện tại
-        public dynamic loadOrderAndImportInMonthNow()
+        public dynamic LoadOrderAndImportInMonthNow()
         {
             DataTable tb = new DataTable();
             tb.Columns.Add("ten");
@@ -35,12 +35,12 @@ namespace DAO
             return tb;
         }
         //top sản phẩm bán chạy nhất
-        public dynamic loadTopSelling()
+        public dynamic LoadTopSelling()
         {
             return Support.ToDataTable(db.topSelling().OrderByDescending(x => x.soluong).ThenBy(x => x.TENLINHKIEN).ToList());
         }
         //load doanh thu năm hiện tại
-        public dynamic loadStatisticalYear()
+        public dynamic LoadStatisticalYear()
         {
             DataTable tb = new DataTable();
             tb.Columns.Add("ten");
@@ -56,7 +56,7 @@ namespace DAO
             return tb;
         }
         //sản phẩm sắp hết hàng <=5
-        public dynamic loadProductNotStock()
+        public dynamic LoadProductNotStock()
         {
             DataTable tb = new DataTable();
             tb.Columns.Add("ten");

@@ -9,7 +9,7 @@ namespace DAO
 {
     public class NoronNextDayDAO
     {
-        private QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
+        private readonly QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
         //trọng số
         private double wa1, wb1, wc1, wd1, wa2, wb2, wc2, wd2, wa3, wb3, wc3, wd3
                        , wa4, wb4, wc4, wd4, w15, w25, w35, w45;
@@ -35,7 +35,7 @@ namespace DAO
             Random random = new Random();
             return random.NextDouble() * (maximum - minimum) + minimum;
         }
-        public dynamic loadDataGC()
+        public dynamic LoadDataGC()
         {
             lstRevenue = new List<ItemNoronNextDay>();
             DateTime days30Ago = DateTime.Now.AddDays(-29);
@@ -50,33 +50,33 @@ namespace DAO
                 });
             }
 
-            randomWeight();
+            RandomWeight();
             for (int j = 0; j < 1000; j++)
             {
                 for (int i = 0; i < 22; i++)
                 {
                     ReadInput(i);
-                    train();
+                    Train();
                 }
             }
             return Support.ToDataTable<ItemNoronNextDay>(lstRevenue);
         }
         //tìm doanh thu lớn nhất
-        private double findMax()
+        private double FindMax()
         {
             return Math.Round(lstRevenue.Max(x => x.Revenue) ?? 0, 6);
         }
         //tìm doanh thu nhỏ nhất
-        private double findMin()
+        private double FindMin()
         {
             return Math.Round(lstRevenue.Min(x => x.Revenue) ?? 0, 6);
 
         }
         //chuẩn hoá dữ liệu về [min,max] của lstStaticalDay
-        private double dataNormalization(double x)
+        private double DataNormalization(double x)
         {
-            double min = findMin();
-            double max = findMax();
+            double min = FindMin();
+            double max = FindMax();
             double result = (x - min) / (max - min);
             return Math.Round(result, 6);
         }
@@ -85,25 +85,25 @@ namespace DAO
         {
             A = lstRevenue[day].Revenue ?? 0;
             //chuẩn hoá dữ liệu A
-            A = Math.Round(dataNormalization(A), 6);
+            A = Math.Round(DataNormalization(A), 6);
 
             B = lstRevenue[day + 1].Revenue ?? 0;
             //chuẩn hoá dữ liệu B
-            B = Math.Round(dataNormalization(B), 6);
+            B = Math.Round(DataNormalization(B), 6);
 
             C = lstRevenue[day + 2].Revenue ?? 0;
             //chuẩn hoá dữ liệu C
-            C = Math.Round(dataNormalization(C), 6);
+            C = Math.Round(DataNormalization(C), 6);
 
 
             D = lstRevenue[day + 3].Revenue ?? 0;
             //chuẩn hoá dữ liệu D
-            D = Math.Round(dataNormalization(D), 6);
+            D = Math.Round(DataNormalization(D), 6);
             if (day + 4 > 29)
                 return;
             Z = lstRevenue[day + 4].Revenue ?? 0;
             //chuẩn hoá dữ liệu Z
-            Z = Math.Round(dataNormalization(Z), 6);
+            Z = Math.Round(DataNormalization(Z), 6);
         }
 
         private static double Sigmoid(double t)
@@ -111,18 +111,18 @@ namespace DAO
             return Math.Round(1.0 / (1 + Math.Pow(Math.E, -t)), 6);
         }
 
-        private static double derivative_Sigmoid(double t)
+        private static double Derivative_Sigmoid(double t)
         {
             return Math.Round(Math.Pow(Math.E, t) / Math.Pow(1.0 + Math.Pow(Math.E, t), 2), 6);
         }
         //tìm t cho nơron
-        private double findT(double wa, double wb, double wc, double wd)
+        private double FindT(double wa, double wb, double wc, double wd)
         {
             double t = (A * wa) + (B * wb) + (C * wc) + (D * wd) + n;
             return Math.Round(t, 6);
         }
         //tìm t cho nơron
-        private double findT(double a, double b, double c, double d, double wa, double wb, double wc, double wd)
+        private double FindT(double a, double b, double c, double d, double wa, double wb, double wc, double wd)
         {
             double t = (a * wa) + (b * wb) + (c * wc) + (d * wd) + n;
             return Math.Round(t, 6);
@@ -130,13 +130,13 @@ namespace DAO
         //tính trọng số cho 1 nơron
         private double CalcWeight(double a, double w, double ng, double t)
         {
-            return Math.Round((double)(w + n * ng * derivative_Sigmoid(t) * a), 6);
+            return Math.Round((double)(w + n * ng * Derivative_Sigmoid(t) * a), 6);
         }
 
         //random trọng số
-        private void randomWeight()
+        private void RandomWeight()
         {
-            Random r = new Random();
+            //Random r = new Random();
             wa1 = GetRandomNumber(0, 1);
             wb1 = GetRandomNumber(0, 1);
             wc1 = GetRandomNumber(0, 1);
@@ -164,26 +164,26 @@ namespace DAO
         }
 
         //train dữ liệu 
-        private void train()
+        private void Train()
         {
             //Tính nơron 1
-            double t1 = findT(wa1, wb1, wc1, wd1);
+            double t1 = FindT(wa1, wb1, wc1, wd1);
             double y1 = Sigmoid(t1);
 
             //tính nơron 2
-            double t2 = findT(wa2, wb2, wc2, wd2);
+            double t2 = FindT(wa2, wb2, wc2, wd2);
             double y2 = Sigmoid(t2);
 
             //tính nơron 3
-            double t3 = findT(wa3, wb3, wc3, wd3);
+            double t3 = FindT(wa3, wb3, wc3, wd3);
             double y3 = Sigmoid(t3);
 
             //tính nơron 4
-            double t4 = findT(wa4, wb4, wc4, wd4);
+            double t4 = FindT(wa4, wb4, wc4, wd4);
             double y4 = Sigmoid(t4);
 
             //tính nơron 5
-            double t5 = findT(y1, y2, y3, y4, w15, w25, w35, w45);
+            double t5 = FindT(y1, y2, y3, y4, w15, w25, w35, w45);
             double y5 = Sigmoid(t5);
             //tính tính hiệu lỗi ( nguy) của nơron 5
             ng5 = Math.Round(Z - y5, 6);
@@ -228,25 +228,25 @@ namespace DAO
 
 
         //dự đoán doanh thu ngày kế tiếp
-        private double predict()
+        private double Predict()
         {
             //Tính nơron 1
-            double t1 = findT(wa1, wb1, wc1, wd1);
+            double t1 = FindT(wa1, wb1, wc1, wd1);
             double y1 = Sigmoid(t1);
 
             //Tính nơron 2
-            double t2 = findT(wa2, wb2, wc2, wd2);
+            double t2 = FindT(wa2, wb2, wc2, wd2);
             double y2 = Sigmoid(t2);
 
             //Tính nơron 3
-            double t3 = findT(wa3, wb3, wc3, wd3);
+            double t3 = FindT(wa3, wb3, wc3, wd3);
             double y3 = Sigmoid(t3);
 
             //Tính nơron 4
-            double t4 = findT(wa4, wb4, wc4, wd4);
+            double t4 = FindT(wa4, wb4, wc4, wd4);
             double y4 = Sigmoid(t4);
             //Tính nơron 5
-            double t5 = findT(y1, y2, y3, y4, w15, w25, w35, w45);
+            double t5 = FindT(y1, y2, y3, y4, w15, w25, w35, w45);
             double y5 = Sigmoid(t5);
             return Math.Round(y5, 6);
         }
@@ -255,9 +255,9 @@ namespace DAO
         public double ReturnResult()
         {
             ReadInput(26);
-            double min = findMin();
-            double max = findMax();
-            double result = predict() * (max - min) + min;
+            double min = FindMin();
+            double max = FindMax();
+            double result = Predict() * (max - min) + min;
             return Math.Round(result, 6);
         }
     }

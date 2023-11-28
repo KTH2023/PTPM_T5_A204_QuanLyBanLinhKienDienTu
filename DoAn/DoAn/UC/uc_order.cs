@@ -19,7 +19,7 @@ namespace DoAn.UC
     public partial class Uc_order : DevExpress.XtraEditors.XtraUserControl
     {
         dynamic lstDetailOrder;
-        FrmMain frm;
+        readonly FrmMain frm;
         public Uc_order(FrmMain frm)
         {
             InitializeComponent();
@@ -35,7 +35,7 @@ namespace DoAn.UC
         //đóng form hoá đơn
         private void BtnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frm._close();
+            frm.CLOSE();
         }
 
         private void GvOrder_MasterRowEmpty(object sender, DevExpress.XtraGrid.Views.Grid.MasterRowEmptyEventArgs e)
@@ -50,7 +50,7 @@ namespace DoAn.UC
             var mahd = gvOrder.GetRowCellValue(e.RowHandle, "MAHD");
             if (mahd != null)
             {
-                e.ChildList = ChiTietHDBUS.Instances.GetChiTietHDs(int.Parse(mahd.ToString()));
+                e.ChildList = ChiTietHDBUS.Instances.GetChiTietHDs_(int.Parse(mahd.ToString()));
 
                 gvOrderDetail.ViewCaption = "Chi tiết hoá đơn " + mahd;
 
@@ -107,8 +107,10 @@ namespace DoAn.UC
                 int mahd = int.Parse(gvOrder.GetRowCellValue(row, "MAHD").ToString());
                 lstDetailOrder = ChiTietHDBUS.Instances.GetChiTietHDs(mahd);
                 dynamic hd = HoaDonBUS.Instances.FindOrderCode(mahd);
-                var rp = new rpOrder();
-                rp.DataSource = lstDetailOrder;
+                var rp = new rpOrder
+                {
+                    DataSource = lstDetailOrder
+                };
                 rp.lbNguoiLap.Value = frm.nv.TENNV;
                 rp.lbCodeOrder.Value = "BÁO CÁO HOÁ ĐƠN " + mahd;
                 rp.lbCustomer.Value = hd.KHACHHANG.TENKH;

@@ -5,7 +5,7 @@ namespace DAO
 {
     public class LinhKienDAO
     {
-        QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
+        readonly QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
         private static LinhKienDAO instances;
         public static LinhKienDAO Instances
         {

@@ -116,7 +116,7 @@ namespace DoAn.FRM
             });
         }
 
-        private void frmBKRS_Load(object sender, EventArgs e)
+        private void FrmBKRS_Load(object sender, EventArgs e)
         {
         }
     }

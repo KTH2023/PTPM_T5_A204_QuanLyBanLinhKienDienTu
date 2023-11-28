@@ -8,13 +8,13 @@ namespace DoAn.FRM
 {
     public partial class FrmLogin : DevExpress.XtraEditors.XtraForm
     {
-        private FrmSystem frm;
+        private readonly FrmSystem frm;
         public FrmLogin(FrmSystem frm)
         {
             InitializeComponent();
             this.frm = frm;
         }
-        private void frmLogin_Load(object sender, EventArgs e)
+        private void FrmLogin_Load(object sender, EventArgs e)
         {
             txtUsername.Focus();
             if (!string.IsNullOrEmpty(Properties.Settings.Default.Remember))
@@ -37,7 +37,7 @@ namespace DoAn.FRM
             }
             return false;
         }
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void BtnLogin_Click(object sender, EventArgs e)
         {
             if (ValidateTextBox(txtUsername) || ValidateTextBox(txtPassword))
                 return;

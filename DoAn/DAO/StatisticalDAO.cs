@@ -9,7 +9,7 @@ namespace DAO
 {
     public class StatisticalDAO
     {
-        private QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
+        private readonly QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
         private static StatisticalDAO instance;
         public static StatisticalDAO Instance
         {

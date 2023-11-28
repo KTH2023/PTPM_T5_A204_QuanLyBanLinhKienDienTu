@@ -10,13 +10,13 @@ namespace DoAn.FRM
     public partial class FrmConnect : DevExpress.XtraEditors.XtraForm
     {
         private string connectionString;
-        private FrmSystem frm; 
+        private readonly FrmSystem frm; 
         public FrmConnect(FrmSystem frm)
         {
             InitializeComponent();
             this.frm = frm;
         }
-        private void btnTestconnect_Click(object sender, EventArgs e)
+        private void BtnTestconnect_Click(object sender, EventArgs e)
         {
             splashScreenManager1.ShowWaitForm();
             connectionString = String.Format("server={0}; database={1}; Integrated Security = False;uid={2};pwd={3}", cbbServer.Text.Trim(), cbbDatabase.Text, txtUsername.Text, txtPassword.Text);
@@ -43,7 +43,7 @@ namespace DoAn.FRM
             }
             return false;
         }
-        private void cbbDatabase_MouseDown(object sender, MouseEventArgs e)
+        private void CbbDatabase_MouseDown(object sender, MouseEventArgs e)
         {
             if (ValidateTextBox(txtUsername) || ValidateTextBox(txtPassword))            
                 return;
@@ -57,7 +57,7 @@ namespace DoAn.FRM
             cbbDatabase.Properties.DisplayMember = "name";
             splashScreenManager1.CloseWaitForm();
         }
-        private void cbbServer_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        private void CbbServer_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             splashScreenManager1.ShowWaitForm();
             cbbServer.Properties.Items.Clear();
@@ -66,7 +66,7 @@ namespace DoAn.FRM
                 cbbServer.Properties.Items.Add(r[0].ToString());
             splashScreenManager1.CloseWaitForm();
         }
-        private void btnConnect_Click(object sender, EventArgs e)
+        private void BtnConnect_Click(object sender, EventArgs e)
         {
             connectionString = String.Format("server={0}; database={1}; Integrated Security = False;uid={2};pwd={3}", cbbServer.Text.Trim(), cbbDatabase.Text, txtUsername.Text, txtPassword.Text);
             splashScreenManager1.ShowWaitForm();

@@ -16,28 +16,30 @@ namespace DoAn.UC
 {
     public partial class Uc_predict : DevExpress.XtraEditors.XtraUserControl
     {
-        FrmMain frm;
-        dynamic tbNextDay, tbNextMonth;
+        readonly FrmMain frm;
+        private readonly dynamic tbNextDay;
+        private readonly dynamic tbNextMonth;
+
         public Uc_predict(FrmMain frm)
         {
             InitializeComponent();
             this.frm = frm;
-            tbNextDay = NoronNextDayBUS.Instances.loadDataGC();
+            tbNextDay = NoronNextDayBUS.Instances.LoadDataGC();
             gcPredictNextDay.DataSource = tbNextDay;
-            tbNextMonth = NoronNextMonthBUS.Instances.loadDataGC();
+            tbNextMonth = NoronNextMonthBUS.Instances.LoadDataGC();
             gcPredictNextMonth.DataSource = tbNextMonth;
             gvPredictNextDay.IndicatorWidth = 50;
             gvPredictNextMonth.IndicatorWidth = 50;
-            loadChartPredictDay();
-            loadChartPredictMonth();
+            LoadChartPredictDay();
+            LoadChartPredictMonth();
         }
 
-        private void btnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frm._close();
+            frm.CLOSE();
         }
 
-        private void btnPredict_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnPredict_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (xtraTabControl1.SelectedTabPageIndex == 0)
                 XtraMessageBox.Show("Doanh thu ngày " + DateTime.Now.AddDays(1).ToShortDateString() + " là: " + Support.ConvertVND(NoronNextDayBUS.Instances.ReturnResult().ToString()), "Thông báo");
@@ -48,11 +50,13 @@ namespace DoAn.UC
 
 
 
-        private void loadChartPredictDay()
+        private void LoadChartPredictDay()
         {
             Series _seri = new Series("", ViewType.SwiftPlot);
-            ChartTitle title = new ChartTitle();
-            title.Text = "Doanh thu 30 ngày gần nhất.";
+            ChartTitle title = new ChartTitle
+            {
+                Text = "Doanh thu 30 ngày gần nhất."
+            };
             chartNextDay.Titles.Add(title);
             chartNextDay.Series.Add(_seri);
             foreach (DataRow dr in tbNextDay.Rows)
@@ -64,11 +68,13 @@ namespace DoAn.UC
         }
 
 
-        private void loadChartPredictMonth()
+        private void LoadChartPredictMonth()
         {
             Series _seri = new Series("", ViewType.SwiftPlot);
-            ChartTitle title = new ChartTitle();
-            title.Text = "Doanh thu 12 tháng gần nhất.";
+            ChartTitle title = new ChartTitle
+            {
+                Text = "Doanh thu 12 tháng gần nhất."
+            };
             chartNextMonth.Titles.Add(title);
             chartNextMonth.Series.Add(_seri);
             foreach (DataRow dr in tbNextMonth.Rows)
@@ -80,39 +86,39 @@ namespace DoAn.UC
         }
 
 
-        private void gvPredictNextDay_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
+        private void GvPredictNextDay_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
         {
             if (!e.Info.IsRowIndicator || e.RowHandle < 0)
                 return;
             e.Info.DisplayText = (e.RowHandle + 1) + "";
         }
 
-        private void gvPredictNextMonth_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
+        private void GvPredictNextMonth_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
         {
             if (!e.Info.IsRowIndicator || e.RowHandle < 0)
                 return;
             e.Info.DisplayText = (e.RowHandle + 1) + "";
         }
 
-        private void chartNextMonth_CustomDrawAxisLabel(object sender, CustomDrawAxisLabelEventArgs e)
+        private void ChartNextMonth_CustomDrawAxisLabel(object sender, CustomDrawAxisLabelEventArgs e)
         {
             try
             {
                 e.Item.Text = Support.ConvertVND(e.Item.Text);
             }
-            catch (Exception ex)
+            catch (Exception )
             {
 
             }
         }
 
-        private void chartNextDay_CustomDrawAxisLabel(object sender, CustomDrawAxisLabelEventArgs e)
+        private void ChartNextDay_CustomDrawAxisLabel(object sender, CustomDrawAxisLabelEventArgs e)
         {
             try
             {
                 e.Item.Text = Support.ConvertVND(e.Item.Text);
             }
-            catch (Exception ex)
+            catch (Exception )
             {
 
             }

@@ -17,7 +17,7 @@ namespace DoAn.UC
 {
     public partial class Uc_inventory : DevExpress.XtraEditors.XtraUserControl
     {
-        FrmMain frm;
+        readonly FrmMain frm;
         public Uc_inventory(FrmMain frm)
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace DoAn.UC
 
         private void BtnDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frm._close();
+            frm.CLOSE();
         }
 
         private void BtnThongKe_Click(object sender, EventArgs e)
@@ -52,8 +52,10 @@ namespace DoAn.UC
             DataTable tb = InventoryBUS.Instances.LoadDetailInventory(dateFrom.DateTime, dateTo.DateTime);
             if (tb == null || tb.Rows.Count == 0)
                 return;
-            var rp = new rpInventory();
-            rp.DataSource = tb;
+            var rp = new rpInventory
+            {
+                DataSource = tb
+            };
             rp.lbNguoiLap.Value = frm.nv.TENNV;
             rp.ShowPreviewDialog();
         }

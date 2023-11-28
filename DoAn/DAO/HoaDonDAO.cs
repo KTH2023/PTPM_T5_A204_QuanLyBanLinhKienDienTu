@@ -8,7 +8,7 @@ namespace DAO
 {
     public class HoaDonDAO
     {
-        QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
+        readonly QL_LinhKienDBDataContext db = new QL_LinhKienDBDataContext();
         private static HoaDonDAO instances;
         public static HoaDonDAO Instances
         {
