@@ -13,7 +13,7 @@ namespace DoAn_Web.Controllers
     {
 
         public const string cartSession = "cartSession";
-        private QLLKDataContext db = new QLLKDataContext();
+        private readonly QLLKDataContext db = new QLLKDataContext();
         public ActionResult Index()
         {
            
@@ -103,10 +103,12 @@ namespace DoAn_Web.Controllers
                         }
                         else
                         {
-                            var item = new CartItem();
-                            item.Product = p;
-                            item.Quantity = Quantity;
-                            item.Id_account = (int)acc_id.Makh;
+                            var item = new CartItem
+                            {
+                                Product = p,
+                                Quantity = Quantity,
+                                Id_account = (int)acc_id.Makh
+                            };
                             list.Add(item);
                             Session[cartSession] = list; //save
                             return Json(new
@@ -120,12 +122,16 @@ namespace DoAn_Web.Controllers
                     }
                     else
                     { //gio hang moi
-                        var item = new CartItem();
-                        item.Product = p;
-                        item.Quantity = Quantity;
-                        item.Id_account = (int)acc_id.Makh;
-                        var list = new List<CartItem>();
-                        list.Add(item);
+                        var item = new CartItem
+                        {
+                            Product = p,
+                            Quantity = Quantity,
+                            Id_account = (int)acc_id.Makh
+                        };
+                        var list = new List<CartItem>
+                        {
+                            item
+                        };
                         Session[cartSession] = list;//save 
                         return Json(new
                         {
@@ -207,7 +213,7 @@ namespace DoAn_Web.Controllers
         }
         [HttpPost]
 
-        public JsonResult Pay(HOADON order)
+        public JsonResult Pay(HOADON order, KHACHHANG kh, string email)
         {
             order.NGAYLAP = DateTime.Parse(DateTime.Now.ToShortDateString());
             order.MAKH = (Session["account_client"] as ACCOUNT).Makh;
@@ -216,10 +222,6 @@ namespace DoAn_Web.Controllers
             var cart = Session[cartSession] as List<CartItem>;
             double? thanhtien = cart.Sum(x => x.Quantity * x.Product.DONGIA);
             order.tongtien = thanhtien * (1 - order.giamgia);
-
-            var hd = (from K in db.KHACHHANGs
-                      join A in db.ACCOUNTs on K.Makh equals A.Makh 
-                      where K.Makh == order.MAKH select new { K = K ,A = A}).FirstOrDefault();
             #region body mail
             string body = @"<!DOCTYPE html>
 <html lang='en'>
@@ -341,21 +343,21 @@ namespace DoAn_Web.Controllers
       <div class='header_detail'>
         <div>
           <span>Họ tên:</span>
-          <span>" + hd.K.TENKH + @"</span>
+          <span>" + kh.TENKH + @"</span>
         </div>
         <div>
           <span>Email:</span>
-          <span>" + hd.A.email + @"</span>
+          <span>" + email + @"</span>
         </div>       
       </div>
          <div class='header_detail'>        
         <div>
           <span>Số điện thoại:</span>
-          <span>" + hd.K.SDT + @"</span>
+          <span>" + kh.SDT + @"</span>
         </div>
         <div>
           <span>Địa chỉ nhận hàng:</span>
-          <span>" + hd.K.DIACHI + @"</span>
+          <span>" + kh.DIACHI + @"</span>
         </div>
       </div>
     </div>
@@ -380,11 +382,13 @@ namespace DoAn_Web.Controllers
             foreach (var item in cart)
             {
                 urlImage.Add("~/Assets/Client/img/" + item.Product.HINHANH.Replace(" ", "%20"));
-                CHITIETHD orderdetail = new CHITIETHD();
-                orderdetail.MAHD = idorder;
-                orderdetail.MALINHKIEN = item.Product.MALINHKIEN;
-                orderdetail.SOLUONG = item.Quantity;
-                orderdetail.DONGIA = item.Product.DONGIA;
+                CHITIETHD orderdetail = new CHITIETHD
+                {
+                    MAHD = idorder,
+                    MALINHKIEN = item.Product.MALINHKIEN,
+                    SOLUONG = item.Quantity,
+                    DONGIA = item.Product.DONGIA
+                };
                 orderdetail.THANHTIEN = orderdetail.DONGIA * orderdetail.SOLUONG;
                 #region body mail
                 body += @"
@@ -449,7 +453,7 @@ namespace DoAn_Web.Controllers
                             Libary.Instances.ConvertVND((thanhtien * (1 - order.giamgia)).ToString()));
             #endregion
             Session[cartSession] = null;
-            Libary.Instances.SendMail(hd.A.email, "Thông tin đơn hàng " + idorder, body, urlImage);
+            Libary.Instances.SendMail(email, "Thông tin đơn hàng " + idorder, body, urlImage);
 
             return Json(new
             {

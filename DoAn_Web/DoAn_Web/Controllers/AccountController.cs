@@ -48,8 +48,8 @@ namespace DoAn_Web.Controllers
         [HttpPost]
         public JsonResult Register(KHACHHANG kh, ACCOUNT acc)
         {
-            try
-            {
+            //try
+            //{
                 if (db.ACCOUNTs.SingleOrDefault(x => x.username.Equals(acc.username)) != null)
                     return Json(new
                     {
@@ -63,14 +63,14 @@ namespace DoAn_Web.Controllers
                         message = "Email đã được sử dụng."
                     });
                 if (acc.image != null&&acc.image.Length!=0)
-                    acc.image = "Assets/Client/img/" + acc.image;
+                    acc.image = acc.image;
                 else
                     acc.image = "";
                 db.KHACHHANGs.InsertOnSubmit(kh);
-                int makh = db.KHACHHANGs.OrderByDescending(x => x.Makh).FirstOrDefault().Makh;
+                db.SubmitChanges();
                 acc.status = true;
                 acc.password = Libary.Instances.EncodeMD5(acc.password);
-                acc.Makh = makh;
+                acc.Makh = db.KHACHHANGs.OrderByDescending(x=>x.Makh).FirstOrDefault().Makh;
                 db.ACCOUNTs.InsertOnSubmit(acc);
                 db.SubmitChanges();
                 return Json(new
@@ -78,10 +78,10 @@ namespace DoAn_Web.Controllers
                     status = 1,
                     message = "Đăng kí thành công."
                 });
-            }
-            catch (Exception)
-            {
-            }
+            //}
+            //catch (Exception)
+            //{
+            //}
             return Json(new
             {
                 status = 0,
@@ -439,6 +439,7 @@ namespace DoAn_Web.Controllers
                 });
             }
             Session["account_client"] = acc;
+            Session["kh_client"] = db.KHACHHANGs.SingleOrDefault(x => x.Makh == acc.Makh);
             return Json(new
             {
                 status = 1,

@@ -223,7 +223,10 @@ function register() {
     var kh = new Object();
     kh.Makh = null;
     kh.maloaikh = 3;
-    kh.GIOITINH = Boolean($('#Gioitinh input:radio:checked').val());
+    console.log($('#Gioitinh input:radio:checked').val());
+    if ($('#Gioitinh input:radio:checked').val() == 0)
+        kh.GIOITINH = false;
+    else kh.GIOITINH = true;
     kh.SDT = $('#phone').val();
     kh.DIACHI = $('#address').val();
     kh.TENKH = $('#fullname').val();

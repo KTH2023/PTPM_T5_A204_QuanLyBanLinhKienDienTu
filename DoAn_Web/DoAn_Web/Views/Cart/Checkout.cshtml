@@ -68,10 +68,10 @@
                     </div>
                     <div class="card-footer border-secondary bg-transparent">
                         <div class="d-flex justify-content-between mt-2 flex-column">
-                            <p class="font-weight-bold">Thành tiền @ViewBag.ThanhTien </p>
+                            <p class="font-weight-bold">Thành tiền @Libary.Instances.ConvertVND(ViewBag.ThanhTien) </p>
                             <p class="font-weight-bold">Giảm giá @ViewBag.giamgia </p>
                             <div class="d-flex">
-                                <h5 class="font-weight-bold">Tổng giá</h5>
+                                <h5 class="font-weight-bold" style="margin-right: 1rem">Tổng giá</h5>
                                 <h5 class="font-weight-bold" id="tt"> @Libary.Instances.ConvertVND(tongtien)</h5>
                             </div>
                         

@@ -262,6 +262,11 @@ $(function () {
     function Pay() {
         var order = new Object();
         order.ispay = 0;
+        var khachhang = new Object();
+        khachhang.fullname = $('#cart-fullname').val();
+        khachhang.phone = $('#cart-phone').val();
+        var email = $('#cart-email').val();
+        khachhang.address = $('#cart-address').val();
         if (order.fullname == '') {
             iziToast.warning({
                 timeout: 1500,
@@ -301,7 +306,7 @@ $(function () {
                 type: 'POST',
                 dataType: 'json',
                 contentType: "application/json; charset=utf-8",
-                data: JSON.stringify({ order}),
+                data: JSON.stringify({ order, khachhang, email}),
                         success: function (data) {
                     enable('#btnpay');
 

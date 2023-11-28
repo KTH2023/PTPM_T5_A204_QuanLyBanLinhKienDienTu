@@ -38,7 +38,7 @@
                         @foreach (var item in Model)
                         {
                             <tr id="cart-@item.Product.MALINHKIEN">
-                                <td class="align-middle"><img src="~/@item.Product.HINHANH" alt="" style="width: 50px;"> Colorful Stylish Shirt</td>
+                                <td class="align-middle"><img src="~/Assets/Client/img/@item.Product.HINHANH" alt="" style="width: 50px;"> @item.Product.TENLINHKIEN</td>
                                 <td class="align-middle">@(Libary.Instances.ConvertVND(item.Product.DONGIA.ToString()))</td>
                                 <td class="align-middle">
                                     <div class="input-group quantity mx-auto" style="width: 100px;">

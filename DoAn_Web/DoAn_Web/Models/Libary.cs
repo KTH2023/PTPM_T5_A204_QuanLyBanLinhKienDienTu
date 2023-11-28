@@ -86,8 +86,10 @@ namespace DoAn_Web.Models
             {
                 string UrlImage = item;
                 UrlImage = UrlImage.Replace("~", AppDomain.CurrentDomain.BaseDirectory);
-                LinkedResource imageResource = new LinkedResource(UrlImage, "image/jpg");
-                imageResource.ContentId = "image"+i++;
+                LinkedResource imageResource = new LinkedResource(UrlImage, "image/jpg")
+                {
+                    ContentId = "image" + i++
+                };
 
                 AlternateView av = AlternateView.CreateAlternateViewFromString(body, null, MediaTypeNames.Text.Html);
                 av.LinkedResources.Add(imageResource);

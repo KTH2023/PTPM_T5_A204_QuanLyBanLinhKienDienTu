@@ -269,7 +269,6 @@
     <Content Include="Assets\Client\js\code\main.js" />
     <Content Include="Assets\Client\js\code\validateform.js" />
     <Content Include="Assets\Client\js\iziToast.min.js" />
-    <Content Include="Assets\Client\js\main.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -286,7 +285,6 @@
       <LastGenOutput>QLLK.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Assets\Client\json\data.json" />
     <Content Include="Assets\Client\scss\bootstrap\scss\bootstrap-grid.scss" />
     <Content Include="Assets\Client\scss\bootstrap\scss\bootstrap-reboot.scss" />
     <Content Include="Assets\Client\scss\bootstrap\scss\bootstrap.scss" />

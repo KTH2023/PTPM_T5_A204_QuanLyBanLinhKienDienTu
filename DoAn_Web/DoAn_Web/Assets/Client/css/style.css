@@ -90,7 +90,7 @@ abbr[data-original-title] {
   text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
-  text-decoration-skip-ink: none;
+  /*text-decoration-skip-ink: none;*/
 }
 
 address {
@@ -215,7 +215,7 @@ caption {
 
 th {
   text-align: inherit;
-  text-align: -webkit-match-parent;
+  /*text-align: -webkit-match-parent;*/
 }
 
 label {
@@ -1926,7 +1926,7 @@ input[type="date"].form-control,
 input[type="time"].form-control,
 input[type="datetime-local"].form-control,
 input[type="month"].form-control {
-  appearance: none;
+  /*appearance: none;*/
 }
 
 select.form-control:focus::-ms-value {
@@ -3484,7 +3484,7 @@ input[type="button"].btn-block {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5rem;
-  color-adjust: exact;
+  /*color-adjust: exact;*/
 }
 
 .custom-control-inline {
@@ -3641,7 +3641,7 @@ input[type="button"].btn-block {
   background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
   border: 1px solid #EDF1FF;
   border-radius: 0;
-  appearance: none;
+  /*appearance: none;*/
 }
 
 .custom-select:focus {
@@ -3762,7 +3762,7 @@ input[type="button"].btn-block {
   height: 1.4rem;
   padding: 0;
   background-color: transparent;
-  appearance: none;
+  /*appearance: none;*/
 }
 
 .custom-range:focus {
@@ -3773,9 +3773,9 @@ input[type="button"].btn-block {
   box-shadow: 0 0 0 1px #fff, none;
 }
 
-.custom-range:focus::-moz-range-thumb {
+/*.custom-range:focus::-moz-range-thumb {
   box-shadow: 0 0 0 1px #fff, none;
-}
+}*/
 
 .custom-range:focus::-ms-thumb {
   box-shadow: 0 0 0 1px #fff, none;
@@ -3792,7 +3792,7 @@ input[type="button"].btn-block {
   background-color: #D19C97;
   border: 0;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  appearance: none;
+  /*appearance: none;*/
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3814,7 +3814,7 @@ input[type="button"].btn-block {
   border-color: transparent;
 }
 
-.custom-range::-moz-range-thumb {
+/*.custom-range::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
   background-color: #D19C97;
@@ -3822,18 +3822,18 @@ input[type="button"].btn-block {
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   appearance: none;
 }
-
-@media (prefers-reduced-motion: reduce) {
+*/
+/*@media (prefers-reduced-motion: reduce) {
   .custom-range::-moz-range-thumb {
     transition: none;
   }
-}
+}*/
 
-.custom-range::-moz-range-thumb:active {
+/*.custom-range::-moz-range-thumb:active {
   background-color: white;
 }
-
-.custom-range::-moz-range-track {
+*/
+/*.custom-range::-moz-range-track {
   width: 100%;
   height: 0.5rem;
   color: transparent;
@@ -3841,7 +3841,7 @@ input[type="button"].btn-block {
   background-color: #dee2e6;
   border-color: transparent;
 }
-
+*/
 .custom-range::-ms-thumb {
   width: 1rem;
   height: 1rem;
@@ -3851,7 +3851,7 @@ input[type="button"].btn-block {
   background-color: #D19C97;
   border: 0;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  appearance: none;
+  /*appearance: none;*/
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3891,14 +3891,14 @@ input[type="button"].btn-block {
   cursor: default;
 }
 
-.custom-range:disabled::-moz-range-thumb {
+/*.custom-range:disabled::-moz-range-thumb {
   background-color: #adb5bd;
-}
+}*/
 
-.custom-range:disabled::-moz-range-track {
+/*.custom-range:disabled::-moz-range-track {
   cursor: default;
 }
-
+*/
 .custom-range:disabled::-ms-thumb {
   background-color: #adb5bd;
 }
@@ -4518,9 +4518,9 @@ input[type="button"].btn-block {
   }
 }
 
-.accordion {
+/*.accordion {
   overflow-anchor: none;
-}
+}*/
 
 .accordion > .card {
   overflow: hidden;
@@ -7157,7 +7157,7 @@ button.bg-dark:focus {
 }
 
 .user-select-auto {
-  user-select: auto !important;
+  /*user-select: auto !important;*/
 }
 
 .user-select-none {
@@ -9584,4 +9584,11 @@ a.text-dark:hover, a.text-dark:focus {
 }
 button[disabled]{
     cursor:not-allowed;
+}
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
 }
