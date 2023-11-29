@@ -238,7 +238,7 @@ namespace DoAn.UC
         //xoá 1 phiếu nhập bằng nút delete
         private void GcImport_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            DestroyImport();
+            //DestroyImport();
         }
 
         private void GvImport_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)

@@ -39,8 +39,10 @@ namespace DoAn.UC
             lkLoaiLK.DisplayMember = "TENLOAI";
             lkLoaiLK.ValueMember = "MALOAI";
             gvProduct.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;
+
             gcTypeProduct.DataSource = LoaiLKBUS.Instances.GetLoaiLKs();
             gvTypeProduct.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;
+
             gvProduct.IndicatorWidth = 30;
             gvTypeProduct.IndicatorWidth = 30;
         }

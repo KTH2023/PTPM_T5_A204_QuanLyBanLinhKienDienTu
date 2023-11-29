@@ -68,7 +68,7 @@
             this.btnLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageOptions.Image")));
             this.btnLogin.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageOptions.LargeImage")));
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLogin_ItemClick);
+            this.btnLogin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnLogin_ItemClick);
             // 
             // btnConnect
             // 
@@ -77,7 +77,7 @@
             this.btnConnect.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnConnect.ImageOptions.Image")));
             this.btnConnect.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnConnect.ImageOptions.LargeImage")));
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnConnect_ItemClick);
+            this.btnConnect.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnConnect_ItemClick);
             // 
             // lbStatus
             // 
@@ -135,7 +135,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Hệ thống";
-            this.Load += new System.EventHandler(this.frmSystem_Load);
+            this.Load += new System.EventHandler(this.FrmSystem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();

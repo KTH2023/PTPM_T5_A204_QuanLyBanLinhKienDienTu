@@ -28,7 +28,7 @@ namespace DAO
             db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues,
                     db.NHAPKHOs);
             if (isPay)
-                return Support.ToDataTable<NHAPKHO>((from nk in db.NHAPKHOs select nk).ToList());
+                return Support.ToDataTable<NHAPKHO>((from nk in db.NHAPKHOs where nk.ispay == true select nk).ToList());
             else
                 return Support.ToDataTable<NHAPKHO>((from nk in db.NHAPKHOs where nk.ispay == false select nk).ToList());
         }

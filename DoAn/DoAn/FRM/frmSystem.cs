@@ -12,7 +12,7 @@ namespace DoAn.FRM
             InitializeComponent();
             lbStatus.Caption = "";
         }
-        void openForm(Type typeForm)
+        void OpenForm(Type typeForm)
         {
             foreach (Form frm in MdiChildren)
             {
@@ -26,34 +26,26 @@ namespace DoAn.FRM
             f.MdiParent = this;
             f.Show();
         }
-        public void setStatus(string status, Color cl)
+        public void SetStatus(string status, Color cl)
         {
             lbStatus.Caption = status;
             lbStatus.ItemAppearance.Normal.ForeColor = cl;
         }
-        private void btnConnect_ItemClick(object sender, ItemClickEventArgs e)
+        private void BtnConnect_ItemClick(object sender, ItemClickEventArgs e)
         {
-            openForm(typeof(FrmConnect));
+            OpenForm(typeof(FrmConnect));
         }
-        private void btnLogin_ItemClick(object sender, ItemClickEventArgs e)
+        private void BtnLogin_ItemClick(object sender, ItemClickEventArgs e)
         {
-            openForm(typeof(FrmLogin));
+            OpenForm(typeof(FrmLogin));
         }
-        private void frmSystem_Load(object sender, EventArgs e)
+        private void FrmSystem_Load(object sender, EventArgs e)
         {
-            openForm(typeof(FrmLogin));
+            OpenForm(typeof(FrmLogin));
         }
-        public void _show()
+        public void Show_()
         {
             this.Show();
-            foreach (Form frm in MdiChildren)
-            {
-                if (frm.GetType() == typeof(FrmLogin))
-                {
-                    frm.Close();
-                    return;
-                }
-            }
         }
     }
 }

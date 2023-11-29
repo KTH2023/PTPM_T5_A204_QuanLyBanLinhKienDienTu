@@ -259,7 +259,7 @@ namespace DoAn.UC
                 XtraMessageBox.Show("Khách chưa đưa tiền.", "Thông báo");
                 return;
             }
-            double tienKhachDua = double.Parse(txtTienKhachDua.Text.Trim().Replace(",", "."));
+            double tienKhachDua = double.Parse(txtTienKhachDua.Text.Trim());
 
             if (tienPhaiTra > tienKhachDua)
             {
@@ -283,7 +283,7 @@ namespace DoAn.UC
             decimal value;
             try
             {
-                value = decimal.Parse(txtTienKhachDua.Text.Replace(",", "."), NumberStyles.AllowThousands);
+                value = decimal.Parse(txtTienKhachDua.Text, NumberStyles.AllowThousands);
 
             }
             catch (Exception)
@@ -304,7 +304,7 @@ namespace DoAn.UC
         //xoá 1 hoá đơn bằng nút delete
         private void GcOrder_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            DestroyOrder();
+            //DestroyOrder();
         }
 
         private void GvOrder_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)

@@ -25,18 +25,6 @@ namespace DoAn.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(".+QL_LINHKIENMAYTINH+sa+123")]
-        public string BKRS {
-            get {
-                return ((string)(this["BKRS"]));
-            }
-            set {
-                this["BKRS"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string Remember {
             get {

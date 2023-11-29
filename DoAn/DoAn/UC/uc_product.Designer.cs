@@ -64,6 +64,7 @@
             this.gcTypeProduct = new DevExpress.XtraGrid.GridControl();
             this.gvTypeProduct = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemImageEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
@@ -81,6 +82,7 @@
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcTypeProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTypeProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit2)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -262,7 +264,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(611, 146);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(7, 7);
+            this.pictureBox1.Size = new System.Drawing.Size(70, 70);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;
@@ -280,7 +282,8 @@
             this.lkLoaiLK,
             this.pictureImage,
             this.repositoryItemPictureEdit2,
-            this.imgHinhAnh});
+            this.imgHinhAnh,
+            this.repositoryItemImageEdit2});
             this.gcProduct.Size = new System.Drawing.Size(620, 335);
             this.gcProduct.TabIndex = 0;
             this.gcProduct.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -450,6 +453,13 @@
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 0;
             // 
+            // repositoryItemImageEdit2
+            // 
+            this.repositoryItemImageEdit2.AutoHeight = false;
+            this.repositoryItemImageEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemImageEdit2.Name = "repositoryItemImageEdit2";
+            // 
             // Uc_product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -481,6 +491,7 @@
             this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcTypeProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTypeProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -522,5 +533,6 @@
         private DevExpress.XtraBars.BarButtonItem BtnExcel;
         private DevExpress.XtraBars.BarButtonItem BtnWord;
         private DevExpress.XtraBars.BarButtonItem BtnPdf;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit2;
     }
 }

@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using DoAn.FRM;
 using DevExpress.XtraCharts;
 using BUS;
@@ -55,7 +47,6 @@ namespace DoAn.UC
             {
                 Text = "Top sản phẩm bán chạy tháng " + DateTime.Now.Month + "/" + DateTime.Now.Year
             };
-            _seri.ShowInLegend = true;
             chartTopSelling.Titles.Add(title);
             chartTopSelling.Series.Add(_seri);
             foreach (DataRow dr in ChartBUS.Instances.LoadTopSelling().Rows)

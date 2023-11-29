@@ -52,8 +52,6 @@ namespace DoAn.FRM
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.BtnChangePass = new DevExpress.XtraBars.BarButtonItem();
-            this.BtnBackup = new DevExpress.XtraBars.BarButtonItem();
-            this.BtnRestore = new DevExpress.XtraBars.BarButtonItem();
             this.BtnLogout = new DevExpress.XtraBars.BarButtonItem();
             this.bar3 = new DevExpress.XtraBars.Bar();
             this.LbAccount = new DevExpress.XtraBars.BarHeaderItem();
@@ -61,6 +59,8 @@ namespace DoAn.FRM
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.BtnBackup = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnRestore = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -104,9 +104,9 @@ namespace DoAn.FRM
             this.BtnKhachHang,
             this.BtnReceipt,
             this.BtnOrder});
-            this.BtnManagerment.Expanded = true;
             this.BtnManagerment.Name = "BtnManagerment";
             this.BtnManagerment.Text = "Quản lý";
+            this.BtnManagerment.Click += new System.EventHandler(this.BtnManagerment_Click);
             // 
             // BtnProduct
             // 
@@ -149,9 +149,9 @@ namespace DoAn.FRM
             this.BtnBanHang,
             this.BtnNhapHang,
             this.BtnCustomerOfStaff});
-            this.BtnStaffCustomer.Expanded = true;
             this.BtnStaffCustomer.Name = "BtnStaffCustomer";
             this.BtnStaffCustomer.Text = "Khách hàng";
+            this.BtnStaffCustomer.Click += new System.EventHandler(this.BtnStaffCustomer_Click);
             // 
             // BtnBanHang
             // 
@@ -235,7 +235,7 @@ namespace DoAn.FRM
             this.BtnRestore,
             this.BtnLogout,
             this.LbAccount});
-            this.barManager1.MaxItemId = 5;
+            this.barManager1.MaxItemId = 7;
             this.barManager1.StatusBar = this.bar3;
             // 
             // bar1
@@ -255,8 +255,6 @@ namespace DoAn.FRM
             this.BtnChangePass.Id = 0;
             this.BtnChangePass.Name = "BtnChangePass";
             this.BtnChangePass.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnChangePass_ItemClick);
-
-
             // 
             // BtnLogout
             // 
@@ -316,6 +314,16 @@ namespace DoAn.FRM
             this.barDockControlRight.Location = new System.Drawing.Point(691, 53);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 394);
+            // 
+            // BtnBackup
+            // 
+            this.BtnBackup.Id = 5;
+            this.BtnBackup.Name = "BtnBackup";
+            // 
+            // BtnRestore
+            // 
+            this.BtnRestore.Id = 6;
+            this.BtnRestore.Name = "BtnRestore";
             // 
             // FrmMain
             // 

@@ -2,9 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DoAn.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="BKRS" Type="System.String" Scope="User">
-      <Value Profile="(Default)">.+QL_LINHKIENMAYTINH+sa+123</Value>
-    </Setting>
     <Setting Name="Remember" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>

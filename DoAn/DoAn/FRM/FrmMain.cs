@@ -21,7 +21,7 @@ namespace DoAn.FRM
             OpenUC(typeof(Uc_home));
             checkClose = true;
             if (!nv.QUYEN.tenquyen.ToLower().Equals("admin"))
-                BtnManagerment.Visible = BtnStatistical.Visible = BtnRestore.Enabled = BtnBackup.Enabled = false;
+                BtnManagerment.Visible = BtnStatistical.Visible = false;
             else
                 BtnCustomerOfStaff.Visible = false;
         }
@@ -70,14 +70,14 @@ namespace DoAn.FRM
                 if (XtraMessageBox.Show("Bạn chắc chắn muốn đăng xuất?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     base.Close();
-                    frm._show();
+                    frm.Show_();
                 }
             }
             else
             {
                 base.Close();
 
-                frm._show();
+                frm.Show_();
             }
             checkClose = true;
 
@@ -145,6 +145,16 @@ namespace DoAn.FRM
         private void BtnPredictNextDay_Click(object sender, EventArgs e)
         {
             OpenUC(typeof(Uc_predict));
+        }
+
+        private void BtnManagerment_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnStaffCustomer_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -24,13 +24,13 @@ namespace DoAn.FRM
             {
                 splashScreenManager1.CloseWaitForm();
                 XtraMessageBox.Show("Kết nối thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                frm.setStatus("Test kết nối thành công.",Color.Yellow);
+                frm.SetStatus("Test kết nối thành công.",Color.Yellow);
             }
             else
             {
                 splashScreenManager1.CloseWaitForm();
                 XtraMessageBox.Show("Kết nối thất bại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                frm.setStatus("Test kết nối thất bại.",Color.Red);
+                frm.SetStatus("Test kết nối thất bại.",Color.Red);
             }
         }
         private bool ValidateTextBox(TextEdit txt)
@@ -50,9 +50,9 @@ namespace DoAn.FRM
             splashScreenManager1.ShowWaitForm();
             DataTable tb = Support.GetDBName(cbbServer.Text, txtUsername.Text.Trim(), txtPassword.Text);
             if (tb.Rows.Count == 0)
-                frm.setStatus("Tài khoản mật khẩu không hợp lệ.",Color.Red);
+                frm.SetStatus("Tài khoản mật khẩu không hợp lệ.",Color.Red);
             else
-                frm.setStatus("", Color.Red);
+                frm.SetStatus("", Color.Red);
             cbbDatabase.Properties.DataSource =tb;
             cbbDatabase.Properties.DisplayMember = "name";
             splashScreenManager1.CloseWaitForm();
@@ -72,19 +72,17 @@ namespace DoAn.FRM
             splashScreenManager1.ShowWaitForm();
             if (Support.SaveConnection(connectionString))
             {
-                frm.setStatus("Lưu thành công.Vui lòng khởi động lại ứng dụng.",Color.Yellow);
+                frm.SetStatus("Lưu thành công.Vui lòng khởi động lại ứng dụng.",Color.Yellow);
                 splashScreenManager1.CloseWaitForm();
                 if (XtraMessageBox.Show("Lưu thành công.Vui lòng khởi động lại ứng dụng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk) == DialogResult.OK)
                 {
-                   DoAn.Properties.Settings.Default.BKRS = cbbServer.Text.Trim() + "+" + cbbDatabase.Text + "+" + txtUsername.Text + "+" + txtPassword.Text;
-                   DoAn.Properties.Settings.Default.Save();
                    Application.Restart();
                 }
             }
             else
             {
                 splashScreenManager1.CloseWaitForm();
-                frm.setStatus("Có lỗi xảy ra.",Color.Red);
+                frm.SetStatus("Có lỗi xảy ra.",Color.Red);
                 XtraMessageBox.Show("Có lỗi xảy ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

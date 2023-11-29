@@ -48,14 +48,14 @@ namespace DoAn.FRM
             {
                 splashScreenManager1.CloseWaitForm();
                 XtraMessageBox.Show("Lỗi kết nối server.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                frm.setStatus("Lỗi kết nối server.", Color.Red);
+                frm.SetStatus("Lỗi kết nối server.", Color.Red);
             }
             else
             if (nv == null)
             {
                 splashScreenManager1.CloseWaitForm();
                 XtraMessageBox.Show("Sai tài khoản hoặc mật khẩu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                frm.setStatus("Sai tài khoản hoặc mật khẩu", Color.Red);
+                frm.SetStatus("Sai tài khoản hoặc mật khẩu", Color.Red);
             }
             else
             {
